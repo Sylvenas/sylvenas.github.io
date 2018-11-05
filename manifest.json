@@ -1,0 +1,11 @@
+{
+  "main.css": "styles.css",
+  "main.js": "render-page.js",
+  "main.js.map": "render-page.js.map",
+  "static/Open-Sans.ttf": "static/Open-Sans.629a55a7.ttf",
+  "static/brandon-grotesque.ttf": "static/brandon-grotesque.c8e490c1.ttf",
+  "static/icomoon.eot?86a4jt": "static/icomoon.dc50c577.eot",
+  "static/icomoon.ttf?86a4jt": "static/icomoon.63be752c.ttf",
+  "static/icomoon.woff?86a4jt": "static/icomoon.ef3242a6.woff",
+  "static/love.jpg": "static/love.5a5d7e06.jpg"
+}
