@@ -1,4 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Little Forest]]></title><description><![CDATA[A JavaScript library for building user interfaces]]></description><link>https://reactjs.org</link><generator>RSS for Node</generator><lastBuildDate>Mon, 05 Nov 2018 05:02:32 GMT</lastBuildDate><item><title><![CDATA['类'模式]]></title><description><![CDATA[<h3 id="oop"><a href="#oop" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>oop</h3>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Little Forest]]></title><description><![CDATA[A JavaScript library for building user interfaces]]></description><link>https://reactjs.org</link><generator>RSS for Node</generator><lastBuildDate>Wed, 07 Nov 2018 13:25:55 GMT</lastBuildDate><item><title><![CDATA[代理模式]]></title><description><![CDATA[<h3 id="模仿类"><a href="#%E6%A8%A1%E4%BB%BF%E7%B1%BB" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>模仿类</h3>
+<p>多年以来，JavaScript中有一种奇怪的行为一直在被无耻地滥用，那就是<code>模仿类</code>。我们会仔细分析这种方法。
+这种奇怪的“类似类”的行为利用了函数的一种特殊特性:所有的函数默认都会拥有一个名为<code>prototype</code>的公有并且不可枚举的属性，它会指向另一个对象:</p>
+<div class="gatsby-highlight">
+      <pre class="gatsby-code-jsx"><code><span class="token keyword">function</span> <span class="token function">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// ...</span>
+<span class="token punctuation">}</span>
+Foo<span class="token punctuation">.</span>prototype<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// { }</span>
+
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Object<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span> a <span class="token punctuation">)</span> <span class="token operator">===</span> Foo<span class="token punctuation">.</span>prototype<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// true</span>
+</code></pre>
+      </div>
+<p>这个对象通常被称为<code>Foo的原型</code>，因为我们通过名为<code>Foo.prototype</code>的属性引用来访问它。</p>
+<p>调用<code>new Foo()</code>时会创建<code>a</code>，其中的一步就是给<code>a</code>一个内部的<code>[[Prototype]]</code>链接，关联到<code>Foo.prototype</code>指向的那个对象。
+下面是<code>new</code>操作符的具体实现，也就是假如没有<code>new</code>操作符的时候，我们该怎么实现<code>new</code>呢？</p>
+<div class="gatsby-highlight">
+      <pre class="gatsby-code-jsx"><code><span class="token keyword">function</span> <span class="token function">newObject</span><span class="token punctuation">(</span>Constructor<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> obj <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>Constructor<span class="token punctuation">.</span>prototype<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Constructor<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token operator">...</span>arguments<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> obj<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+      </div>
+<p>在面向类的语言中，类可以被复制(或者说实例化)多次，就像用模具制作东西一样。之所以会这样是因为实例化(或者继承)一个类就意味着“把类的行为复制到物理对象中”，对于每一个新实例来说都会重复这个过程。
+但是在JavaScript中，并没有类似的复制机制。你不能创建一个类的多个实例，只能创建多个对象，它们<code>[[Prototype]]</code>关联的是同一个对象。但是在默认情况下并不会进行复制， 因此这些对象之间并不会完全失去联系，它们是互相关联的。</p>
+<p><code>new Foo()</code>会生成一个新对象(我们称之为a)，这个新对象的内部链接<code>[[Prototype]]</code>关联的是<code>Foo.prototype</code>对象。</p>
+<p>最后我们得到了两个对象，它们之间互相关联，就是这样。</p>
+<p>我们并没有初始化一个类，实际上我们并没有从“类”中复制任何行为到一个对象中，只是让两个对象互相关联。</p>
+<p>继承意味着复制操作，JavaScript(默认)并不会复制对象属性。</p>
+<p>相反，JavaScript会在两个对象之间创建一个关联，这样一个对象就可以通过委托访问另一个对象的属性和函数。</p>
+<p><code>Object.create(..)</code> 是一个大英雄，现在是时候来弄明白为 什么了:</p>
+<div class="gatsby-highlight">
+      <pre class="gatsby-code-jsx"><code><span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token punctuation">{</span>
+something<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span> <span class="token string">"Tell me something good..."</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> bar <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span> foo <span class="token punctuation">)</span><span class="token punctuation">;</span> bar<span class="token punctuation">.</span><span class="token function">something</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// Tell me something good...</span>
+</code></pre>
+      </div>
+<p><code>Object.create(..)</code> 会创建一个新对象(<code>bar</code>)并把它关联到我们指定的对象(<code>foo</code>)，这样 我们就可以充分发挥<code>[[Prototype]]</code>机制的威力(委托)并且避免不必要的麻烦(比如使用<code>new</code>的构造函数调用会生成<code>.prototype</code> 和<code>.constructor</code>引用)。</p>
+<p>换句话说JavaScript中这个原型链机制的本质就是对象之间的关联关系，对象之间从未存在过“继承”这种东西</p>]]></description><link>https://reactjs.org/blog/2018/08/24/代理-pattern.html</link><guid isPermaLink="false">https://reactjs.org/blog/2018/08/24/代理-pattern.html</guid><pubDate>Thu, 23 Aug 2018 16:00:00 GMT</pubDate></item><item><title><![CDATA['类'模式]]></title><description><![CDATA[<h3 id="oop"><a href="#oop" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>oop</h3>
 <p>面向对象编程强调的是数据和操作数据的行为本质上是相互关联的(当然，不同的数据有不同的行为)，因此好的设计就是把数据以及和它相关的行为打包(封装)起来，这在正是的计算机科学中有时候被称为数据结构。</p>
 <p>举例来说：用来表示一个单词或者短语的<code>一串字符通</code>常被称为字符串。字符就是<code>数据</code>。但是你关心的往往不是<code>数据是什么</code>，而是<code>可以对数据做什么</code>，所以可以应用在这种数据上的行为(计算长度、添加数据、搜索，等等)都被设计成<code>String</code>类的方法。</p>
 <p>所有字符串都是<code>String</code>类的一个实例，也就是说它是一个包裹，包含字符数据和我们可以 应用在数据上的函数。</p>
@@ -157,49 +199,7 @@ JavaScript中的函数无法(用标准、可靠的方法)真正地复制，所�
 <p>JavaScript并不会(像类那样)自动创建对象的副本。</p>
 <p>混入模式可以用来模拟类的复制行为，但是通常会产生丑陋并且脆弱的语法，比如显式伪多态<code>(OtherObj.methodName.call(this, ...))</code>，这会让代码更加难懂并且难以维护。</p>
 <p>此外，显式混入实际上无法完全模拟类的复制行为，因为对象(和函数!别忘了函数也 是对象)只能复制引用，无法复制被引用的对象或者函数本身。忽视这一点会导致许多问题。
-总地来说，在<code>JavaScript</code>中模拟类是得不偿失的，虽然能解决当前的问题，但是可能会埋下更多的隐患。</p>]]></description><link>https://reactjs.org/blog/2018/08/24/class-pattern.html</link><guid isPermaLink="false">https://reactjs.org/blog/2018/08/24/class-pattern.html</guid><pubDate>Thu, 23 Aug 2018 16:00:00 GMT</pubDate></item><item><title><![CDATA[代理模式]]></title><description><![CDATA[<h3 id="模仿类"><a href="#%E6%A8%A1%E4%BB%BF%E7%B1%BB" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>模仿类</h3>
-<p>多年以来，JavaScript中有一种奇怪的行为一直在被无耻地滥用，那就是<code>模仿类</code>。我们会仔细分析这种方法。
-这种奇怪的“类似类”的行为利用了函数的一种特殊特性:所有的函数默认都会拥有一个名为<code>prototype</code>的公有并且不可枚举的属性，它会指向另一个对象:</p>
-<div class="gatsby-highlight">
-      <pre class="gatsby-code-jsx"><code><span class="token keyword">function</span> <span class="token function">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// ...</span>
-<span class="token punctuation">}</span>
-Foo<span class="token punctuation">.</span>prototype<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// { }</span>
-
-<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-Object<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span> a <span class="token punctuation">)</span> <span class="token operator">===</span> Foo<span class="token punctuation">.</span>prototype<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// true</span>
-</code></pre>
-      </div>
-<p>这个对象通常被称为<code>Foo的原型</code>，因为我们通过名为<code>Foo.prototype</code>的属性引用来访问它。</p>
-<p>调用<code>new Foo()</code>时会创建<code>a</code>，其中的一步就是给<code>a</code>一个内部的<code>[[Prototype]]</code>链接，关联到<code>Foo.prototype</code>指向的那个对象。
-下面是<code>new</code>操作符的具体实现，也就是假如没有<code>new</code>操作符的时候，我们该怎么实现<code>new</code>呢？</p>
-<div class="gatsby-highlight">
-      <pre class="gatsby-code-jsx"><code><span class="token keyword">function</span> <span class="token function">newObject</span><span class="token punctuation">(</span>Constructor<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">const</span> obj <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>Constructor<span class="token punctuation">.</span>prototype<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    Constructor<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token operator">...</span>arguments<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> obj<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
-      </div>
-<p>在面向类的语言中，类可以被复制(或者说实例化)多次，就像用模具制作东西一样。之所以会这样是因为实例化(或者继承)一个类就意味着“把类的行为复制到物理对象中”，对于每一个新实例来说都会重复这个过程。
-但是在JavaScript中，并没有类似的复制机制。你不能创建一个类的多个实例，只能创建多个对象，它们<code>[[Prototype]]</code>关联的是同一个对象。但是在默认情况下并不会进行复制， 因此这些对象之间并不会完全失去联系，它们是互相关联的。</p>
-<p><code>new Foo()</code>会生成一个新对象(我们称之为a)，这个新对象的内部链接<code>[[Prototype]]</code>关联的是<code>Foo.prototype</code>对象。</p>
-<p>最后我们得到了两个对象，它们之间互相关联，就是这样。</p>
-<p>我们并没有初始化一个类，实际上我们并没有从“类”中复制任何行为到一个对象中，只是让两个对象互相关联。</p>
-<p>继承意味着复制操作，JavaScript(默认)并不会复制对象属性。</p>
-<p>相反，JavaScript会在两个对象之间创建一个关联，这样一个对象就可以通过委托访问另一个对象的属性和函数。</p>
-<p><code>Object.create(..)</code> 是一个大英雄，现在是时候来弄明白为 什么了:</p>
-<div class="gatsby-highlight">
-      <pre class="gatsby-code-jsx"><code><span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token punctuation">{</span>
-something<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span> <span class="token string">"Tell me something good..."</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token keyword">var</span> bar <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span> foo <span class="token punctuation">)</span><span class="token punctuation">;</span> bar<span class="token punctuation">.</span><span class="token function">something</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// Tell me something good...</span>
-</code></pre>
-      </div>
-<p><code>Object.create(..)</code> 会创建一个新对象(<code>bar</code>)并把它关联到我们指定的对象(<code>foo</code>)，这样 我们就可以充分发挥<code>[[Prototype]]</code>机制的威力(委托)并且避免不必要的麻烦(比如使用<code>new</code>的构造函数调用会生成<code>.prototype</code> 和<code>.constructor</code>引用)。</p>
-<p>换句话说JavaScript中这个原型链机制的本质就是对象之间的关联关系，对象之间从未存在过“继承”这种东西</p>]]></description><link>https://reactjs.org/blog/2018/08/24/代理-pattern.html</link><guid isPermaLink="false">https://reactjs.org/blog/2018/08/24/代理-pattern.html</guid><pubDate>Thu, 23 Aug 2018 16:00:00 GMT</pubDate></item><item><title><![CDATA[What is 'this' in JavaScript]]></title><description><![CDATA[<p>JavaScript里有个太常见的<code>this</code>关键字，不过却有很多的开发人员弄不懂<code>this</code>关键字在不同的环境中的指向，也弄不清楚应该怎样使用这个关键字。</p>
+总地来说，在<code>JavaScript</code>中模拟类是得不偿失的，虽然能解决当前的问题，但是可能会埋下更多的隐患。</p>]]></description><link>https://reactjs.org/blog/2018/08/24/class-pattern.html</link><guid isPermaLink="false">https://reactjs.org/blog/2018/08/24/class-pattern.html</guid><pubDate>Thu, 23 Aug 2018 16:00:00 GMT</pubDate></item><item><title><![CDATA[What is 'this' in JavaScript]]></title><description><![CDATA[<p>JavaScript里有个太常见的<code>this</code>关键字，不过却有很多的开发人员弄不懂<code>this</code>关键字在不同的环境中的指向，也弄不清楚应该怎样使用这个关键字。</p>
 <p>当你彻底理解了<code>闭包</code>和<code>this</code>的时候，你也就弄明白了JavaScript的核心精髓了。</p>
 <p>在理解this的绑定之前，首先要理解调用位置：调用位置就是函数在代码中的调用位置(此处绝不是说函数的声明位置)，这个过程中最重要是分析函数的调用栈(就是为了到达当前调用位置所调用的所有的函数)。</p>
 <p>我们首先来看看关于<code>this</code>两种常见的<strong>误解</strong>:</p>
