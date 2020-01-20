@@ -41,7 +41,7 @@
     "path---blog-2013-06-12-css-html": "path---blog-2013-06-12-css-html-7d00c960bb1c18459d93.js",
     "path---blog-2018-03-12-白夜行-html": "path---blog-2018-03-12-白夜行-html-37b819f83d5a99806d6b.js",
     "path---blog-2017-10-16-pub-sub-html": "path---blog-2017-10-16-pub-sub-html-cb1e4acf286f85666783.js",
-    "path---blog-2019-09-10-黑珍珠号的诅咒-html": "path---blog-2019-09-10-黑珍珠号的诅咒-html-443d7077690cd6712475.js",
+    "path---blog-2019-09-10-黑珍珠号的诅咒-html": "path---blog-2019-09-10-黑珍珠号的诅咒-html-cd06fa7d723b92e18415.js",
     "path---blog-2018-11-07-fb-16-applicative-functor-html": "path---blog-2018-11-07-fb-16-applicative-functor-html-f245c69fbbb1282867ce.js",
     "path---blog-2014-09-15-css-float-html": "path---blog-2014-09-15-css-float-html-815daf29bfb2363d58f9.js",
     "path---blog-2018-07-12-webp-loader-html": "path---blog-2018-07-12-webp-loader-html-68107c81c61df12d9cc3.js",
@@ -63,7 +63,7 @@
     "path---index": "path---index-b9b3c5cefd52d1d8b704.js",
     "path---blog-2014-04-03-js-natives-html": "path---blog-2014-04-03-js-natives-html-243df6a622b743d5858a.js",
     "path---blog-2018-01-06-pub-sub-pattern-html": "path---blog-2018-01-06-pub-sub-pattern-html-e4b98e41c33e6474059f.js",
-    "component---src-pages-resume-js": "component---src-pages-resume-js-7b55de066552ceb34f3c.js",
+    "component---src-pages-resume-js": "component---src-pages-resume-js-0d91592e9010b32a31f2.js",
     "path---blog-2015-02-10-圣杯布局-html": "path---blog-2015-02-10-圣杯布局-html-9fe6bf677b09d581c408.js",
     "path---blog-2018-12-13-fp-18-semigroup-html": "path---blog-2018-12-13-fp-18-semigroup-html-b9ae39f27e2cd326c352.js",
     "component---src-pages-404-js": "component---src-pages-404-js-db6e54dcc2a4b6819049.js",
@@ -90,7 +90,7 @@
     "path---resume": "path---resume-a0e39f21c11f6a62c5ab.js",
     "path---blog-2017-03-11-generator-html": "path---blog-2017-03-11-generator-html-3ab384277efd31a2d883.js",
     "app": [
-      "app-ccbfb1bc3f326d0f55b0.js",
+      "app-43d18a576e1e449eb359.js",
       "build-js-styles.css"
     ],
     "path---blog-2017-08-21-spa-html": "path---blog-2017-08-21-spa-html-9b5a06a8e5a6baf5f630.js",
