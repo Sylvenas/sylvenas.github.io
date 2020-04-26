@@ -22,7 +22,7 @@
     "path---archive-html": "path---archive-html-b93d121c5e3189e40f62.js",
     "path---blog-2018-01-12-constructor-pattern-html": "path---blog-2018-01-12-constructor-pattern-html-16639fb2db8140e51dcb.js",
     "component---src-pages-index-js": "component---src-pages-index-js-7c8dad074c08ab93931e.js",
-    "component---src-templates-blog-js": "component---src-templates-blog-js-abb4c1188ce0c9a52f7f.js",
+    "component---src-templates-blog-js": "component---src-templates-blog-js-62c890ff9ad4e298a56e.js",
     "path---blog-2017-09-30-using-react-16-portal-html": "path---blog-2017-09-30-using-react-16-portal-html-7fa8794580d73371476c.js",
     "path---blog-2015-04-21-utils-html": "path---blog-2015-04-21-utils-html-56f012a2b8e9fd9dd402.js",
     "path---blog-2018-01-29-parcel-html": "path---blog-2018-01-29-parcel-html-86d56f498093ffdbdcb9.js",
@@ -44,7 +44,7 @@
     "path---blog-2018-06-06-fp-9-hindley-milner-html": "path---blog-2018-06-06-fp-9-hindley-milner-html-9fd05c1ce55c65d73938.js",
     "path---blog-2016-08-21-bfc-html": "path---blog-2016-08-21-bfc-html-6db4e0709c1dc686adeb.js",
     "path---blog-2015-01-12-js-async-html": "path---blog-2015-01-12-js-async-html-a456fccb6b96c5d8db74.js",
-    "path---blog-2013-06-12-css-html": "path---blog-2013-06-12-css-html-32b4108b6629c259e33d.js",
+    "path---blog-2013-06-12-css-html": "path---blog-2013-06-12-css-html-63e189fb1ab54a5192c8.js",
     "path---blog-2018-03-12-白夜行-html": "path---blog-2018-03-12-白夜行-html-c979bea86b9e929d2d17.js",
     "path---blog-2017-10-16-pub-sub-html": "path---blog-2017-10-16-pub-sub-html-286297293ac8556a1d4c.js",
     "path---blog-2019-09-10-黑珍珠号的诅咒-html": "path---blog-2019-09-10-黑珍珠号的诅咒-html-55d0ae1042bda96151cc.js",
@@ -101,7 +101,7 @@
     "path---blog-2017-07-20-fp-1-composing-software-intro-html": "path---blog-2017-07-20-fp-1-composing-software-intro-html-a87afa327017e79b5000.js",
     "path---blog-2017-03-11-generator-html": "path---blog-2017-03-11-generator-html-b50e98c47de4c16b594b.js",
     "app": [
-      "app-2240df241ed4a87a29e9.js",
+      "app-65e32f7b6b19756092e5.js",
       "build-js-styles.css"
     ],
     "path---blog-2017-08-21-spa-html": "path---blog-2017-08-21-spa-html-bb48768e4f0c989fd331.js",
