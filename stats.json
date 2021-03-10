@@ -1,6 +1,6 @@
 {
   "assetsByChunkName": {
-    "path---blog-2020-02-12-俄罗斯套娃娃-html": "path---blog-2020-02-12-俄罗斯套娃娃-html-a13508fc4279209274ee.js",
+    "path---blog-2020-02-12-俄罗斯套娃娃-html": "path---blog-2020-02-12-俄罗斯套娃娃-html-5a7f4b68711b5b4282e3.js",
     "path---blog-2017-10-24-rxjs-intro-html": "path---blog-2017-10-24-rxjs-intro-html-bd381b2b99f76850cf6f.js",
     "path---blog-2018-03-06-web-image-优化-html": "path---blog-2018-03-06-web-image-优化-html-f8d7877bb40b897cacff.js",
     "path---blog-2018-07-19-node-error-catch-html": "path---blog-2018-07-19-node-error-catch-html-274be1ba4635ac809197.js",
@@ -69,7 +69,7 @@
     "path---blog-2018-01-03-desgin-pattern-in-js-html": "path---blog-2018-01-03-desgin-pattern-in-js-html-8cebf163ff73647534d3.js",
     "path---blog-2015-02-03-call-back-html": "path---blog-2015-02-03-call-back-html-c23f8a5337be6101ea15.js",
     "path---blog-2018-10-22-node-process-stability-html": "path---blog-2018-10-22-node-process-stability-html-fe33f57465a8be2ce71f.js",
-    "path---index": "path---index-3481d55729055c3a6c74.js",
+    "path---index": "path---index-01248146a5d36d4bb52f.js",
     "path---blog-2014-04-03-js-natives-html": "path---blog-2014-04-03-js-natives-html-4e3c16c2d887cac533a4.js",
     "path---blog-2018-01-06-pub-sub-pattern-html": "path---blog-2018-01-06-pub-sub-pattern-html-4b7f71b6917a79dc946f.js",
     "component---src-pages-resume-js": "component---src-pages-resume-js-c4b23ba1b25501cf3e47.js",
@@ -105,7 +105,7 @@
     "path---blog-2017-07-20-fp-1-composing-software-intro-html": "path---blog-2017-07-20-fp-1-composing-software-intro-html-f0a7f2733ee7613dff54.js",
     "path---blog-2017-03-11-generator-html": "path---blog-2017-03-11-generator-html-942eeff05c8bee7e0bad.js",
     "app": [
-      "app-aad2144b4e31c004bded.js",
+      "app-3649c0cd6a5fad8a68c8.js",
       "build-js-styles.css"
     ],
     "path---blog-2017-08-21-spa-html": "path---blog-2017-08-21-spa-html-a4220d23f7db45203803.js",
