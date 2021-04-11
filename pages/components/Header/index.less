@@ -1,0 +1,83 @@
+.pageheader {
+  height: 55px;
+  display: flex;
+  position: fixed;
+  z-index: 99;
+  background-color: #fff;
+  width: 100%;
+}
+
+.header {
+  width: 273px;
+  height: 100%;
+  background-color: #0d3650;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.companylogo {
+  width: 36px;
+  height: 36px;
+  margin-right: 15px;
+}
+
+.companyname {
+  position: relative;
+  font-size: 13px;
+  height: 100%;
+  line-height: 55px;
+  font-weight: 400;
+  color: #fff;
+  width: 94px;
+}
+
+.companyname::after {
+  /* content: ' ';
+  position: absolute;
+  right: -8px;
+  top: 0;
+  height: 100%;
+  width: 25px;
+  transform: skewX(-11deg);
+  background-color: #fff; */
+}
+
+.navigation {}
+
+.navlist {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.navitem {
+  position: relative;
+  transition: color 0.2s ease-out;
+  color: #0d3650;
+  cursor: pointer;
+  margin-left: 8px;
+  margin-right: 20px;
+  font-size: 13px;
+}
+
+.navitemactive {
+  color: #ff3162;
+}
+
+.navitem:hover {
+  color: #ff3162;
+}
+
+.navitem::after {
+  content: ' ';
+  width: 1px;
+  height: 20px;
+  background-color: #d1e0e7;
+  position: absolute;
+  /* transform: rotate(12deg); */
+  margin-left: 17px;
+  // margin-top: 4px;
+}
