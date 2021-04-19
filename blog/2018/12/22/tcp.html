@@ -1,0 +1,639 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="icon" href="/favicon.ico"/><link rel="preload" href="/component---src-layouts-index-js-933419639cd1b488f0e0.js" as="script"/><link rel="preload" href="/component---src-templates-blog-js-b58464b776f21cfad9e7.js" as="script"/><link rel="preload" href="/path---blog-2018-12-22-tcp-html-3966c3b7c5012dd44700.js" as="script"/><link rel="preload" href="/app-ba22115cf3423541542f.js" as="script"/><link rel="preload" href="/commons-ca4351058a10da99e2be.js" as="script"/><style id="glamor-styles">.gatsby-highlight{background:#282c34;color:#ffffff;border-radius:5px;overflow:auto;tab-size:1.5em;-moz-tab-size:1.5em;}
+.gatsby-highlight code[class*="gatsby-code-"],
+.gatsby-highlight pre[class*="gatsby-code-"],
+.gatsby-highlight pre.prism-code{height:auto !important;margin:1rem 0;font-size:14px;line-height:20px;white-space:pre-wrap;word-break:break-word;}.gatsby-highlight + .gatsby-highlight{margin-top:20px;}.gatsby-highlight-code-line{background-color:#14161a;display:block;margin:-0.125rem calc(-1rem - 15px);padding:0.125rem calc(1rem + 15px);}.token.attr-name{color:#c5a5c5;}
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata{color:#999999;}
+.token.property,
+.token.number,
+.token.function-name,
+.token.constant,
+.token.symbol,
+.token.deleted{color:#5a9bcf;}.token.boolean{color:#ff8b50;}.token.tag{color:#fc929e;}.token.string{color:#8dc891;}.token.punctuation{color:#5FB3B3;}
+.token.selector,
+.token.char,
+.token.builtin,
+.token.inserted{color:#D8DEE9;}.token.function{color:#79b6f2;}
+.token.operator,
+.token.entity,
+.token.url,
+.token.variable{color:#d7deea;}.token.attr-value{color:#8dc891;}.token.keyword{color:#c5a5c5;}
+.token.atrule,
+.token.class-name{color:#FAC863;}.token.important{font-weight:400;}.token.bold{font-weight:600;color:#323a45;}.token.italic{font-style:italic;}.token.entity{cursor:help;}.namespace{opacity:0.7;}html {
+  font-family: sans-serif; /* 1 */
+  line-height: 1.15; /* 2 */
+  -ms-text-size-adjust: 100%; /* 3 */
+  -webkit-text-size-adjust: 100%; /* 3 */
+}body {
+  margin: 0;
+}article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}figcaption,
+figure,
+main { /* 1 */
+  display: block;
+}figure {
+  margin: 1em 40px;
+}hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}a {
+  background-color: transparent; /* 1 */
+  -webkit-text-decoration-skip: objects; /* 2 */
+}a:active,
+a:hover {
+  outline-width: 0;
+}abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}b,
+strong {
+  font-weight: inherit;
+}b,
+strong {
+  font-weight: bolder;
+}code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}dfn {
+  font-style: italic;
+}mark {
+  background-color: #ff0;
+  color: #000;
+}small {
+  font-size: 80%;
+}sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}sub {
+  bottom: -0.25em;
+}sup {
+  top: -0.5em;
+}audio,
+video {
+  display: inline-block;
+}audio:not([controls]) {
+  display: none;
+  height: 0;
+}img {
+  border-style: none;
+}svg:not(:root) {
+  overflow: hidden;
+}button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}button,
+input { /* 1 */
+  overflow: visible;
+}button,
+select { /* 1 */
+  text-transform: none;
+}button,
+html [type="button"], /* 1 */
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+}button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}progress {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}textarea {
+  overflow: auto;
+}[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}details, /* 1 */
+menu {
+  display: block;
+}summary {
+  display: list-item;
+}canvas {
+  display: inline-block;
+}template {
+  display: none;
+}[hidden] {
+  display: none;
+}.css-1yok9qz,[data-css-1yok9qz]{flex:1 0 auto;margin-top:50px;-webkit-flex:1 0 auto;}@media (min-width: 780px) and (max-width: 1279px){.css-1yok9qz,[data-css-1yok9qz]{margin-top:45px;}}@media (max-width: 779px){.css-1yok9qz,[data-css-1yok9qz]{margin-top:40px;}}.css-190hivd,[data-css-190hivd]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:column;min-height:calc(100vh - 40px);-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;}.css-1wiofhw,[data-css-1wiofhw]{margin:0;}.css-ja0yb3,[data-css-ja0yb3]{color:#fff;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;margin-left:10px;font-weight:500;font-size:14px;line-height:20px;}@media (max-width: 979px){.css-ja0yb3,[data-css-ja0yb3]{font-size:16px;margin-top:1px;}}@media (max-width: 599px){.css-ja0yb3,[data-css-ja0yb3]{position:absolute;overflow:hidden;clip:rect(0 0 0 0);height:1px;width:1px;margin:-1px;padding:0;border:0;}}.css-qudo5w,[data-css-qudo5w]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;margin-right:10px;height:100%;align-items:center;color:#61dafb;-webkit-box-align:center;-webkit-align-items:center;}.css-qudo5w:focus,[data-css-qudo5w]:focus{outline:0;color:#ffffff;}@media (min-width: 600px){.css-qudo5w,[data-css-qudo5w]{width:calc(100% / 3);}}@media (max-width: 599px){.css-qudo5w,[data-css-qudo5w]{flex:0 0 auto;-webkit-flex:0 0 auto;}}.css-v72wnb,[data-css-v72wnb]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:row;align-items:stretch;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;height:100%;width:60%;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-webkit-box-align:stretch;-webkit-align-items:stretch;}@media (min-width: 0px) and (max-width: 599px){.css-v72wnb,[data-css-v72wnb]{width:auto;}}@media (max-width: 599px){.css-v72wnb,[data-css-v72wnb]{mask-image:-webkit-linear-gradient(to right, transparent, black 13px, black 90%, transparent); mask-image: -moz-linear-gradient(to right, transparent, black 13px, black 90%, transparent); mask-image: linear-gradient(to right, transparent, black 13px, black 90%, transparent);-webkit-mask-image:-webkit-linear-gradient(to right, transparent, black 13px, black 90%, transparent); -webkit-mask-image: -moz-linear-gradient(to right, transparent, black 13px, black 90%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 13px, black 90%, transparent);}}.css-10ayjkp,[data-css-10ayjkp]{padding:5px 10px;margin-left:10px;white-space:nowrap;font-size:15px;}.css-10ayjkp:hover,[data-css-10ayjkp]:hover{color:#61dafb;}.css-10ayjkp:focus,[data-css-10ayjkp]:focus{outline:0;background-color:#373940;border-radius:15px;}.css-14nlkyt,[data-css-14nlkyt]{padding:5px 10px;margin-left:10px;white-space:nowrap;font-size:14px;}.css-14nlkyt:hover,[data-css-14nlkyt]:hover{color:#61dafb;}.css-14nlkyt:focus,[data-css-14nlkyt]:focus{outline:0;background-color:#373940;border-radius:15px;}@media (max-width: 779px){.css-dkzafi,[data-css-dkzafi]{display:none;}}@media (min-width: 980px){.css-dkzafi,[data-css-dkzafi]{width:calc(100% / 6);}}.css-1xv6vnd,[data-css-1xv6vnd]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:row;align-items:center;height:50px;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-webkit-box-align:center;-webkit-align-items:center;}@media (min-width: 600px) and (max-width: 1279px){.css-1xv6vnd,[data-css-1xv6vnd]{height:45px;}}@media (max-width: 599px){.css-1xv6vnd,[data-css-1xv6vnd]{height:40px;}}.css-9zmdzy,[data-css-9zmdzy]{padding-left:20px;padding-right:20px;margin-left:auto;margin-right:auto;}@media (min-width: 780px){.css-9zmdzy,[data-css-9zmdzy]{width:90%;}}@media (min-width: 1340px){.css-9zmdzy,[data-css-9zmdzy]{max-width:900px;}}.css-16n14tl,[data-css-16n14tl]{background-color:#252b33;color:#ffffff;position:fixed;z-index:1;width:100%;top:0;left:0;}.css-1cxcbpn,[data-css-1cxcbpn]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:row;align-items:center;color:#ffffff;transition:color 0.2s ease-out;padding-left:15px;padding-right:15px;font-weight:400;font-family:brandon-grotesque;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-webkit-box-align:center;-webkit-align-items:center;-webkit-transition:color 0.2s ease-out;-moz-transition:color 0.2s ease-out;}.css-1cxcbpn:focus,[data-css-1cxcbpn]:focus{outline:0;background-color:#373940;color:#ffffff;}@media (min-width: 0px) and (max-width: 599px){.css-1cxcbpn,[data-css-1cxcbpn]{padding-left:8px;padding-right:8px;font-size:14px;}}@media (min-width: 600px) and (max-width: 979px){.css-1cxcbpn,[data-css-1cxcbpn]{padding-left:10px;padding-right:10px;font-size:14px;}}@media (min-width: 1280px){.css-1cxcbpn,[data-css-1cxcbpn]{padding-left:20px;padding-right:20px;font-size:13px;}.css-1cxcbpn:hover:not(:focus),[data-css-1cxcbpn]:hover:not(:focus){color:#f36;}}.css-gczsff,[data-css-gczsff]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex:0 0 auto;flex-direction:row;align-items:center;padding-left:0.5rem;padding-right:0.5rem;font-size:15px;cursor:pointer;-webkit-flex:0 0 auto;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-webkit-box-align:center;-webkit-align-items:center;}@media (max-width: 599px){.css-gczsff,[data-css-gczsff]{justify-content:flex-end;-webkit-box-pack:end;-webkit-justify-content:flex-end;}}@media (max-width: 979px){.css-gczsff,[data-css-gczsff]{margin-right:10px;}}@media (min-width: 600px) and (max-width: 979px){.css-gczsff,[data-css-gczsff]{width:calc(100% / 3);}}@media (min-width: 780px) and (max-width: 1339px){.css-gczsff,[data-css-gczsff]{width:calc(100% / 6);}}@media (min-width: 600px){.css-gczsff,[data-css-gczsff]{min-width:20px;}}.css-15lkjjo,[data-css-15lkjjo]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:column;flex-grow:1;flex-shrink:0;flex-basis:auto;justify-content:stretch;align-items:flex-start;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-webkit-flex-grow:1;-webkit-flex-shrink:0;-webkit-flex-basis:auto;-webkit-box-pack:stretch;-webkit-justify-content:stretch;-webkit-box-align:start;-webkit-align-items:flex-start;}.css-vqwfir,[data-css-vqwfir]{line-height:25px;p > img:[object Object];}.css-vqwfir .gatsby-highlight,[data-css-vqwfir] .gatsby-highlight{margin-top:25px;margin-left:-30px;margin-right:-30px;margin-bottom:25px;padding-left:35px;padding-right:15px;}.css-vqwfir a:not(.anchor):not(.gatsby-resp-image-link),[data-css-vqwfir] a:not(.anchor):not(.gatsby-resp-image-link){color:#2f7bbd;transition:color .3s;border-bottom:1px dotted rgba(64, 153, 255, .6);-webkit-transition:color .3s;-moz-transition:color .3s;}.css-vqwfir a:not(.anchor):not(.gatsby-resp-image-link):hover,[data-css-vqwfir] a:not(.anchor):not(.gatsby-resp-image-link):hover{color:#f36;}.css-vqwfir table,[data-css-vqwfir] table{border-collapse:collapse;border-spacing:0;}.css-vqwfir table th,[data-css-vqwfir] table th{font-size:15px;color:#323a45;background:#F3F3F3;border:1px solid #E6E6E6;padding:5px 8px;}.css-vqwfir table td,[data-css-vqwfir] table td{border:1px solid #E6E6E6;padding:5px 8px;}.css-vqwfir strong,[data-css-vqwfir] strong{font-weight:600;font-size:15px;color:#323a45;}.css-vqwfir p,[data-css-vqwfir] p{margin-top:30px;color:#333;font-size:16px;line-height:1.9;}.css-vqwfir p:first-of-type,[data-css-vqwfir] p:first-of-type{margin-top:15px;}.css-vqwfir p:first-child,[data-css-vqwfir] p:first-child{margin-top:0;}.css-vqwfir h3 + p,[data-css-vqwfir] h3 + p, .css-vqwfir h3 + p:first-of-type, [data-css-vqwfir] h3 + p:first-of-type{margin-top:20px;}.css-vqwfir p > code,[data-css-vqwfir] p > code, .css-vqwfir li > code, [data-css-vqwfir] li > code{padding:0 3px;font-size:inherit;word-break:break-word;font-family:"Open Sans", "open-sans", sans-serif;background:rgba(0, 0, 0, .05);margin:0 3px;border-radius:3px;}.css-vqwfir hr,[data-css-vqwfir] hr{height:1px;margin-bottom:-1px;border:none;border-bottom:1px solid #ececec;margin-top:40px;}.css-vqwfir hr:first-child,[data-css-vqwfir] hr:first-child{margin-top:0;}.css-vqwfir h1,[data-css-vqwfir] h1{line-height:1.2;}.css-vqwfir h2,[data-css-vqwfir] h2{color:#323a45;border-top:1px solid #ececec;margin-top:20px;padding-top:20px;line-height:1.2;}.css-vqwfir h2:first-child,[data-css-vqwfir] h2:first-child{border-top:0;margin-top:0;padding-top:0;}.css-vqwfir hr + h2,[data-css-vqwfir] hr + h2{border-top:0;margin-top:0;}.css-vqwfir h3,[data-css-vqwfir] h3{padding-top:50px;color:#323a45;font-weight:600;}.css-vqwfir h2 + h3,[data-css-vqwfir] h2 + h3, .css-vqwfir h2 + h3:first-of-type, [data-css-vqwfir] h2 + h3:first-of-type{padding-top:30px;}.css-vqwfir h4,[data-css-vqwfir] h4{font-size:16px;color:#323a45;line-height:1.3;margin-top:35px;font-weight:600;}.css-vqwfir h5,[data-css-vqwfir] h5{font-size:16px;color:#323a45;line-height:1.3;margin-top:20px;font-weight:600;}.css-vqwfir h4 + p,[data-css-vqwfir] h4 + p{margin-top:20px;}.css-vqwfir h5 + p,[data-css-vqwfir] h5 + p{margin-top:20px;}.css-vqwfir ol,[data-css-vqwfir] ol, .css-vqwfir ul, [data-css-vqwfir] ul{margin-top:20px;font-size:16px;color:#1a1a1a;padding-left:20px;}.css-vqwfir ol p,[data-css-vqwfir] ol p, .css-vqwfir ul p, [data-css-vqwfir] ul p, .css-vqwfir ol p:first-of-type, [data-css-vqwfir] ol p:first-of-type,  .css-vqwfir ul p:first-of-type,  [data-css-vqwfir] ul p:first-of-type{font-size:16px;margin-top:0;line-height:1.9;}.css-vqwfir ol li,[data-css-vqwfir] ol li, .css-vqwfir ul li, [data-css-vqwfir] ul li{margin-top:20px;}.css-vqwfir ol li.button-newapp,[data-css-vqwfir] ol li.button-newapp, .css-vqwfir ul li.button-newapp, [data-css-vqwfir] ul li.button-newapp{margin-top:0;}.css-vqwfir ol ol,[data-css-vqwfir] ol ol, .css-vqwfir ul ol, [data-css-vqwfir] ul ol, .css-vqwfir ol ul, [data-css-vqwfir] ol ul,  .css-vqwfir ul ul,  [data-css-vqwfir] ul ul{margin-left:20px;}.css-vqwfir img,[data-css-vqwfir] img{max-width:100%;}.css-vqwfir ol,[data-css-vqwfir] ol{list-style:decimal;}.css-vqwfir ul,[data-css-vqwfir] ul{list-style:disc;}.css-vqwfir blockquote,[data-css-vqwfir] blockquote{border-left-color:#333;border-left-width:3px;border-left-style:solid;font-style:italic;padding:0 29px 0 20px;margin-bottom:30px;margin-top:20px;margin-left:-30px;margin-right:-30px;}.css-vqwfir blockquote p,[data-css-vqwfir] blockquote p{margin-top:15px;}.css-vqwfir blockquote p:first-of-type,[data-css-vqwfir] blockquote p:first-of-type{font-weight:400;margin-left:7px;}.css-vqwfir blockquote p:nth-of-type(2),[data-css-vqwfir] blockquote p:nth-of-type(2){margin-top:0;}.css-vqwfir .gatsby-highlight + blockquote,[data-css-vqwfir] .gatsby-highlight + blockquote{margin-top:40px;}@media (max-width: 599px){.css-vqwfir .gatsby-highlight,[data-css-vqwfir] .gatsby-highlight{margin-left:-20px;margin-right:-20px;border-radius:0;}.css-vqwfir blockquote,[data-css-vqwfir] blockquote{margin-left:-20px;margin-right:-20px;}}@media (max-width: 979px){.css-vqwfir p,[data-css-vqwfir] p{font-size:16px;margin-top:25px;}.css-vqwfir h2,[data-css-vqwfir] h2{font-size:20px;}}@media (min-width: 0px) and (max-width: 599px){.css-vqwfir h1,[data-css-vqwfir] h1{font-size:30px;}}@media (min-width: 600px) and (max-width: 1279px){.css-vqwfir h1,[data-css-vqwfir] h1{font-size:45px;}}@media (min-width: 1280px){.css-vqwfir h1,[data-css-vqwfir] h1{font-size:60px;}.css-vqwfir h2,[data-css-vqwfir] h2{font-size:20px;}.css-vqwfir h3,[data-css-vqwfir] h3{font-size:18px;line-height:1.3;}}.css-124oy3v,[data-css-124oy3v]{margin-top:40px;margin-bottom:120px;}@media (min-width: 780px){.css-124oy3v,[data-css-124oy3v]{margin-top:50px;}}.css-5nmmc4,[data-css-5nmmc4]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:column;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;}@media (min-width: 2000px){.css-5nmmc4,[data-css-5nmmc4]{position:fixed;right:0;width:300px;z-index:2;}}.css-j4q8zh,[data-css-j4q8zh]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;min-height:calc(100vh - 60px);}@media (min-width: 2000px){.css-j4q8zh,[data-css-j4q8zh]{max-width:840px;margin-left:auto;margin-right:auto;}}.css-12vsfho,[data-css-12vsfho]{flex:1 0 auto;-webkit-flex:1 0 auto;}.css-5v0gxc,[data-css-5v0gxc]{width:100%;flex:1 0 auto;position:relative;z-index:0;-webkit-flex:1 0 auto;}.css-95xunl,[data-css-95xunl]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:column;flex-grow:1;flex-shrink:0;flex-basis:auto;justify-content:flex-start;align-items:stretch;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-webkit-flex-grow:1;-webkit-flex-shrink:0;-webkit-flex-basis:auto;-webkit-box-pack:start;-webkit-justify-content:flex-start;-webkit-box-align:stretch;-webkit-align-items:stretch;}.css-qvgrb1,[data-css-qvgrb1]{color:#fff;margin-bottom:0;margin-top:40px;font-size:30px;line-height:40px;letter-spacing:.08em;font-weight:400;font-family:"brandon-grotesque", sans-serif;text-transform:uppercase;}@media (max-width: 779px){.css-qvgrb1,[data-css-qvgrb1]{font-size:20px;line-height:45px;}}@media (min-width: 780px) and (max-width: 979px){.css-qvgrb1,[data-css-qvgrb1]{margin-top:60px;}}@media (min-width: 980px){.css-qvgrb1,[data-css-qvgrb1]{margin-top:80px;}}.css-1vzv80m,[data-css-1vzv80m]{margin-top:15px;color:#abb0b7;font-style:italic;letter-spacing:.005em;font-size:12px;font-weight:300;}.css-ughd3t,[data-css-ughd3t]{position:relative;text-align:center;width:100%;height:200px;overflow:hidden;background:#323a45;}.css-hgc6lu,[data-css-hgc6lu]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:row;flex-grow:0;flex-shrink:1;flex-basis:auto;justify-content:space-between;align-items:baseline;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-webkit-flex-grow:0;-webkit-flex-shrink:1;-webkit-flex-basis:auto;-webkit-box-pack:justify;-webkit-justify-content:space-between;-webkit-box-align:baseline;-webkit-align-items:baseline;}.css-174qq1k,[data-css-174qq1k]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:column;flex-grow:1;flex-shrink:1;flex-basis:auto;justify-content:flex-start;align-items:stretch;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-webkit-flex-grow:1;-webkit-flex-shrink:1;-webkit-flex-basis:auto;-webkit-box-pack:start;-webkit-justify-content:flex-start;-webkit-box-align:stretch;-webkit-align-items:stretch;}.css-86uhag,[data-css-86uhag]{font-size:.8rem;margin-bottom:20px;}.css-gyrv08,[data-css-gyrv08]{display:none;}.css-1eushs4,[data-css-1eushs4]{padding:8px 17px;border:1px solid #abb0b7;border-radius:3px;font-size:14px;font-weight:400;color:#333;transition:all .2s;-webkit-transition:all .2s;-moz-transition:all .2s;}.css-1eushs4:hover,[data-css-1eushs4]:hover{background-color:#55acee;color:#fff;}.css-x76up1,[data-css-x76up1]{display:inline-block;margin-right:0.5em;}.css-9st2on,[data-css-9st2on]{padding:8px 17px;border:1px solid #abb0b7;border-radius:3px;font-size:14px;font-weight:400;color:#333;transition:all .2s;-webkit-transition:all .2s;-moz-transition:all .2s;}.css-9st2on:hover,[data-css-9st2on]:hover{background-color:#3b5998;color:#fff;}.css-oqtow6,[data-css-oqtow6]{padding:8px 17px;border:1px solid #abb0b7;border-radius:3px;font-size:14px;font-weight:400;color:#333;transition:all .2s;-webkit-transition:all .2s;-moz-transition:all .2s;}.css-oqtow6:hover,[data-css-oqtow6]:hover{background-color:#dd4b39;color:#fff;}.css-92irrj,[data-css-92irrj]{padding:8px 17px;border:1px solid #abb0b7;border-radius:3px;font-size:14px;font-weight:400;color:#333;transition:all .2s;-webkit-transition:all .2s;-moz-transition:all .2s;}.css-92irrj:hover,[data-css-92irrj]:hover{background-color:#0976b4;color:#fff;}.css-7c9av6,[data-css-7c9av6]{margin:0;padding:0;}.css-gjwx19,[data-css-gjwx19]{margin-top:80px;border-top:1px solid #abb0b7;padding-top:20px;}.css-42tr88,[data-css-42tr88]{font-size:.8rem;margin-bottom:10px;}.css-d7avb2,[data-css-d7avb2]{height:109px;width:109px;padding:8px 8px;border:1px solid #abb0b7;border-radius:3px;font-size:14px;font-weight:400;color:#333;}.css-qih34u,[data-css-qih34u]{font-size:.6rem;text-align:center;margin-top:5px;}.css-1ydqk91,[data-css-1ydqk91]{margin-top:30px;padding-top:10px;}.css-p72dfi,[data-css-p72dfi]{margin-top:60px;}@media (min-width: 0px) and (max-width: 599px){.css-p72dfi,[data-css-p72dfi]{margin-top:40px;}}@media (min-width: 600px) and (max-width: 979px){.css-p72dfi,[data-css-p72dfi]{margin-top:0;}}@media (min-width: 780px) and (max-width: 1279px){.css-p72dfi,[data-css-p72dfi]{margin-top:50px;}}@media (min-width: 600px){.css-p72dfi,[data-css-p72dfi]{transform:none !important;-webkit-transform:none !important;}}@media (max-width: 599px){.css-1vrdrc4,[data-css-1vrdrc4]{top:0;left:0;bottom:0;right:0;position:fixed;background-color:#ffffff;z-index:2;height:100vh;overflow-y:auto;-webkit-overflow-scrolling:touch;pointer-events:none;}}@media (min-width: 780px){.css-1vrdrc4,[data-css-1vrdrc4]{margin-right:-999px;padding-right:999px;}}@media (min-width: 780px) and (max-width: 1999px){.css-1vrdrc4,[data-css-1vrdrc4]{position:fixed;z-index:2;height:100%;}}@media (min-width: 600px){.css-1vrdrc4,[data-css-1vrdrc4]{position:fixed;z-index:2;height:calc(100vh - 60px);overflow-y:auto;-webkit-overflow-scrolling:touch;margin-right:-999px;padding-right:999px;opacity:1 !important;}}@media (min-width: 600px) and (max-width: 779px){.css-1vrdrc4,[data-css-1vrdrc4]{height:calc(100vh - 40px);}}@media (min-width: 780px) and (max-width: 1279px){.css-1vrdrc4,[data-css-1vrdrc4]{height:calc(100vh - 50px);}}.css-kh5h8y,[data-css-kh5h8y]{width:100%;padding-left:20px;position:relative;font-size:13px;}@media (min-width: 1100px){.css-kh5h8y,[data-css-kh5h8y]{padding-left:40px;}}@media (max-width: 599px){.css-kh5h8y,[data-css-kh5h8y]{padding-bottom:100px;}}.css-1aai96l,[data-css-1aai96l]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:column;flex-grow:0;flex-shrink:1;flex-basis:auto;justify-content:flex-start;align-items:stretch;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-webkit-flex-grow:0;-webkit-flex-shrink:1;-webkit-flex-basis:auto;-webkit-box-pack:start;-webkit-justify-content:flex-start;-webkit-box-align:stretch;-webkit-align-items:stretch;}.css-1tckc8c,[data-css-1tckc8c]{margin-left:20px;padding:6px 17px;border:1px solid #f36;border-radius:3px;font-size:14px;font-weight:700;color:#fff;transition:all .2s ease-in-out;background:#f36;-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;}.css-1tckc8c:hover,[data-css-1tckc8c]:hover{background:#252b33;border:1px solid #f36;color:#f36;}.css-l2t6xk,[data-css-l2t6xk]{color:#fff;padding-top:25px;}.css-1s9y5m3,[data-css-1s9y5m3]{padding-top:20px;display:block !important;}@media (min-width: 1280px){.css-1s9y5m3,[data-css-1s9y5m3]{width:calc(100% / 2);order:-1;-webkit-order:-1;}}@media (min-width: 980px){.css-1s9y5m3,[data-css-1s9y5m3]{order:-1;-webkit-order:-1;}}@media (max-width: 979px){.css-1s9y5m3,[data-css-1s9y5m3]{text-align:center;width:100%;padding-top:40px;}}.css-ftk3jl,[data-css-ftk3jl]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:row;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-webkit-box-lines:multiple;-webkit-flex-wrap:wrap;}@media (min-width: 600px) and (max-width: 979px){.css-ftk3jl,[data-css-ftk3jl]{padding-right:240px;}}@media (min-width: 980px) and (max-width: 1339px){.css-ftk3jl,[data-css-ftk3jl]{padding-right:280px;}}@media (min-width: 1100px) and (max-width: 1999px){.css-ftk3jl,[data-css-ftk3jl]{padding-right:380px;}}.css-1y8xe5z,[data-css-1y8xe5z]{background-color:#252b33;color:#ffffff;padding-top:0;padding-bottom:20px;}@media (min-width: 2000px){.css-1y8xe5z,[data-css-1y8xe5z]{padding-top:40px;}}.css-1qq1zo5,[data-css-1qq1zo5]{font-family:brandon-grotesque;margin-bottom:5px;font-weight:400;font-size:14px;display:block;}.css-1pg3mb5,[data-css-1pg3mb5]{color:#1a1a1a;display:inline-block;transition:border 0.2s ease;margin-top:3px;padding-bottom:2px;border-bottom:1px dotted transparent;-webkit-transition:border 0.2s ease;-moz-transition:border 0.2s ease;}.css-1pg3mb5:hover,[data-css-1pg3mb5]:hover{color:#6d6d6d;border-bottom:1px dotted rgba(64, 153, 255, .6);}.css-axv6fp,[data-css-axv6fp]{margin-bottom:10px;}@media (min-width: 600px){.css-axv6fp,[data-css-axv6fp]{display:block;}}</style><script id="glamor-ids">
+        // <![CDATA[
+        window._glamor = ["1ekujff","1vv77hc","1jld97y","1b1t4gw","14f2gh7","1u4y56u","1h2fzrm","syyzfr","ki8d3w","o0vamj","1j3hxv8","zsednb","2x6ipt","nf6sef","6kb8y3","1ogfv32","h7y4wy","kgt1pa","qcikeu","9cb5ay","lhlvbt","f5j1cd","1lk3hfe","8jdw55","17ufatm","u4j1fe","1jmm0qs","vztle4","1spusys","p9r9zw","k99y95","tqmsxa","514nx3","bmkla1","1i9sgxs","1ilizh3","kirud9","tt2yeq","h5g5l5","18vkdd6","1f9aa52","w0wzhx","kcwrr","1dvmgyu","2oh51h","1hke9lz","1gqfy9o","und790","164veih","q1fzsk","wzwv41","8r5hw5","dumj1p","j1ud8o","npkq0u","htcfem","eznxm9","1cpgitm","1lzdxot","g5mtsg","1w8g2ov","pbmvx7","rabpw6","1tj07cs","19ekajh","1rho0fa","1yok9qz","190hivd","1wiofhw","ja0yb3","qudo5w","v72wnb","10ayjkp","14nlkyt","dkzafi","1xv6vnd","9zmdzy","16n14tl","1cxcbpn","gczsff","15lkjjo","vqwfir","124oy3v","5nmmc4","j4q8zh","12vsfho","5v0gxc","95xunl","qvgrb1","1vzv80m","ughd3t","hgc6lu","174qq1k","86uhag","gyrv08","1eushs4","x76up1","9st2on","oqtow6","92irrj","7c9av6","gjwx19","42tr88","d7avb2","qih34u","1ydqk91","p72dfi","1vrdrc4","kh5h8y","1aai96l","1tckc8c","l2t6xk","1s9y5m3","ftk3jl","1y8xe5z","1qq1zo5","1pg3mb5","axv6fp"]
+        // ]]>
+        </script><style type="text/css">
+    .anchor {
+      float: left;
+      padding-right: 4px;
+      margin-left: -20px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var offset = element.offsetTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="alternate" type="application/rss+xml" href="/feed.xml"/><title data-react-helmet="true">TCP 重传、滑动窗口、流量控制、拥塞控制 - little forest</title><meta data-react-helmet="true" property="og:title" content="TCP 重传、滑动窗口、流量控制、拥塞控制 - little forest"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:url" content="https://sylvenas.github.io/blog/2018/12/22/tcp.html"/><meta data-react-helmet="true" property="og:image" content="/logo-og.png"/><meta data-react-helmet="true" property="og:description" content="Little Forset Blog - null"/><meta data-react-helmet="true" property="fb:app_id" content="623268441017527"/><script data-react-helmet="true" type="application/ld+json">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?128683c0ba41f92f130e92ac9620d31b";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script><style id="gatsby-inlined-css">html{box-sizing:border-box;font-family:Open Sans,open-sans,sans-serif;font-weight:400;font-style:normal;-webkit-font-smoothing:antialiased}body{overflow-x:hidden;position:relative}*{margin:0;padding:0}*,:after,:before{box-sizing:inherit}a{color:inherit;text-decoration:none}ol,ul{list-style:none}img{display:block;margin:0 auto}code,pre{font-family:source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace}.searchbox{display:inline-block;position:relative;width:200px;height:32px!important;white-space:nowrap;box-sizing:border-box;visibility:visible!important}.searchbox .algolia-autocomplete{display:block;width:100%;height:100%}.searchbox__wrapper{width:100%;height:100%;z-index:999;position:relative}.searchbox__input{display:inline-block;box-sizing:border-box;transition:box-shadow .4s ease,background .4s ease;border:0;border-radius:16px;box-shadow:inset 0 0 0 1px #ccc;background:#fff!important;padding:0;padding-right:26px;padding-left:32px;width:100%;height:100%;vertical-align:middle;white-space:normal;font-size:12px;-webkit-appearance:none;-moz-appearance:none;appearance:none}.searchbox__input::-webkit-search-cancel-button,.searchbox__input::-webkit-search-decoration,.searchbox__input::-webkit-search-results-button,.searchbox__input::-webkit-search-results-decoration{display:none}.searchbox__input:hover{box-shadow:inset 0 0 0 1px #b3b3b3}.searchbox__input:active,.searchbox__input:focus{outline:0;box-shadow:inset 0 0 0 1px #aaa;background:#fff}.searchbox__input:-ms-input-placeholder{color:#aaa}.searchbox__input::placeholder{color:#aaa}.searchbox__submit{position:absolute;top:0;margin:0;border:0;border-radius:16px 0 0 16px;background-color:rgba(69,142,225,0);padding:0;width:32px;height:100%;vertical-align:middle;text-align:center;font-size:inherit;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;right:inherit;left:0}.searchbox__submit:before{display:inline-block;margin-right:-4px;height:100%;vertical-align:middle;content:""}.searchbox__submit:active,.searchbox__submit:hover{cursor:pointer}.searchbox__submit:focus{outline:0}.searchbox__submit svg{width:14px;height:14px;vertical-align:middle;fill:#6d7e96}.searchbox__reset{display:block;position:absolute;top:8px;right:8px;margin:0;border:0;background:none;cursor:pointer;padding:0;font-size:inherit;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;fill:rgba(0,0,0,.5)}.searchbox__reset.hide{display:none}.searchbox__reset:focus{outline:0}.searchbox__reset svg{display:block;margin:4px;width:8px;height:8px}.searchbox__input:valid~.searchbox__reset{display:block;animation-name:sbx-reset-in;animation-duration:.15s}@keyframes sbx-reset-in{0%{transform:translate3d(-20%,0,0);opacity:0}to{transform:none;opacity:1}}.algolia-autocomplete .ds-dropdown-menu:before{display:block;position:absolute;content:"";width:14px;height:14px;background:#373940;z-index:1000;top:-7px;border-top:1px solid #373940;border-right:1px solid #373940;-ms-transform:rotate(-45deg);transform:rotate(-45deg);border-radius:2px}.algolia-autocomplete .ds-dropdown-menu{box-shadow:0 1px 0 0 rgba(0,0,0,.2),0 2px 3px 0 rgba(0,0,0,.1)}@media (min-width:601px){.algolia-autocomplete.algolia-autocomplete-right .ds-dropdown-menu{right:0!important;left:inherit!important}.algolia-autocomplete.algolia-autocomplete-right .ds-dropdown-menu:before{right:48px}.algolia-autocomplete .ds-dropdown-menu{top:-6px;border-radius:4px;margin:6px 0 0;padding:0;text-align:left;height:auto;position:relative;background:transparent;border:none;z-index:999;max-width:600px;min-width:500px}}@media (max-width:600px){.algolia-autocomplete .ds-dropdown-menu{z-index:100;position:fixed!important;top:40px!important;left:auto!important;right:1rem!important;width:600px;max-width:calc(100% - 2rem);max-height:calc(100% - 5rem);display:block}.algolia-autocomplete .ds-dropdown-menu:before{right:96px;right:6rem}}.algolia-autocomplete .ds-dropdown-menu .ds-suggestions{position:relative;z-index:1000}.algolia-autocomplete .ds-dropdown-menu .ds-suggestion{cursor:pointer}.algolia-autocomplete .ds-dropdown-menu [class^=ds-dataset-]{position:relative;border-radius:4px;overflow:auto;padding:0}.algolia-autocomplete .ds-dropdown-menu *{box-sizing:border-box}.algolia-autocomplete .algolia-docsearch-suggestion{position:relative;padding:0;overflow:hidden}.algolia-autocomplete .ds-cursor .algolia-docsearch-suggestion--wrapper{background:#f1f1f1;box-shadow:inset -2px 0 0 #61dafb}.algolia-autocomplete .algolia-docsearch-suggestion--highlight{background:#ffe564;padding:.1em .05em}.algolia-autocomplete .algolia-docsearch-suggestion--category-header .algolia-docsearch-suggestion--category-header-lvl0 .algolia-docsearch-suggestion--highlight,.algolia-autocomplete .algolia-docsearch-suggestion--category-header .algolia-docsearch-suggestion--category-header-lvl1 .algolia-docsearch-suggestion--highlight{color:inherit;background:inherit}.algolia-autocomplete .algolia-docsearch-suggestion--text .algolia-docsearch-suggestion--highlight{padding:0 0 1px;background:inherit;box-shadow:inset 0 -2px 0 0 rgba(69,142,225,.8);color:inherit}.algolia-autocomplete .algolia-docsearch-suggestion--content{display:block;float:right;width:70%;position:relative;padding:5.33333px 0 5.33333px 10.66667px;cursor:pointer}.algolia-autocomplete .algolia-docsearch-suggestion--content:before{content:"";position:absolute;display:block;top:0;height:100%;width:1px;background:#ececec;left:-1px}.algolia-autocomplete .algolia-docsearch-suggestion--category-header{position:relative;display:none;font-size:14px;letter-spacing:.08em;font-weight:700;background-color:#373940;text-transform:uppercase;color:#fff;margin:0;padding:5px 8px}.algolia-autocomplete .algolia-docsearch-suggestion--wrapper{background-color:#fff;width:100%;float:left;padding:8px 0 0}.algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column{float:left;width:30%;display:none;padding-left:0;text-align:right;position:relative;padding:5.33333px 10.66667px;color:#777;font-size:.9em;word-wrap:break-word}.algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column:before{content:"";position:absolute;display:block;top:0;height:100%;width:1px;background:#ececec;right:0}.algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column .algolia-docsearch-suggestion--highlight{background-color:inherit;color:inherit}.algolia-autocomplete .algolia-docsearch-suggestion--subcategory-inline{display:none}.algolia-autocomplete .algolia-docsearch-suggestion--title{margin-bottom:4px;color:#02060c;font-size:.9em;font-weight:700}.algolia-autocomplete .algolia-docsearch-suggestion--text{display:block;line-height:1.5em;font-size:.85em;color:#63676d;padding-right:2px}.algolia-autocomplete .algolia-docsearch-suggestion--no-results{width:100%;padding:8px 0;text-align:center;font-size:1.2em;background-color:#373940;margin-top:-8px}.algolia-autocomplete .algolia-docsearch-suggestion--no-results .algolia-docsearch-suggestion--text{color:#fff;margin-top:4px}.algolia-autocomplete .algolia-docsearch-suggestion--no-results:before{display:none}.algolia-autocomplete .algolia-docsearch-suggestion code{padding:1px 5px;font-size:90%;border:none;color:#222;background-color:#ebebeb;border-radius:3px;font-family:source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace}.algolia-autocomplete .algolia-docsearch-suggestion code .algolia-docsearch-suggestion--highlight{background:none}.algolia-autocomplete .algolia-docsearch-suggestion.algolia-docsearch-suggestion__main .algolia-docsearch-suggestion--category-header,.algolia-autocomplete .algolia-docsearch-suggestion.algolia-docsearch-suggestion__secondary .algolia-docsearch-suggestion--subcategory-column{display:block}.algolia-autocomplete .algolia-docsearch-footer{background-color:#fff;width:100%;height:30px;z-index:2000;float:right;font-size:0;line-height:0}.algolia-autocomplete .algolia-docsearch-footer--logo{background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 18"><defs><linearGradient id="a" x1="-36.87%" x2="129.43%" y1="134.94%" y2="-27.7%"><stop stop-color="%2300AEFF" offset="0%"/><stop stop-color="%233369E7" offset="100%"/></linearGradient></defs><g fill="none" fill-rule="evenodd"><path fill="url(%23a)" d="M59.4.02h13.3a2.37 2.37 0 0 1 2.38 2.37V15.6a2.37 2.37 0 0 1-2.38 2.36H59.4a2.37 2.37 0 0 1-2.38-2.36V2.38A2.37 2.37 0 0 1 59.4.02z"/><path fill="%23FFF" d="M66.26 4.56c-2.82 0-5.1 2.27-5.1 5.08 0 2.8 2.28 5.07 5.1 5.07 2.8 0 5.1-2.26 5.1-5.07 0-2.8-2.28-5.07-5.1-5.07zm0 8.65c-2 0-3.6-1.6-3.6-3.56 0-1.97 1.6-3.58 3.6-3.58 1.98 0 3.6 1.6 3.6 3.58a3.58 3.58 0 0 1-3.6 3.57zm0-6.4v2.66c0 .07.08.13.15.1l2.4-1.24c.04-.02.06-.1.03-.14a2.96 2.96 0 0 0-2.46-1.5c-.06 0-.1.05-.1.1zm-3.33-1.96l-.3-.3a.78.78 0 0 0-1.12 0l-.36.36a.77.77 0 0 0 0 1.1l.3.3c.05.05.13.04.17 0 .2-.25.4-.5.6-.7.23-.23.46-.43.7-.6.07-.04.07-.1.03-.16zm5-.8V3.4a.78.78 0 0 0-.78-.78h-1.83a.78.78 0 0 0-.78.78v.63c0 .07.06.12.14.1a5.74 5.74 0 0 1 1.58-.22c.52 0 1.04.07 1.54.2a.1.1 0 0 0 .13-.1z"/><path fill="%23182359" d="M102.16 13.76c0 1.46-.37 2.52-1.12 3.2-.75.67-1.9 1-3.44 1-.56 0-1.74-.1-2.67-.3l.34-1.7c.78.17 1.82.2 2.36.2.86 0 1.48-.16 1.84-.5.37-.36.55-.88.55-1.57v-.35a6.37 6.37 0 0 1-.84.3 4.15 4.15 0 0 1-1.2.17 4.5 4.5 0 0 1-1.6-.28 3.38 3.38 0 0 1-1.26-.82 3.74 3.74 0 0 1-.8-1.35c-.2-.54-.3-1.5-.3-2.2 0-.67.1-1.5.3-2.06a3.92 3.92 0 0 1 .9-1.43 4.12 4.12 0 0 1 1.45-.92 5.3 5.3 0 0 1 1.94-.37c.7 0 1.35.1 1.97.2a15.86 15.86 0 0 1 1.6.33v8.46zm-5.95-4.2c0 .9.2 1.88.6 2.3.4.4.9.62 1.53.62.34 0 .66-.05.96-.15a2.75 2.75 0 0 0 .73-.33V6.7a8.53 8.53 0 0 0-1.42-.17c-.76-.02-1.36.3-1.77.8-.4.5-.62 1.4-.62 2.23zm16.13 0c0 .72-.1 1.26-.32 1.85a4.4 4.4 0 0 1-.9 1.53c-.38.42-.85.75-1.4.98-.54.24-1.4.37-1.8.37-.43 0-1.27-.13-1.8-.36a4.1 4.1 0 0 1-1.4-.97 4.5 4.5 0 0 1-.92-1.52 5.04 5.04 0 0 1-.33-1.84c0-.72.1-1.4.32-2 .22-.6.53-1.1.92-1.5.4-.43.86-.75 1.4-.98a4.55 4.55 0 0 1 1.78-.34 4.7 4.7 0 0 1 1.8.34c.54.23 1 .55 1.4.97.38.42.68.92.9 1.5.23.6.35 1.3.35 2zm-2.2 0c0-.92-.2-1.7-.6-2.22-.38-.54-.94-.8-1.64-.8-.72 0-1.27.26-1.67.8-.4.54-.58 1.3-.58 2.22 0 .93.2 1.56.6 2.1.38.54.94.8 1.64.8s1.25-.26 1.65-.8c.4-.55.6-1.17.6-2.1zm6.97 4.7c-3.5.02-3.5-2.8-3.5-3.27L113.57.92l2.15-.34v10c0 .25 0 1.87 1.37 1.88v1.8zm3.77 0h-2.15v-9.2l2.15-.33v9.54zM119.8 3.74c.7 0 1.3-.58 1.3-1.3 0-.7-.58-1.3-1.3-1.3-.73 0-1.3.6-1.3 1.3 0 .72.58 1.3 1.3 1.3zm6.43 1c.7 0 1.3.1 1.78.27.5.18.88.42 1.17.73.28.3.5.74.6 1.18.13.46.2.95.2 1.5v5.47a25.24 25.24 0 0 1-1.5.25c-.67.1-1.42.15-2.25.15a6.83 6.83 0 0 1-1.52-.16 3.2 3.2 0 0 1-1.18-.5 2.46 2.46 0 0 1-.76-.9c-.18-.37-.27-.9-.27-1.44 0-.52.1-.85.3-1.2.2-.37.48-.67.83-.9a3.6 3.6 0 0 1 1.23-.5 7.07 7.07 0 0 1 2.2-.1l.83.16v-.35c0-.25-.03-.48-.1-.7a1.5 1.5 0 0 0-.3-.58c-.15-.18-.34-.3-.58-.4a2.54 2.54 0 0 0-.92-.17c-.5 0-.94.06-1.35.13-.4.08-.75.16-1 .25l-.27-1.74c.27-.1.67-.18 1.2-.28a9.34 9.34 0 0 1 1.65-.14zm.18 7.74c.66 0 1.15-.04 1.5-.1V10.2a5.1 5.1 0 0 0-2-.1c-.23.03-.45.1-.64.2a1.17 1.17 0 0 0-.47.38c-.13.17-.18.26-.18.52 0 .5.17.8.5.98.32.2.74.3 1.3.3zM84.1 4.8c.72 0 1.3.08 1.8.26.48.17.87.42 1.15.73.3.3.5.72.6 1.17.14.45.2.94.2 1.47v5.48a25.24 25.24 0 0 1-1.5.26c-.67.1-1.42.14-2.25.14a6.83 6.83 0 0 1-1.52-.16 3.2 3.2 0 0 1-1.18-.5 2.46 2.46 0 0 1-.76-.9c-.18-.38-.27-.9-.27-1.44 0-.53.1-.86.3-1.22.2-.36.5-.65.84-.88a3.6 3.6 0 0 1 1.24-.5 7.07 7.07 0 0 1 2.2-.1c.26.03.54.08.84.15v-.35c0-.24-.03-.48-.1-.7a1.5 1.5 0 0 0-.3-.58c-.15-.17-.34-.3-.58-.4a2.54 2.54 0 0 0-.9-.15c-.5 0-.96.05-1.37.12-.4.07-.75.15-1 .24l-.26-1.75c.27-.08.67-.17 1.18-.26a8.9 8.9 0 0 1 1.66-.15zm.2 7.73c.65 0 1.14-.04 1.48-.1v-2.17a5.1 5.1 0 0 0-1.98-.1c-.24.03-.46.1-.65.18a1.17 1.17 0 0 0-.47.4c-.12.17-.17.26-.17.52 0 .5.18.8.5.98.32.2.75.3 1.3.3zm8.68 1.74c-3.5 0-3.5-2.82-3.5-3.28L89.45.92 91.6.6v10c0 .25 0 1.87 1.38 1.88v1.8z"/><path fill="%231D3657" d="M5.03 11.03c0 .7-.26 1.24-.76 1.64-.5.4-1.2.6-2.1.6-.88 0-1.6-.14-2.17-.42v-1.2c.36.16.74.3 1.14.38.4.1.78.15 1.13.15.5 0 .88-.1 1.12-.3a.94.94 0 0 0 .35-.77.98.98 0 0 0-.33-.74c-.22-.2-.68-.44-1.37-.72-.72-.3-1.22-.62-1.52-1C.23 8.27.1 7.82.1 7.3c0-.65.22-1.17.7-1.55.46-.37 1.08-.56 1.86-.56.76 0 1.5.16 2.25.48l-.4 1.05c-.7-.3-1.32-.44-1.87-.44-.4 0-.73.08-.94.26a.9.9 0 0 0-.33.72c0 .2.04.38.12.52.08.15.22.3.42.4.2.14.55.3 1.06.52.58.24 1 .47 1.27.67.27.2.47.44.6.7.12.26.18.57.18.92zM9 13.27c-.92 0-1.64-.27-2.16-.8-.52-.55-.78-1.3-.78-2.24 0-.97.24-1.73.72-2.3.5-.54 1.15-.82 2-.82.78 0 1.4.25 1.85.72.46.48.7 1.14.7 1.97v.67H7.35c0 .58.17 1.02.46 1.33.3.3.7.47 1.24.47.36 0 .68-.04.98-.1a5.1 5.1 0 0 0 .98-.33v1.02a3.87 3.87 0 0 1-.94.32 5.72 5.72 0 0 1-1.08.1zm-.22-5.2c-.4 0-.73.12-.97.38s-.37.62-.42 1.1h2.7c0-.48-.13-.85-.36-1.1-.23-.26-.54-.38-.94-.38zm7.7 5.1l-.26-.84h-.05c-.28.36-.57.6-.86.74-.28.13-.65.2-1.1.2-.6 0-1.05-.16-1.38-.48-.32-.32-.5-.77-.5-1.34 0-.62.24-1.08.7-1.4.45-.3 1.14-.47 2.07-.5l1.02-.03V9.2c0-.37-.1-.65-.27-.84-.17-.2-.45-.28-.82-.28-.3 0-.6.04-.88.13a6.68 6.68 0 0 0-.8.33l-.4-.9a4.4 4.4 0 0 1 1.05-.4 4.86 4.86 0 0 1 1.08-.12c.76 0 1.33.18 1.7.5.4.33.6.85.6 1.56v4h-.9zm-1.9-.87c.47 0 .83-.13 1.1-.38.3-.26.43-.62.43-1.08v-.52l-.76.03c-.6.03-1.02.13-1.3.3s-.4.45-.4.82c0 .26.08.47.24.6.16.16.4.23.7.23zm7.57-5.2c.25 0 .46.03.62.06l-.12 1.18a2.38 2.38 0 0 0-.56-.06c-.5 0-.92.16-1.24.5-.3.32-.47.75-.47 1.27v3.1h-1.27V7.23h1l.16 1.05h.05c.2-.36.45-.64.77-.85a1.83 1.83 0 0 1 1.02-.3zm4.12 6.17c-.9 0-1.58-.27-2.05-.8-.47-.52-.7-1.27-.7-2.25 0-1 .24-1.77.73-2.3.5-.54 1.2-.8 2.12-.8.63 0 1.2.1 1.7.34l-.4 1c-.52-.2-.96-.3-1.3-.3-1.04 0-1.55.68-1.55 2.05 0 .67.13 1.17.38 1.5.26.34.64.5 1.13.5a3.23 3.23 0 0 0 1.6-.4v1.1a2.53 2.53 0 0 1-.73.28 4.36 4.36 0 0 1-.93.08zm8.28-.1h-1.27V9.5c0-.45-.1-.8-.28-1.02-.18-.23-.47-.34-.88-.34-.53 0-.9.16-1.16.48-.25.3-.38.85-.38 1.6v2.94h-1.26V4.8h1.26v2.12c0 .34-.02.7-.06 1.1h.08a1.76 1.76 0 0 1 .72-.67c.3-.16.66-.24 1.07-.24 1.43 0 2.15.74 2.15 2.2v3.86zM42.2 7.1c.74 0 1.32.28 1.73.82.4.53.62 1.3.62 2.26 0 .97-.2 1.73-.63 2.27-.42.54-1 .82-1.75.82s-1.33-.27-1.75-.8h-.08l-.23.7h-.94V4.8h1.26v2l-.02.64-.03.56h.05c.4-.6 1-.9 1.78-.9zm-.33 1.04c-.5 0-.88.15-1.1.45-.22.3-.34.8-.35 1.5v.08c0 .72.12 1.24.35 1.57.23.32.6.48 1.12.48.44 0 .78-.17 1-.53.24-.35.36-.87.36-1.53 0-1.35-.47-2.03-1.4-2.03zm3.24-.92h1.4l1.2 3.37c.18.47.3.92.36 1.34h.04l.18-.72 1.37-4H51l-2.53 6.73c-.46 1.23-1.23 1.85-2.3 1.85-.3 0-.56-.03-.83-.1v-1c.2.05.4.08.65.08.6 0 1.03-.36 1.28-1.06l.22-.56-2.4-5.94z"/></g></svg>');background-repeat:no-repeat;background-position:50%;background-size:100%;overflow:hidden;text-indent:-9000px;width:110px;height:100%;display:block;margin-left:auto;margin-right:5px}@font-face{font-family:brandon-grotesque;src:url(/static/brandon-grotesque.c8e490c1.ttf)}@font-face{font-family:Open Sans;src:url(/static/Open-Sans.629a55a7.ttf)}@media only screen and (min-width:600px){.share{margin:.5em}.post-categories,.post-date-cat,.share{display:inline}}.timeline{position:relative;font-family:Open Sans,open-sans,sans-serif}.timeline:before{content:"";position:absolute;top:0;left:-1px;height:100%;width:2px;background:#f97171}.title{margin:2em auto 1em}.year{position:relative;font:600 30px/1.5;font-size:18px;display:block;color:#323a45;text-transform:none;margin:.625rem 0 .5rem;margin-left:1em}.year:before{content:" ";position:absolute;left:0;top:50%;margin-left:-22px;margin-top:-4px;width:8px;height:8px;background:#f36;border-radius:50%}.posts-ul{margin:14px 0;padding-left:40px}.post-li{margin:1em auto;display:-ms-flexbox;display:flex}.post-date{width:70px;font-size:14px}.post-date-cat{width:120px;color:#2f7bbd;transition:color .3s;cursor:pointer;font-size:14px}.post-date-cat:hover{color:#f36}.post-categories{width:200px}.post-categorie{color:#2f7bbd;transition:color .3s;cursor:pointer;font-size:14px}.post-categorie:hover{color:#f36}.post-title{max-width:calc(100% - 70px)}.post-title,.post-title-cat{color:#191d22;transition:color .3s;cursor:pointer;font-size:15px;border-bottom:1px dotted rgba(64,153,255,.6)}.post-title-cat:hover,.post-title:hover{color:#f36;border-bottom:1px solid #f36}.resume-title{font-weight:600;font:600 30px/1.5 Open Sans,open-sans,sans-serif;font-size:18px;color:#323a45}.resume-sub-title{display:inline-block;font-weight:600;font:600 30px/1.5 Open Sans,open-sans,sans-serif;font-size:16px;color:#323a45;margin:5px 0;border-bottom:1px dotted rgba(64,153,255,.6);cursor:pointer;transition:color .3s}.resume-sub-title:hover{color:#f36}.resume-p{color:#333;font-size:16px;line-height:1.9}.keywords{padding:0 3px;font-size:inherit;word-break:break-word;font-family:Open Sans,open-sans,sans-serif;background:rgba(0,0,0,.05);margin:0 3px;border-top-left-radius:3px;border-top-right-radius:3px;border-bottom:1px dotted rgba(64,153,255,.6);transition:color .3s;cursor:pointer}.keywords:hover{color:#f36;border-bottom:1px solid #f36}.resume-p>a{color:#2f7bbd;transition:color .3s}.resume-p>a,.resume-p>a:hover{font-size:16px;line-height:1.9;cursor:pointer}.resume-p>a:hover{color:#f36}.love-container{width:100%;margin:0 auto;position:relative;overflow:hidden;background:#797979;margin-top:20px;filter:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /></filter></svg>#filter');filter:grayscale(100%);height:540px;border-radius:3px;margin-bottom:20px}.resume-love{position:absolute;top:0;width:100%;border-radius:3px}.work{font-size:16px;margin-left:18px;line-height:1.9}.work-date{margin-right:20px}.work>a{color:#2f7bbd;cursor:pointer;transition:color .3s}.work>a:hover{color:#f36}@font-face{font-family:icomoon;src:url(/static/icomoon.dc50c577.eot);src:url(/static/icomoon.dc50c577.eot#iefix) format("embedded-opentype"),url(/static/icomoon.63be752c.ttf) format("truetype"),url(/static/icomoon.ef3242a6.woff) format("woff"),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiID4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8bWV0YWRhdGE+R2VuZXJhdGVkIGJ5IEljb01vb248L21ldGFkYXRhPgo8ZGVmcz4KPGZvbnQgaWQ9Imljb21vb24iIGhvcml6LWFkdi14PSIxMDI0Ij4KPGZvbnQtZmFjZSB1bml0cy1wZXItZW09IjEwMjQiIGFzY2VudD0iOTYwIiBkZXNjZW50PSItNjQiIC8+CjxtaXNzaW5nLWdseXBoIGhvcml6LWFkdi14PSIxMDI0IiAvPgo8Z2x5cGggdW5pY29kZT0iJiN4MjA7IiBob3Jpei1hZHYteD0iNTEyIiBkPSIiIC8+CjxnbHlwaCB1bmljb2RlPSImI3hlOTAwOyIgZ2x5cGgtbmFtZT0iZ29vZ2xlKyIgZD0iTTEwMS44MzcgNjg2LjY0M2MwLTc2LjQ5MyAyNS41NDktMTMxLjY4NiA3NS44NzgtMTY0LjA5NiA0MS4yNjctMjYuNjI0IDg5LjA4OC0zMC42MTggMTEzLjk3MS0zMC42MTggNi4wNDIgMCAxMC45MDYgMC4zMDcgMTQuMjg1IDAuNTEyIDAgMC03Ljg4NS01MS40MDUgMzAuMjA4LTEwMi4xOTVoLTEuNzQxYy02NS45OTcgMC0yODEuMjQyLTEzLjc3My0yODEuMjQyLTE5MC44MjIgMC0xODAuMDE5IDE5Ny42ODMtMTg5LjE4NCAyMzcuMzYzLTE4OS4xODQgMy4xMjMgMCA0Ljk2NiAwLjEwMiA0Ljk2NiAwLjEwMiAwLjQxIDAgMy4yMjYtMC4xMDIgOC4wOTAtMC4xMDIgMjUuNDQ2IDAgOTEuMjM4IDMuMTc0IDE1Mi4zMiAzMi45MjIgNzkuMjU4IDM4LjQgMTE5LjQ1IDEwNS40MjEgMTE5LjQ1IDE5OC45MTIgMCA5MC4zMTctNjEuMjM1IDE0NC4wNzctMTA1LjkzMyAxODMuMzk4LTI3LjI5IDI0LjAxMy01MC44OTMgNDQuNjk4LTUwLjg5MyA2NC44MTkgMCAyMC40OCAxNy4yNTQgMzUuODkxIDM5LjAxNCA1NS4zOTggMzUuMjc3IDMxLjQ4OCA2OC41NTcgNzYuMzkgNjguNTU3IDE2MS4yOCAwIDc0LjU5OC05LjY3NyAxMjQuNzIzLTY5LjMyNSAxNTYuNTE4IDYuMTk1IDMuMTc0IDI4LjIxMSA1LjQ3OCAzOS4wNjYgNy4wMTQgMzIuMzA3IDQuNDAzIDc5LjU2NSA5LjQyMSA3OS41NjUgMzUuNzg5djUuMDY5aC0yMzUuNDY5Yy0yLjM1NS0wLjEwMi0yMzguMTMxLTguODA2LTIzOC4xMzEtMjI0LjcxN3pNNDgxLjk0NiAyMjUuMTc4YzQuNTA2LTcxLjk4Ny01Ny4wODgtMTI1LjA4Mi0xNDkuNjA2LTEzMS43ODktOTMuOTUyLTYuOTEyLTE3MS4yNjQgMzUuMzc5LTE3NS43NyAxMDcuMzE1LTIuMjAyIDM0LjYxMSAxMy4wMDUgNjguNDAzIDQyLjc1MiA5NS4zODYgMzAuMTU3IDI3LjI5IDcxLjU3OCA0NC4xODYgMTE2LjYzNCA0Ny41MTQgNS4zMjUgMC4zMDcgMTAuNTk4IDAuNjE0IDE1Ljg3MiAwLjYxNCA4Ni45ODktMC4wNTEgMTQ1Ljg2OS01MS4xNDkgMTUwLjExOC0xMTkuMDQwek00MjAuNDU0IDczNS45NDljMjMuMDkxLTgxLjMwNi0xMS43NzYtMTY2LjE5NS02Ny4zNzktMTgxLjkxNC02LjQtMS43OTItMTIuOTU0LTIuNjYyLTE5LjY2MS0yLjY2Mi01MC44OTMgMC0xMDEuMzI1IDUxLjUwNy0xMjAuMDY0IDEyMi41MjItMTAuNDQ1IDM5LjczMS05LjU3NCA3NC42NSAyLjQwNiAxMDguMTM0IDExLjcyNSAzMy4wMjQgMzIuOTIyIDU1LjE5NCA1OS41NDYgNjIuNzIgNi40IDEuNzkyIDEzLjAwNSAyLjcxNCAxOS43MTIgMi43MTQgNjEuNDQgMCAxMDAuOTY2LTI1LjQ5OCAxMjUuNDQtMTExLjUxNHpNODE5LjIgNTYzLjJ2MTUzLjZoLTEwMi40di0xNTMuNmgtMTUzLjZ2LTEwMi40aDE1My42di0xNTMuNmgxMDIuNHYxNTMuNmgxNTMuNnYxMDIuNGgtMTUzLjZ6IiAvPgo8Z2x5cGggdW5pY29kZT0iJiN4ZTkwMTsiIGdseXBoLW5hbWU9ImJyYW5kIiBkPSJNMTAyNCA3NzUuMTExdi02NDBjMC0zNi4yODgtMjcuNzEyLTY0LTY0LTY0aC02NHY1ODAuOGwtMzg0LTI3NS43MTItMzg0IDI3NS43MTJ2LTU4MC44aC02NGMtMzYuMjg4IDAtNjQgMjcuNzEyLTY0IDY0djY0MGMwIDE4LjExMiA2LjkxMiAzNC4xMTIgMTguMzY4IDQ1LjU2OCAxMS41MiAxMS41ODQgMjcuNTg0IDE4LjQzMiA0NS42MzIgMTguNDMyaDIxLjMxMmw0MjYuNjg4LTMwOS4zMTIgNDI2LjY4OCAzMDkuMzEyaDIxLjMxMmMxOC4xMTIgMCAzNC4xMTItNi45MTIgNDUuNjMyLTE4LjQzMiAxMS40NTYtMTEuNDU2IDE4LjM2OC0yNy40NTYgMTguMzY4LTQ1LjU2OHoiIC8+CjxnbHlwaCB1bmljb2RlPSImI3hlOTAyOyIgZ2x5cGgtbmFtZT0iYnJhbmQyLCB0d2l0dGVyIiBkPSJNMTAyNCA3NzIuNjc5Yy0zNy43Ni0xNi42NC03OC4wODAtMjcuOTY4LTEyMC42NC0zMy4wODggNDMuMzI4IDI2LjA0OCA3Ni42NzIgNjcuMiA5Mi4zNTIgMTE2LjIyNC00MC41NzYtMjMuNjgtODUuNTY4LTQwLjk2LTEzMy40NC01MC41Ni0zOC4yNzIgNDAuOTYtOTIuOCA2Ni41Ni0xNTMuMzQ0IDY2LjU2LTExNS45NjggMC0yMTAuMDQ4LTk0LjA4MC0yMTAuMDQ4LTIwOS45MiAwLTE2LjY0IDEuOTItMzIuNjQgNS40NC00OC0xNzQuNTkyIDguMzItMzI5LjQwOCA5Mi4xNi00MzMuMDI0IDIxOC44OC0xOC4xNzYtMzAuNzg0LTI4LjQxNi02Ni42MjQtMjguNDE2LTEwNS42NjQgMC03Mi45NiAzNy4xMi0xMzcuMTUyIDkzLjQ0LTE3NC44NDgtMzQuNDMyIDEuMDg4LTY2Ljg4IDEwLjU2LTk1LjE2OCAyNi4yNHYtMi41NmMwLTEwMS43NiA3Mi4zMi0xODYuNzUyIDE2OC41MTItMjA2LjA4MC0xNy42NjQtNC43MzYtMzYuMjI0LTcuMjk2LTU1LjM2LTcuMjk2LTEzLjQ0IDAtMjYuMjQgMS4yOC0zOS4wNDAgMy43MTIgMjYuODgtODMuNDU2IDEwNC4zMi0xNDQuMTkyIDE5Ni40OC0xNDUuOTItNzEuNjgtNTYuMzItMTYyLjU2LTg5Ljg1Ni0yNjAuNDgtODkuODU2LTE2LjY0IDAtMzMuMjggMC45Ni00OS45MiAyLjg4IDkzLjQ0LTU5LjUyIDIwMy41Mi05NC4zMzYgMzIyLjU2LTk0LjMzNiAzODYuNTYgMCA1OTcuNzYgMzIwIDU5Ny43NiA1OTcuMTIgMCA4Ljk2IDAgMTcuOTItMC42NCAyNi44OCA0MC45NiAyOS40NCA3Ni44IDY2LjU2IDEwNC45NiAxMDguOHoiIC8+CjxnbHlwaCB1bmljb2RlPSImI3hlYTkwOyIgZ2x5cGgtbmFtZT0iZmFjZWJvb2siIGQ9Ik02MDggNzY4aDE2MHYxOTJoLTE2MGMtMTIzLjUxNCAwLTIyNC0xMDAuNDg2LTIyNC0yMjR2LTk2aC0xMjh2LTE5MmgxMjh2LTUxMmgxOTJ2NTEyaDE2MGwzMiAxOTJoLTE5MnY5NmMwIDE3LjM0NiAxNC42NTQgMzIgMzIgMzJ6IiAvPgo8Z2x5cGggdW5pY29kZT0iJiN4ZWE5YTsiIGdseXBoLW5hbWU9InNpbmEtd2VpYm8iIGQ9Ik00MzAuMiA2MmMtMTY5LjYtMTYuOC0zMTYgNjAtMzI3IDE3MS4yLTExIDExMS40IDExNy42IDIxNSAyODcgMjMxLjggMTY5LjYgMTYuOCAzMTYtNjAgMzI2LjgtMTcxLjIgMTEuMi0xMTEuNC0xMTcuNC0yMTUuMi0yODYuOC0yMzEuOHpNNzY5LjIgNDMxLjRjLTE0LjQgNC40LTI0LjQgNy4yLTE2LjggMjYuMiAxNi40IDQxLjIgMTggNzYuNiAwLjIgMTAyLTMzLjIgNDcuNC0xMjQuMiA0NS0yMjguNCAxLjIgMCAwLTMyLjgtMTQuMi0yNC40IDExLjYgMTYgNTEuNiAxMy42IDk0LjYtMTEuNCAxMTkuNi01Ni42IDU2LjYtMjA3LTIuMi0zMzYtMTMxLjItOTYuNC05Ni4yLTE1Mi40LTE5OC44LTE1Mi40LTI4Ny40IDAtMTY5LjIgMjE3LjItMjcyLjIgNDI5LjYtMjcyLjIgMjc4LjQgMCA0NjMuOCAxNjEuOCA0NjMuOCAyOTAuMiAwIDc3LjgtNjUuNCAxMjEuOC0xMjQuMiAxNDB6TTk1NC4yIDc0MS40Yy02Ny4yIDc0LjYtMTY2LjQgMTAzLTI1OCA4My42djBjLTIxLjItNC42LTM0LjYtMjUuNC0zMC00Ni40IDQuNi0yMS4yIDI1LjItMzQuNiA0Ni40LTMwIDY1LjIgMTMuOCAxMzUuNi02LjQgMTgzLjQtNTkuNHM2MC44LTEyNS4yIDQwLjItMTg4LjR2MGMtNi42LTIwLjYgNC42LTQyLjYgMjUuMi00OS40IDIwLjYtNi42IDQyLjYgNC42IDQ5LjQgMjUuMnYwLjJjMjguOCA4OC40IDEwLjYgMTkwLTU2LjYgMjY0LjZ6TTg1MC44IDY0OGMtMzIuOCAzNi40LTgxLjIgNTAuMi0xMjUuNiA0MC42LTE4LjItMy44LTI5LjgtMjItMjYtNDAuMiA0LTE4LjIgMjItMjkuOCA0MC0yNS44djBjMjEuOCA0LjYgNDUuNC0yLjIgNjEuNC0xOS44IDE2LTE3LjggMjAuNC00MiAxMy40LTYzLjJ2MGMtNS42LTE3LjYgNC0zNi44IDIxLjgtNDIuNiAxNy44LTUuNiAzNi44IDQgNDIuNiAyMS44IDE0IDQzLjQgNS4yIDkzLTI3LjYgMTI5LjJ6TTQzOS42IDI2My40Yy02LTEwLjItMTktMTUtMjkuMi0xMC44LTEwLjIgNC0xMy4yIDE1LjYtNy40IDI1LjQgNiA5LjggMTguNiAxNC42IDI4LjYgMTAuOCAxMC0zLjYgMTMuNi0xNSA4LTI1LjR6TTM4NS40IDE5NC4yYy0xNi40LTI2LjItNTEuNi0zNy42LTc4LTI1LjYtMjYgMTEuOC0zMy44IDQyLjItMTcuNCA2Ny44IDE2LjIgMjUuNCA1MC4yIDM2LjggNzYuNCAyNS44IDI2LjYtMTEuNCAzNS4yLTQxLjYgMTktNjh6TTQ0NyAzNzkuNGMtODAuNiAyMS0xNzEuOC0xOS4yLTIwNi44LTkwLjItMzUuOC03Mi40LTEuMi0xNTMgODAuMi0xNzkuNCA4NC40LTI3LjIgMTg0IDE0LjYgMjE4LjYgOTIuNiAzNC4yIDc2LjYtOC40IDE1NS4yLTkyIDE3N3oiIC8+CjxnbHlwaCB1bmljb2RlPSImI3hlYWIwOyIgZ2x5cGgtbmFtZT0iZ2l0aHViIiBkPSJNNTEyLjAwOCA5NDcuMzU4Yy0yODIuNzM4IDAtNTEyLjAwOC0yMjkuMjE4LTUxMi4wMDgtNTExLjk5OCAwLTIyNi4yMTQgMTQ2LjcwNC00MTguMTMyIDM1MC4xMzYtNDg1LjgzNiAyNS41ODYtNC43MzggMzQuOTkyIDExLjExIDM0Ljk5MiAyNC42MzIgMCAxMi4yMDQtMC40OCA1Mi41NDItMC42OTYgOTUuMzI0LTE0Mi40NDgtMzAuOTc2LTE3Mi41MDQgNjAuNDEtMTcyLjUwNCA2MC40MS0yMy4yODIgNTkuMTc2LTU2Ljg0OCA3NC45MTYtNTYuODQ4IDc0LjkxNi00Ni40NTIgMzEuNzc4IDMuNTEgMzEuMTI0IDMuNTEgMzEuMTI0IDUxLjQtMy42MSA3OC40NzYtNTIuNzY2IDc4LjQ3Ni01Mi43NjYgNDUuNjcyLTc4LjI3IDExOS43NzYtNTUuNjQgMTQ5LjAwNC00Mi41NTggNC41ODggMzMuMDg2IDE3Ljg1MiA1NS42OCAzMi41MDYgNjguNDY0LTExMy43MyAxMi45NDItMjMzLjI3NiA1Ni44NS0yMzMuMjc2IDI1My4wMzIgMCA1NS44OTggMjAuMDA0IDEwMS41NzQgNTIuNzYgMTM3LjQyOC01LjMxNiAxMi45LTIyLjg1NCA2NC45NzIgNC45NTIgMTM1LjUgMCAwIDQzLjAwNiAxMy43NTIgMTQwLjg0LTUyLjQ5IDQwLjgzNiAxMS4zNDggODQuNjM2IDE3LjAzNiAxMjguMTU0IDE3LjIzNCA0My41MDItMC4xOTggODcuMzM2LTUuODg2IDEyOC4yNTYtMTcuMjM0IDk3LjczNCA2Ni4yNDQgMTQwLjY1NiA1Mi40OSAxNDAuNjU2IDUyLjQ5IDI3Ljg3Mi03MC41MjggMTAuMzUtMTIyLjYgNS4wMzYtMTM1LjUgMzIuODItMzUuODU2IDUyLjY5NC04MS41MzIgNTIuNjk0LTEzNy40MjggMC0xOTYuNjU0LTExOS43NzgtMjM5Ljk1LTIzMy43OS0yNTIuNjI0IDE4LjM2NC0xNS44OSAzNC43MjQtNDcuMDQ2IDM0LjcyNC05NC44MTIgMC02OC41MDgtMC41OTYtMTIzLjY0NC0wLjU5Ni0xNDAuNTA4IDAtMTMuNjI4IDkuMjIyLTI5LjU5NCAzNS4xNzItMjQuNTY2IDIwMy4zMjIgNjcuNzc2IDM0OS44NDIgMjU5LjYyNiAzNDkuODQyIDQ4NS43NjggMCAyODIuNzgtMjI5LjIzNCA1MTEuOTk4LTUxMS45OTIgNTExLjk5OHoiIC8+CjxnbHlwaCB1bmljb2RlPSImI3hlYWM2OyIgZ2x5cGgtbmFtZT0icmVkZGl0IiBkPSJNMjU2IDMyMGMwIDM1LjM0NiAyOC42NTQgNjQgNjQgNjRzNjQtMjguNjU0IDY0LTY0YzAtMzUuMzQ2LTI4LjY1NC02NC02NC02NHMtNjQgMjguNjU0LTY0IDY0ek02NDAgMzIwYzAgMzUuMzQ2IDI4LjY1NCA2NCA2NCA2NHM2NC0yOC42NTQgNjQtNjRjMC0zNS4zNDYtMjguNjU0LTY0LTY0LTY0cy02NCAyOC42NTQtNjQgNjR6TTY0My4xMTIgMTgzLjIyMmMxNi40ODIgMTIuOTg2IDQwLjM3NiAxMC4xNTQgNTMuMzY0LTYuMzMyczEwLjE1Mi00MC4zNzgtNi4zMzQtNTMuMzY2Yy00NS44OTYtMzYuMTU4LTExNS44MjItNTkuNTI0LTE3OC4xNDItNTkuNTI0LTYyLjMyMiAwLTEzMi4yNDggMjMuMzY2LTE3OC4xNDQgNTkuNTIyLTE2LjQ4NiAxMi45OS0xOS4zMiAzNi44ODItNi4zMzIgNTMuMzY4IDEyLjk5IDE2LjQ4MiAzNi44ODIgMTkuMzE4IDUzLjM2NiA2LjMzMiAyNi40MjItMjAuODE4IDc4LjcyMi00My4yMjIgMTMxLjExLTQzLjIyMnMxMDQuNjg4IDIyLjQwNCAxMzEuMTEyIDQzLjIyMnpNMTAyNCA0NDhjMCA3MC42OTItNTcuMzA4IDEyOC0xMjggMTI4LTQ4LjExNiAwLTg5Ljk5Mi0yNi41Ny0xMTEuODUyLTY1LjgyLTY1Ljc5MiAzNS45OTQtMTQ1Ljk1MiA1OS4yNDYtMjMzLjI4IDY0LjYwOGw3Ni4zODIgMTcxLjUyNiAxNDYuMTk0LTQyLjJjMTMuMTUyLTM3LjM0MiA0OC43MTgtNjQuMTE0IDkwLjU1Ni02NC4xMTQgNTMuMDIwIDAgOTYgNDIuOTggOTYgOTZzLTQyLjk4IDk2LTk2IDk2Yy0zNi41NiAwLTY4LjM0Mi0yMC40NDItODQuNTU0LTUwLjUxNGwtMTYyLjkwNiA0Ny4wMjRjLTE4LjIyNCA1LjI1OC0zNy41MzgtMy43MjItNDUuMjUyLTIxLjA1MmwtMTAzLjc3LTIzMy4wMjZjLTg1LjEzOC01Ljk5Ni0xNjMuMjYyLTI5LjAyMi0yMjcuNjM2LTY0LjIzNi0yMS44NjQgMzkuMjUtNjMuNzY2IDY1LjgwNC0xMTEuODgyIDY1LjgwNC03MC42OTIgMC0xMjgtNTcuMzA4LTEyOC0xMjggMC01Mi4zMTIgMzEuNDAyLTk3LjI1NCA3Ni4zNzItMTE3LjEwMi04LjA3MC0yNC4wMjgtMTIuMzcyLTQ5LjEwNC0xMi4zNzItNzQuODk4IDAtMTc2LjczIDIwMC41NzYtMzIwIDQ0OC0zMjAgMjQ3LjQyMiAwIDQ0OCAxNDMuMjcgNDQ4IDMyMCAwIDI1Ljc5Mi00LjMgNTAuODYyLTEyLjM2OCA3NC44ODYgNDQuOTcgMTkuODUgNzYuMzY4IDY0LjgwMiA3Ni4zNjggMTE3LjExNHpNODY0IDc3MmMxOS44ODIgMCAzNi0xNi4xMTggMzYtMzZzLTE2LjExOC0zNi0zNi0zNi0zNiAxNi4xMTgtMzYgMzYgMTYuMTE4IDM2IDM2IDM2ek02NCA0NDhjMCAzNS4yOSAyOC43MSA2NCA2NCA2NCAyNS41MDggMCA0Ny41NzItMTUuMDA0IDU3Ljg0Ni0zNi42NDYtMzMuNDQ4LTI1LjM2Ni02MS4xNjYtNTQuNjI2LTgxLjY2Ni04Ni43MzgtMjMuNTI0IDkuNDctNDAuMTggMzIuNTEyLTQwLjE4IDU5LjM4NHpNNTEyIDEyYy0yMDUuNDUgMC0zNzIgMTA5LjI0Mi0zNzIgMjQ0czE2Ni41NSAyNDQgMzcyIDI0NGMyMDUuNDUgMCAzNzItMTA5LjI0MiAzNzItMjQ0cy0xNjYuNTUtMjQ0LTM3Mi0yNDR6TTkxOS44MiAzODguNjE2Yy0yMC41IDMyLjExMi00OC4yMTggNjEuMzcyLTgxLjY2NiA4Ni43MzggMTAuMjc2IDIxLjY0MiAzMi4zMzggMzYuNjQ2IDU3Ljg0NiAzNi42NDYgMzUuMjkgMCA2NC0yOC43MSA2NC02NCAwLTI2Ljg3Mi0xNi42NTYtNDkuOTE0LTQwLjE4LTU5LjM4NHoiIC8+CjwvZm9udD48L2RlZnM+PC9zdmc+#icomoon) format("svg");font-weight:400;font-style:normal}[class*=" icon-"],[class^=icon-]{font-family:icomoon!important;speak:none;font-style:normal;font-weight:400;-webkit-font-feature-settings:normal;font-feature-settings:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-google-plus:before{content:"\E900";color:#e36f60}.icon-brand:before{content:"\E901";color:#d14836}.icon-brand2:before,.icon-twitter:before{content:"\E902";color:#1da1f2}.icon-facebook:before{content:"\EA90";color:#627aac}.icon-sina-weibo:before{content:"\EA9A"}.icon-github:before{content:"\EAB0";color:#fff}.icon-reddit:before{content:"\EAC6";color:#5f99cf}.root-animation{position:relative;height:250px;width:100%;border-radius:5px;background-image:url(https://images.unsplash.com/photo-1457104312140-ada7fcd34df7?dpr=1&auto=compress,format&fit=crop&w=376&h=251&q=80&cs=tinysrgb&crop=);background-size:cover;background-position:50%;cursor:pointer;margin:0 auto;animation:show .2s 1;margin-top:20px}@keyframes show{0%{transform:scale(.8);opacity:.8}to{transform:scale(1);opacity:1}}.place-holder{position:absolute;top:0;left:0;right:0;bottom:0}.container,.place-holder{width:100%;height:100%;border-radius:5px}.container{position:relative;transition:background-color .15s ease-in-out;background-color:rgba(0,0,0,.25)}.container:hover{background-color:rgba(0,0,0,.35)}.file-info{text-decoration:none;position:absolute;top:0;left:0;right:0;bottom:0;padding:28px 30px 30px}.file-info-date{font-size:12px;letter-spacing:.02em;color:#fff;text-shadow:0 1px 1px rgba(0,0,0,.15);opacity:.6}.file-info-name{font-size:23px;margin:0;color:#fff;text-shadow:0 1px 1px rgba(0,0,0,.1);line-height:1.3;font-weight:600}.author-info{position:absolute;left:20px;bottom:20px;height:32px;line-height:30px}.author-info-container{position:relative;pointer-events:auto;display:-ms-inline-flexbox;display:inline-flex;-ms-flex-align:center;align-items:center}.author-info-avatar{position:relative}.author-info-avatar-link{display:inline-block;width:32px;height:32px;line-height:1;margin-right:10px;border-radius:50%;overflow:hidden;vertical-align:middle;box-shadow:0 0 1px rgba(0,0,0,.5);background-color:rgba(0,0,0,.2)}.author-info-avatar-img{width:100%;vertical-align:middle;border:0}.author-info-name{max-width:200px;position:relative;min-width:0}.author-info-name-link{color:#fff;transform:translateZ(0);text-shadow:0 1px rgba(0,0,0,.04);display:block;font-size:15px;opacity:.8;transition:opacity .2s ease-in-out;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.upload-btn-wrapper{margin-top:20px;position:relative;overflow:hidden;display:inline-block}.btn{border:1px solid #282c34;color:#282c34;background-color:#fff;padding:8px 20px;border-radius:3px;font-size:20px}.upload-btn-wrapper input[type=file]{font-size:100px;position:absolute;left:0;top:0;opacity:0;cursor:pointer}</style></head><body><div id="___gatsby"><div class="css-190hivd" data-reactroot=""><header class="css-16n14tl"><div class="css-9zmdzy"><div class="css-1xv6vnd"><a class="css-qudo5w" href="/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAIAAABLixI0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAxBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QkVCMzIzMzQyNkEyMTFFOEFDMDg5QzEyQjZBQkVFQzAiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QkVCMzIzMzMyNkEyMTFFOEFDMDg5QzEyQjZBQkVFQzAiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiBXaW5kb3dzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9IjUzNDQzMkUwNjJCQjgxQzkzOTBCNzEzODY2NjFDMDJFIiBzdFJlZjpkb2N1bWVudElEPSI1MzQ0MzJFMDYyQkI4MUM5MzkwQjcxMzg2NjYxQzAyRSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PjsnVbAAAAXeSURBVHjaPJVrb+PGFYaHnOGdFClSlCxb2nbXTnfdC3pLsb+gCIp+6S8M0N+QTwWCFgWay2azdS5AkrXXK61ly7Ik3snhbTjsUVp09EEEwZk557zPeY/w8acXSDj8/r+wIOIeNYy1rPnnP/7Oe9a27P7uRpLl28Vy6LpZlm23W8dxRpNxTqk7HM5nj7GIiEwkzrmA/ncY/BGM8zxbLRdtx95c/XB6drpYXHUtcyTJdhw4KApD1KMsTRljhmXlWR7uN/BGvFutOsbE/y5BkCXpfr1++cVny+X1d19f2Ka5XLzNkqxnXVvVsFlRVd8fd7zrWAc33757RwjWLQPSwI7rzo6nE39yv75b3S6apnnx6b8296s8TTnvmrYJg0Aih0XzIggC0zJ2u11VVaZlRXEoirhjTRbHSZKS3f5hv9uePT3/6tuLzd1K1fU0iljdJGmsmRY8ZHE6nZ0UeS4SLGJx8XaBMZ7P53lREFEsq8oazLumgUjx2XtP+SH5+NXLLwxVY00NtWva1nW9uqxW7256oacFLcsyiiLbtjmHT+qiKKBep6dncK6AOMGSrMh46I2g5JBgniSDwQAhtN3uoC684wUteM+zLNd1vW6aPMs0TYNiSZJ8NJ3gHxOHLbPZvChL0Br/8YM/+Z7HGRsMHSyKwX7P+x6ujeII7pRlGWKxLMtxh7pusK4L9wEom6Sp2AtXry+RINrDw7pZvhMnkwnBhCMU7LZVSQ3ThMshLkmSiCQBAf2PR7+9fOMMBk8eP6Ylvby8DPbB9dWVqqrPfn6OUMfa5vHpE0KLnHUc+Dw6moIooONms2nbFvISBVTX9Xp99/TZOeJ9mqbffPW1ZRh5lECCQ8+bzWYVLU3LBAWgmqQsSoRF3TKBQw7AAeac7x8eBNQvrq9lWf3Jo0dJFEGx8jzvOW+7DiRTsAINIKvKm9evR0dHgoh4wwgcBNwDn0kci1gIw+BocjyZjEEBRdFczy2rGmpU07Jum5PjY5GQ3cM2TRLbdfa7vWEaeZpAcmVO8bNnv9AUFdgReuQ6zn4bJFEMIeRZ6gyHkBe0Q1lS0FeVlbKgcZ6CfJKipGkmcO6OPGg/JKI8S4ikq2ESed5IkeUOIXfsZ0lKs6zIi0P56hrOapuWt62k66Zte6Mx9M/t7S3vBVDs5mZ1Mp+ppt7SmuiKigFO1haU+r4PEPzw/fcKIZPp9Hfvv+97Y4wlTVOtwQCaRtW0zz//5G8ffdTQom4ZKzEAUaR5zZr1/ZqA3gA64gwEhvbTVO358+e/+s2vf/v7P5imifoe9Ye46rra3N//9cMPv/n2Atqj63v4sirLvuuqurIcG24ioEVFK1VRDs4lkdFg8Mvz87bnr778LIsSKFsYRk3dQOc8PGwEJL335CylUJykphXotodutwdYxtDtBBwPqATuJU3tUBdGIQC1221530b7GCGMieiPRyImumaoqtxxwdM8SCLa7iDLCmRuaqu3wCkJIA56+54L8K4Wa1bXYDVd20LJJVGAJyLK65ulIiuSoo6PZy9fvOg7pBkGUZUioIoiA3E9FquqJNA0kAJoX5b5crnECKzS2GwSGSyO4IFpgO1GQTg9PgZHqKt8YJiM9SUtvYnf1jTaRbppKgdIJOKYxmETRvGOT/zxdDqmddV2kJGCRUHV9LaqNFWKorB9aCtKm6Zyh/7A0hRNFW07DhIYD6quOY5Fjh890k0rjHb+eHLyUzr2xxCjLH8XBJsiCMs4NOyBZTu0gmHSAYOua0cBBBp5kxOQxhk5YCGSTABsAgB2TTXQbdnRshwGzINpaB/8+S/wHAcRhGYYpqIoYEFRuAN6IBdKq/0+GA6hf9Hd3R0w29ZQ7ZYsrq+G7kiW9DQNCBFNQwcPiKMYxB35E+hQ4Au8dARhT6fQ16A7+NpTkIUBZPzsZ+dFkf/71UXAETEMD0yxpAnMs44JIDCjFEwVhhLsAVbBf4BlSZYOEw8JsB8cDcHI6hE4BogOJHhDfz4/+Y8AAwB2UbMMsjeTIwAAAABJRU5ErkJggg==" alt="" height="25" class="css-1wiofhw"/><span class="css-ja0yb3">little forest</span></a><nav class="css-v72wnb"><a class="css-1cxcbpn" href="/">HOME</a><a class="css-1cxcbpn" href="/archive.html">ARCHIVE</a><a class="css-1cxcbpn" href="/categories.html">CATEGORIES</a><a class="css-1cxcbpn" href="/resume">RESUME</a></nav><div class="css-gczsff"><a href="https://github.com/lit-forest" target="_blank" rel="noopener" class="css-14nlkyt"><i class="icon-github"></i></a></div><div class="css-dkzafi"><a href="https://twitter.com/TaoZhao_" target="_blank" rel="noopener" class="css-10ayjkp"><i class="icon-twitter"></i></a><a href="mailto:sylvenas@outlook.com?subject=little forest" target="_blank" rel="noopener" class="css-14nlkyt"><i class="icon-brand"></i></a></div></div></div></header><div class="css-1yok9qz css-15lkjjo"><div class="css-5v0gxc css-95xunl"><div class="css-12vsfho"><header class="css-hgc6lu"><div class="css-ughd3t"><h1 class="css-qvgrb1">TCP 重传、滑动窗口、流量控制、拥塞控制</h1><div class="css-1vzv80m">December 21, 2018<!-- --> <span>by<!-- --> <!-- -->sylvenas</span></div></div></header><div class="css-9zmdzy"><div class="css-j4q8zh"><article class="css-174qq1k"><div class="css-124oy3v"><div class="css-vqwfir"><p>相信大家都知道TCP是一个可靠传输的协议，那它是如何保证可靠的呢？</p>
+<p>为了实现可靠性传输，需要考虑很多事情，例如数据的破坏、丢包、重复以及分片顺序混乱等问题。如不能解决这些问题，也就无从谈起可靠传输。</p>
+<p>那么，TCP是通过序列号、确认应答、重发控制、连接管理以及窗口控制等机制实现可靠性传输的。</p>
+<p>今天，将重点介绍TCP的<strong>重传机制</strong>、<strong>滑动窗口</strong>、<strong>流量控制</strong>、<strong>拥塞控制</strong>。</p>
+<h3 id="重传机制"><a href="#%E9%87%8D%E4%BC%A0%E6%9C%BA%E5%88%B6" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>重传机制</h3>
+<p>TCP实现可靠传输的方式之一，是通过序列号与确认应答。</p>
+<p>在TCP中，当发送端的数据到达接收主机时，接收端主机会返回一个确认应答消息，表示已收到消息。</p>
+<p><img src="https://p5.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4588832959/c5bf/8f4a/6fee/14797be1578e50cf0b82d4ca66911f9f.png" alt="正常的数据传输"></p>
+<p>但在错综复杂的网络，并不一定能如上图那么顺利能正常的数据传输，万一数据在传输过程中丢失了呢？</p>
+<p>所以TCP针对数据包丢失的情况，会用重传机制解决。</p>
+<ul>
+<li>超时重传</li>
+<li>快速重传</li>
+<li>SACK</li>
+<li>D-SACK</li>
+</ul>
+<h4 id="超时重传"><a href="#%E8%B6%85%E6%97%B6%E9%87%8D%E4%BC%A0" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>超时重传</h4>
+<p>重传机制的其中一个方式，就是在发送数据时，设定一个定时器，当超过指定的时间后，没有收到对方的<code class="gatsby-code-text">ACK</code>确认应答报文，就会重发该数据，也就是我们常说的<strong>超时重传</strong>。</p>
+<p>TCP 会在以下两种情况发生超时重传：</p>
+<ul>
+<li>数据包丢失</li>
+<li>确认应答丢失</li>
+</ul>
+<p><img src="https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4588884163/5699/ec2d/d30c/9759f4d4649df48feef4d6eb795d3b96.png" alt="超时重传的两种情况"></p>
+<h5 id="超时时间应该设置为多少呢？"><a href="#%E8%B6%85%E6%97%B6%E6%97%B6%E9%97%B4%E5%BA%94%E8%AF%A5%E8%AE%BE%E7%BD%AE%E4%B8%BA%E5%A4%9A%E5%B0%91%E5%91%A2%EF%BC%9F" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>超时时间应该设置为多少呢？</h5>
+<p>我们先来了解一下什么是<code class="gatsby-code-text">RTT</code>（Round-Trip Time 往返时延），从下图我们就可以知道：</p>
+<p><img src="https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4588895167/f2b3/54ae/8eec/abbd85cf878e5d29c5c2a333826d1c1d.png" alt="RTT"></p>
+<p><code class="gatsby-code-text">RTT</code>就是<strong>数据从网络一端传送到另一端所需的时间，也就是包的往返时间</strong>。</p>
+<p>超时重传时间是以<code class="gatsby-code-text">RTO</code>（Retransmission Timeout 超时重传时间）表示。假设在重传的情况下，超时时间<code class="gatsby-code-text">RTO</code>「较长或较短」时，会发生什么事情呢？</p>
+<p><img src="https://p5.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4588914450/aebf/8a11/c135/a1a11a6dfa94327442e31342c2fa3279.png" alt="超时时间较长与较短"></p>
+<p>上图中有两种超时时间不同的情况：</p>
+<ul>
+<li>当超时时间<code class="gatsby-code-text">RTO</code>较大时，重发就慢，丢了老半天才重发，没有效率，性能差；</li>
+<li>当超时时间<code class="gatsby-code-text">RTO</code>较小时，会导致可能并没有丢就重发，于是重发的就快，会增加网络拥塞，导致更多的超时，更多的超时导致更多的重发。</li>
+</ul>
+<p>精确的测量超时时间<code class="gatsby-code-text">RTO</code>的值是非常重要的，这可让我们的重传机制更高效。</p>
+<p>根据上述的两种情况，我们可以得知，超时重传时间RTO的值应该略大于报文往返RTT的值。</p>
+<p><img src="https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4588936814/997a/3b68/0f43/e140117d11507aa794a6e5d7b8833984.png" alt="RTO 应略大于 RTT"></p>
+<p>至此，可能大家觉得超时重传时间<code class="gatsby-code-text">RTO</code>的值计算，也不是很复杂嘛。</p>
+<p>好像就是在发送端发包时记下<code class="gatsby-code-text">t0</code>，然后接收端再把这个<code class="gatsby-code-text">ack</code>回来时再记一个<code class="gatsby-code-text">t1</code>，于是<code class="gatsby-code-text">RTT = t1 – t0</code>。没那么简单，<strong>这只是一个采样，不能代表普遍情况</strong>。</p>
+<p>实际上「报文往返<code class="gatsby-code-text">RTT</code>的值」是经常变化的，因为我们的网络也是时常变化的。也就因为「报文往返<code class="gatsby-code-text">RTT</code>的值」 是经常波动变化的，所以「超时重传时间<code class="gatsby-code-text">RTO</code>的值」应该是一个动态变化的值。</p>
+<p>我们来看看<code class="gatsby-code-text">Linux</code>是如何计算<code class="gatsby-code-text">RTO</code>的呢？</p>
+<p>估计往返时间，通常需要采样以下两个：</p>
+<ul>
+<li>需要<code class="gatsby-code-text">TCP</code>通过采样<code class="gatsby-code-text">RTT</code>的时间，然后进行加权平均，算出一个平滑<code class="gatsby-code-text">RTT</code>的值，而且这个值还是要不断变化的，因为网络状况不断地变化。</li>
+<li>除了采样<code class="gatsby-code-text">RTT</code>，还要采样<code class="gatsby-code-text">RTT</code>的波动范围，这样就避免如果<code class="gatsby-code-text">RTT</code>有一个大的波动的话，很难被发现的情况。</li>
+</ul>
+<p><a href="https://tools.ietf.org/html/rfc6289">RFC6289</a> 建议使用以下的公式计算<code class="gatsby-code-text">RTO</code>：</p>
+<p><img src="https://p5.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4588977559/2c5f/b62f/e344/762ac5081202cb902fa1f7f29bf7b69a.png" alt="RFC6289 建议的RTO计算"></p>
+<p>其中<code class="gatsby-code-text">SRTT</code>是计算平滑的<code class="gatsby-code-text">RTT</code>，<code class="gatsby-code-text">DevRTR</code>是计算平滑的<code class="gatsby-code-text">RTT</code>与最新<code class="gatsby-code-text">RTT</code>的差距。</p>
+<p>在 Linux 下，<code class="gatsby-code-text">α = 0.125</code>，<code class="gatsby-code-text">β = 0.25</code>， <code class="gatsby-code-text">μ = 1</code>，<code class="gatsby-code-text">∂ = 4</code>。别问怎么来的，问就是大量实验中调出来的。</p>
+<p>如果超时重发的数据，再次超时的时候，又需要重传的时候，<code class="gatsby-code-text">TCP</code>的策略是<strong>超时间隔加倍</strong>。</p>
+<p>也就是<strong>每当遇到一次超时重传的时候，都会将下一次超时时间间隔设为先前值的两倍。两次超时，就说明网络环境差，不宜频繁反复发送</strong>。</p>
+<p>超时触发重传存在的问题是，超时周期可能相对较长。那是不是可以有更快的方式呢？</p>
+<p>于是就可以用「快速重传」机制来解决超时重发的时间等待。</p>
+<h4 id="快速重传"><a href="#%E5%BF%AB%E9%80%9F%E9%87%8D%E4%BC%A0" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>快速重传</h4>
+<p>TCP 还有另外一种<strong>快速重传（Fast Retransmit）</strong>机制，它<strong>不以时间为驱动，而是以数据驱动重传</strong>。</p>
+<p>快速重传机制，是如何工作的呢？其实很简单，一图胜千言。</p>
+<p><img src="https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4589015108/0bb5/c0ea/4933/e150980b328fb3c1360212b178ca502c.png" alt="快速重传机制"></p>
+<p>在上图，发送方发出了 1，2，3，4，5 份数据：</p>
+<ul>
+<li>第一份<code class="gatsby-code-text">Seq1</code>先送到了，于是就<code class="gatsby-code-text">Ack</code>回 2；</li>
+<li>结果<code class="gatsby-code-text">Seq2</code>因为某些原因没收到，<code class="gatsby-code-text">Seq3</code>到达了，于是还是<code class="gatsby-code-text">Ack</code>回<code class="gatsby-code-text">2</code>；</li>
+<li>后面的<code class="gatsby-code-text">Seq4</code>和<code class="gatsby-code-text">Seq5</code>都到了，但还是<code class="gatsby-code-text">Ack</code>回<code class="gatsby-code-text">2</code>，因为<code class="gatsby-code-text">Seq2</code>还是没有收到；</li>
+<li><strong>发送端收到了三个<code class="gatsby-code-text">Ack = 2</code>的确认，知道了<code class="gatsby-code-text">Seq2</code>还没有收到，就会在定时器过期之前，重传丢失的<code class="gatsby-code-text">Seq2</code></strong>。</li>
+<li>最后，收到了<code class="gatsby-code-text">Seq2</code>，此时因为<code class="gatsby-code-text">Seq3，Seq4，Seq5</code> 都收到了，于是<code class="gatsby-code-text">Ack</code>回<code class="gatsby-code-text">6</code>。</li>
+</ul>
+<p>所以，快速重传的工作方式是当收到三个相同的 ACK 报文时，会在定时器过期之前，重传丢失的报文段。</p>
+<p>快速重传机制只解决了一个问题，就是超时时间的问题，但是它依然面临着另外一个问题。就是<strong>重传的时候，是重传之前的一个，还是重传所有的问题</strong>。</p>
+<p>比如对于上面的例子，是重传 Seq2 呢？还是重传 Seq2、Seq3、Seq4、Seq5 呢？因为发送端并不清楚这连续的三个 Ack 2 是谁传回来的。</p>
+<p>根据 TCP 不同的实现，以上两种情况都是有可能的。可见，这是一把双刃剑。</p>
+<p>为了解决不知道该重传哪些 TCP 报文，于是就有<code class="gatsby-code-text">SACK</code>方法。</p>
+<h4 id="sack-方法"><a href="#sack-%E6%96%B9%E6%B3%95" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SACK 方法</h4>
+<p>还有一种实现重传机制的方式叫：<code class="gatsby-code-text">SACK</code>（ Selective Acknowledgment 选择性确认）。</p>
+<p>这种方式需要在<code class="gatsby-code-text">TCP</code>头部「选项(option)」字段里加一个<code class="gatsby-code-text">SACK</code>的东西，它可以<strong>将缓存的地图发送给发送方</strong>，这样发送方就可以知道哪些数据收到了，哪些数据没收到，知道了这些信息，就可以<strong>只重传丢失的数据</strong>。</p>
+<p>如下图，发送方收到了三次同样的 ACK 确认报文，于是就会触发快速重发机制，通过 SACK 信息发现只有<code class="gatsby-code-text">200~299</code>这段数据丢失，则重发时，就只选择了这个<code class="gatsby-code-text">TCP</code>段进行重复。</p>
+<p><img src="https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4589116835/42a1/c862/cac8/326da0bd1a23c03a408fc1fad2fbe386.png" alt="选择性确认"></p>
+<h4 id="duplicate-sack"><a href="#duplicate-sack" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Duplicate SACK</h4>
+<p>Duplicate SACK 又称<code class="gatsby-code-text">D-SACK</code>，其主要<strong>使用了 SACK 来告诉「发送方」有哪些数据被重复接收了</strong>。</p>
+<p>下面举例两个栗子，来说明<code class="gatsby-code-text">D-SACK</code>的作用。</p>
+<h5 id="ack-丢包"><a href="#ack-%E4%B8%A2%E5%8C%85" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ACK 丢包</h5>
+<p><img src="https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4589148186/a039/2023/69f1/9cdd88a1bd8d1573a1d0c88dc55af724.png" alt="ACK 丢包"></p>
+<ul>
+<li>「接收方」发给「发送方」的两个 ACK 确认应答都丢失了，所以发送方超时后，重传第一个数据包（3000 ~ 3499）</li>
+<li><strong>于是「接收方」发现数据是重复收到的，于是回了一个 SACK = 3000~3500</strong>，告诉「发送方」 3000~3500 的数据早已被接收了，因为 ACK 都到了 4000 了，已经意味着 4000 之前的所有数据都已收到，所以这个<code class="gatsby-code-text">SACK</code>就代表着<code class="gatsby-code-text">D-SACK</code>。</li>
+<li>这样「发送方」就知道了，数据没有丢，是「接收方」的<code class="gatsby-code-text">ACK</code>确认报文丢了。</li>
+</ul>
+<h5 id="网络延时"><a href="#%E7%BD%91%E7%BB%9C%E5%BB%B6%E6%97%B6" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>网络延时</h5>
+<p><img src="https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4589258125/db23/6fb0/7d07/d5076cec202cd69934ed4a9244ff65d1.png" alt="网络延时"></p>
+<ul>
+<li>数据包（1000~1499） 被网络延迟了，导致「发送方」没有收到 Ack 1500 的确认报文。</li>
+<li>而后面报文到达的三个相同的 ACK 确认报文，就触发了快速重传机制，但是在重传后，被延迟的数据包（1000~1499）又到了「接收方」；</li>
+<li><strong>所以「接收方」回了一个 SACK=1000~1500，因为 ACK 已经到了 3000，所以这个 SACK 是 D-SACK，表示收到了重复的包</strong>。</li>
+<li>这样发送方就知道快速重传触发的原因不是发出去的包丢了，也不是因为回应的 ACK 包丢了，而是因为网络延迟了。</li>
+</ul>
+<p>可见，D-SACK 有这么几个好处：</p>
+<ul>
+<li>可以让「发送方」知道，是发出去的包丢了，还是接收方回应的 ACK 包丢了;</li>
+<li>可以知道是不是「发送方」的数据包被网络延迟了;</li>
+<li>可以知道网络中是不是把「发送方」的数据包给复制了;</li>
+</ul>
+<h3 id="滑动窗口"><a href="#%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>滑动窗口</h3>
+<h4 id="引入窗口概念的原因"><a href="#%E5%BC%95%E5%85%A5%E7%AA%97%E5%8F%A3%E6%A6%82%E5%BF%B5%E7%9A%84%E5%8E%9F%E5%9B%A0" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>引入窗口概念的原因</h4>
+<p>我们都知道 TCP 是每发送一个数据，都要进行一次确认应答。当上一个数据包收到了应答了， 再发送下一个。</p>
+<p>这个模式就有点像我和你面对面聊天，你一句我一句。但这种方式的缺点是效率比较低的。</p>
+<p>如果你说完一句话，我在处理其他事情，没有及时回复你，那你不是要干等着我做完其他事情后，我回复你，你才能说下一句话，很显然这不现实。</p>
+<p><img src="https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4589323017/bde1/b169/beda/7096510ea594451e638b5eae317904f2.png" alt="按数据包进行确认应答"></p>
+<p>所以，这样的传输方式有一个缺点：<strong>数据包的往返时间越长，通信的效率就越低</strong>。</p>
+<p>为解决这个问题，TCP 引入了<strong>窗口</strong>这个概念。即使在往返时间较长的情况下，它也不会降低网络通信的效率。</p>
+<p>那么有了窗口，就可以指定窗口大小，窗口大小就是指<strong>无需等待确认应答，而可以继续发送数据的最大值</strong>。</p>
+<p>窗口的实现实际上是操作系统开辟的一个缓存空间，发送方主机在等到确认应答返回之前，必须在缓冲区中保留已发送的数据。如果按期收到确认应答，此时数据就可以从缓存区清除。</p>
+<p>假设窗口大小为 3 个 TCP 段，那么发送方就可以「连续发送」 3 个 TCP 段，并且中途若有 ACK 丢失，可以通过「下一个确认应答进行确认」。如下图：</p>
+<p><img src="https://p5.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4590288355/c8db/3422/85d2/5ace1d032bec386a9007c7832ae34ca7.png" alt="用滑动窗口方式并行处理"></p>
+<p>图中的<code class="gatsby-code-text">ACK 600</code>确认应答报文丢失，也没关系，因为可以通过下一个确认应答进行确认，只要发送方收到了<code class="gatsby-code-text">ACK 700</code>确认应答，就意味着<code class="gatsby-code-text">700</code>之前的所有数据「接收方」都收到了。这个模式就叫累计确认或者累计应答。</p>
+<h4 id="窗口大小由哪一方决定？"><a href="#%E7%AA%97%E5%8F%A3%E5%A4%A7%E5%B0%8F%E7%94%B1%E5%93%AA%E4%B8%80%E6%96%B9%E5%86%B3%E5%AE%9A%EF%BC%9F" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>窗口大小由哪一方决定？</h4>
+<p>TCP 头里有一个字段叫<code class="gatsby-code-text">Window</code>，也就是窗口大小。</p>
+<p><strong>这个字段是接收端告诉发送端自己还有多少缓冲区可以接收数据。于是发送端就可以根据这个接收端的处理能力来发送数据，而不会导致接收端处理不过来。</strong></p>
+<p>所以，通常窗口的大小是由接收方的窗口大小来决定的。</p>
+<p>发送方发送的数据大小不能超过接收方的窗口大小，否则接收方就无法正常接收到数据。</p>
+<h4 id="发送方的滑动窗口"><a href="#%E5%8F%91%E9%80%81%E6%96%B9%E7%9A%84%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>发送方的滑动窗口</h4>
+<p>我们先来看看发送方的窗口，下图就是发送方缓存的数据，根据处理的情况分成四个部分，其中深蓝色方框是发送窗口，紫色方框是可用窗口：</p>
+<p><img src="https://p5.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4591070853/e9c8/a088/8b27/6ea17e1e07b31db67f20bf635df6effb.png" alt="发送方的滑动窗口"></p>
+<ul>
+<li>#1是已发送并收到 ACK确认的数据：1~31 字节</li>
+<li>#2是已发送但未收到 ACK确认的数据：32~45 字节</li>
+<li>#3是未发送但总大小在接收方处理范围内（接收方还有空间）：46~51字节</li>
+<li>#4是未发送但总大小超过接收方处理范围（接收方没有空间）：52字节以后</li>
+</ul>
+<p>在下图，当发送方把数据「全部」都一下发送出去后，可用窗口的大小就为 0 了，表明可用窗口耗尽，在没收到 ACK 确认之前是无法继续发送数据了。</p>
+<p><img src="https://p5.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4591097013/3aed/8133/704f/f7df58c9a3b4933e64c41abcef50ca1e.png" alt="可用窗口耗尽"></p>
+<p>在下图，当收到之前发送的数据<code class="gatsby-code-text">32~36</code>字节的 ACK 确认应答后，如果发送窗口的大小没有变化，则<strong>滑动窗口往右边移动 5 个字节，因为有 5 个字节的数据被应答确认</strong>，接下来<code class="gatsby-code-text">52~56</code>字节又变成了可用窗口，那么后续也就可以发送<code class="gatsby-code-text">52~56</code>这<code class="gatsby-code-text">5</code>个字节的数据了。</p>
+<p><img src="https://p5.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4591107429/d49d/5348/3a3c/9ad75127d8ec3f5b6911796ea7e1638b.png" alt="32 ~ 36 字节已确认"></p>
+<h4 id="程序是如何表示发送方的四个部分的呢？"><a href="#%E7%A8%8B%E5%BA%8F%E6%98%AF%E5%A6%82%E4%BD%95%E8%A1%A8%E7%A4%BA%E5%8F%91%E9%80%81%E6%96%B9%E7%9A%84%E5%9B%9B%E4%B8%AA%E9%83%A8%E5%88%86%E7%9A%84%E5%91%A2%EF%BC%9F" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>程序是如何表示发送方的四个部分的呢？</h4>
+<p>TCP 滑动窗口方案使用三个指针来跟踪在四个传输类别中的每一个类别中的字节。其中两个指针是绝对指针（指特定的序列号），一个是相对指针（需要做偏移）。</p>
+<p><img src="https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4591203967/58eb/1c7d/cecb/baa0cdb70aa167eeafbdb99f0cf7e789.png" alt="SND.WND、SND.UN、SND.NXT"></p>
+<ul>
+<li>
+<p>SND.WND：表示发送窗口的大小（大小是由接收方指定的）；</p>
+</li>
+<li>
+<p>SND.UNA：是一个绝对指针，它指向的是已发送但未收到确认的第一个字节的序列号，也就是 #2 的第一个字节。</p>
+</li>
+<li>
+<p>SND.NXT：也是一个绝对指针，它指向未发送但可发送范围的第一个字节的序列号，也就是 #3 的第一个字节。</p>
+</li>
+<li>
+<p>指向 #4 的第一个字节是个相对指针，它需要 SND.UNA 指针加上 SND.WND 大小的偏移量，就可以指向 #4 的第一个字节了。</p>
+</li>
+</ul>
+<p>那么可用窗口大小的计算就可以是：</p>
+<p><strong>可用窗口大 = SND.WND -（SND.NXT - SND.UNA）</strong></p>
+<h4 id="接收方的滑动窗口"><a href="#%E6%8E%A5%E6%94%B6%E6%96%B9%E7%9A%84%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>接收方的滑动窗口</h4>
+<p>接下来我们看看接收方的窗口，接收窗口相对简单一些，根据处理的情况划分成三个部分：</p>
+<p><img src="https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4591237589/fdd9/ab3d/d5ea/1125ea95238b078dfd241c93175ec4bd.png" alt="接收窗口"></p>
+<ul>
+<li>#1 + #2 是已成功接收并确认的数据（等待应用进程读取）；</li>
+<li>#3 是未收到数据但可以接收的数据；</li>
+<li>#4 未收到数据并不可以接收的数据；</li>
+</ul>
+<p>其中三个接收部分，使用两个指针进行划分:</p>
+<ul>
+<li>RCV.WND：表示接收窗口的大小，它会通告给发送方。</li>
+<li>RCV.NXT：是一个指针，它指向期望从发送方发送来的下一个数据字节的序列号，也就是 #3 的第一个字节。</li>
+<li>指向 #4 的第一个字节是个相对指针，它需要 RCV.NXT 指针加上 RCV.WND 大小的偏移量，就可以指向 #4 的第一个字节了。</li>
+</ul>
+<h4 id="接收窗口和发送窗口的大小是相等的吗？"><a href="#%E6%8E%A5%E6%94%B6%E7%AA%97%E5%8F%A3%E5%92%8C%E5%8F%91%E9%80%81%E7%AA%97%E5%8F%A3%E7%9A%84%E5%A4%A7%E5%B0%8F%E6%98%AF%E7%9B%B8%E7%AD%89%E7%9A%84%E5%90%97%EF%BC%9F" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>接收窗口和发送窗口的大小是相等的吗？</h4>
+<p>并不是完全相等，接收窗口的大小是约等于发送窗口的大小的。</p>
+<p>因为滑动窗口并不是一成不变的。比如，当接收方的应用进程读取数据的速度非常快的话，这样的话接收窗口可以很快的就空缺出来。那么新的接收窗口大小，是通过 TCP 报文中的 Windows 字段来告诉发送方。那么这个传输过程是存在时延的，所以接收窗口和发送窗口是约等于的关系。</p>
+<h3 id="流量控制"><a href="#%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>流量控制</h3>
+<p>发送方不能无脑的发数据给接收方，要考虑接收方处理能力。</p>
+<p>如果一直无脑的发数据给对方，但对方处理不过来，那么就会导致触发重发机制，从而导致网络流量的无端的浪费。</p>
+<p>为了解决这种现象发生，<strong>TCP 提供一种机制可以让「发送方」根据「接收方」的实际接收能力控制发送的数据量，这就是所谓的流量控制</strong>。</p>
+<p>下面举个栗子，为了简单起见，假设以下场景：</p>
+<ul>
+<li>客户端是接收方，服务端是发送方</li>
+<li>假设接收窗口和发送窗口相同，都为 200</li>
+<li>假设两个设备在整个传输过程中都保持相同的窗口大小，不受外界影响</li>
+</ul>
+<p><img src="https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4591405895/11a5/f4a6/045b/111589e422bf38df4464c68b89514ed4.png" alt="流量控制"></p>
+<p>根据上图的流量控制，说明下每个过程：</p>
+<ul>
+<li>1.客户端向服务端发送请求数据报文。这里要说明下，本次例子是把服务端作为发送方，所以没有画出服务端的接收窗口。</li>
+<li>2.服务端收到请求报文后，发送确认报文和 80 字节的数据，于是可用窗口 Usable 减少为 120 字节，同时 SND.NXT 指针也向右偏移 80 字节后，指向 321，这意味着下次发送数据的时候，序列号是 321。</li>
+<li>3.客户端收到 80 字节数据后，于是接收窗口往右移动 80 字节，RCV.NXT 也就指向 321，这意味着客户端期望的下一个报文的序列号是 321，接着发送确认报文给服务端。</li>
+<li>4.服务端再次发送了 120 字节数据，于是可用窗口耗尽为 0，服务端无法再继续发送数据。</li>
+<li>5.客户端收到 120 字节的数据后，于是接收窗口往右移动 120 字节，RCV.NXT 也就指向 441，接着发送确认报文给服务端。</li>
+<li>6.服务端收到对 80 字节数据的确认报文后，SND.UNA 指针往右偏移后指向 321，于是可用窗口 Usable 增大到 80。</li>
+<li>7.服务端收到对 120 字节数据的确认报文后，SND.UNA 指针往右偏移后指向 441，于是可用窗口 Usable 增大到 200。</li>
+<li>8.服务端可以继续发送了，于是发送了 160 字节的数据后，SND.NXT 指向 601，于是可用窗口 Usable 减少到 40。</li>
+<li>9.客户端收到 160 字节后，接收窗口往右移动了 160 字节，RCV.NXT 也就是指向了 601，接着发送确认报文给服务端。</li>
+<li>10.服务端收到对 160 字节数据的确认报文后，发送窗口往右移动了 160 字节，于是 SND.UNA 指针偏移了 160 后指向 601，可用窗口 Usable 也就增大至了 200。</li>
+</ul>
+<h4 id="操作系统缓冲区与滑动窗口的关系"><a href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%BC%93%E5%86%B2%E5%8C%BA%E4%B8%8E%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E7%9A%84%E5%85%B3%E7%B3%BB" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>操作系统缓冲区与滑动窗口的关系</h4>
+<p>前面的流量控制例子，我们假定了发送窗口和接收窗口是不变的，但是实际上，发送窗口和接收窗口中所存放的字节数，都是放在操作系统内存缓冲区中的，而操作系统的缓冲区，会被操作系统调整。</p>
+<p>当应用进程没办法及时读取缓冲区的内容时，也会对我们的缓冲区造成影响。</p>
+<h5 id="那操心系统的缓冲区，是如何影响发送窗口和接收窗口的呢？"><a href="#%E9%82%A3%E6%93%8D%E5%BF%83%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BC%93%E5%86%B2%E5%8C%BA%EF%BC%8C%E6%98%AF%E5%A6%82%E4%BD%95%E5%BD%B1%E5%93%8D%E5%8F%91%E9%80%81%E7%AA%97%E5%8F%A3%E5%92%8C%E6%8E%A5%E6%94%B6%E7%AA%97%E5%8F%A3%E7%9A%84%E5%91%A2%EF%BC%9F" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>那操心系统的缓冲区，是如何影响发送窗口和接收窗口的呢？</h5>
+<p><strong>我们先来看看第一个例子</strong></p>
+<p>当应用程序没有及时读取缓存时，发送窗口和接收窗口的变化。
+考虑以下场景：</p>
+<ul>
+<li>客户端作为发送方，服务端作为接收方，发送窗口和接收窗口初始大小为 360；</li>
+<li>服务端非常的繁忙，当收到客户端的数据时，应用层不能及时读取数据。</li>
+</ul>
+<p><img src="https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4591677934/3022/da48/6b3b/f44fc49d6c87dc80770cdde3d870e035.png"></p>
+<p>根据上图的流量控制，说明下每个过程：</p>
+<ul>
+<li>1.客户端发送 140 字节数据后，可用窗口变为 220 （360 - 140）。</li>
+<li>2.服务端收到 140 字节数据，但是服务端非常繁忙，应用进程只读取了 40 个字节，还有 100 字节占用着缓冲区，于是接收窗口收缩到了 260 （360 - 100），最后发送确认信息时，将窗口大小通告给客户端。</li>
+<li>3.客户端收到确认和窗口通告报文后，发送窗口减少为 260。</li>
+<li>4.客户端发送 180 字节数据，此时可用窗口减少到 80。</li>
+<li>5.服务端收到 180 字节数据，但是应用程序没有读取任何数据，这 180 字节直接就留在了缓冲区，于是接收窗口收缩到了 80 （260 - 180），并在发送确认信息时，通过窗口大小给客户端。</li>
+<li>6.客户端收到确认和窗口通告报文后，发送窗口减少为 80。</li>
+<li>7.客户端发送 80 字节数据后，可用窗口耗尽。</li>
+<li>8.服务端收到 80 字节数据，但是应用程序依然没有读取任何数据，这 80 字节留在了缓冲区，于是接收窗口收缩到了 0，并在发送确认信息时，通过窗口大小给客户端。</li>
+<li>9.客户端收到确认和窗口通告报文后，发送窗口减少为 0。</li>
+</ul>
+<p>可见最后窗口都收缩为 0 了，也就是发生了窗口关闭。当发送方可用窗口变为 0 时，发送方实际上会定时发送窗口探测报文，以便知道接收方的窗口是否发生了改变，这个内容后面会说，这里先简单提一下。</p>
+<p><strong>我们先来看看第二个例子</strong></p>
+<p>当服务端系统资源非常紧张的时候，操心系统可能会直接减少了接收缓冲区大小，这时应用程序又无法及时读取缓存数据，那么这时候就有严重的事情发生了，会出现数据包丢失的现象。</p>
+<p><img src="https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4591715978/b845/f6f5/5101/a2ab52ba5f9230679f3ed2f35529ae35.png"></p>
+<p>说明下每个过程：</p>
+<ul>
+<li>1.客户端发送 140 字节的数据，于是可用窗口减少到了 220。</li>
+<li>2.服务端因为现在非常的繁忙，操作系统于是就把接收缓存减少了 120 字节，当收到 140 字节数据后，又因为应用程序没有读取任何数据，所以 140 字节留在了缓冲区中，于是接收窗口大小从 360 收缩成了 100，最后发送确认信息时，通告窗口大小给对方。</li>
+<li>3.此时客户端因为还没有收到服务端的通告窗口报文，所以不知道此时接收窗口收缩成了 100，客户端只会看自己的可用窗口还有 220，所以客户端就发送了 180 字节数据，于是可用窗口减少到 40。</li>
+<li>4.服务端收到了 180 字节数据时，发现数据大小超过了接收窗口的大小，于是就把数据包丢失了。</li>
+<li>5.客户端收到第 2 步时，服务端发送的确认报文和通告窗口报文，尝试减少发送窗口到 100，把窗口的右端向左收缩了 80，此时可用窗口的大小就会出现诡异的负值。</li>
+</ul>
+<p>所以，如果发生了先减少缓存，再收缩窗口，就会出现丢包的现象。</p>
+<p>为了防止这种情况发生，TCP 规定是不允许同时减少缓存又收缩窗口的，而是采用先收缩窗口，过段时间再减少缓存，这样就可以避免了丢包情况。</p>
+<h4 id="窗口关闭"><a href="#%E7%AA%97%E5%8F%A3%E5%85%B3%E9%97%AD" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>窗口关闭</h4>
+<p>在前面我们都看到了，TCP 通过让接收方指明希望从发送方接收的数据大小（窗口大小）来进行流量控制。</p>
+<p><strong>如果窗口大小为 0 时，就会阻止发送方给接收方传递数据，直到窗口变为非 0 为止，这就是窗口关闭</strong>。</p>
+<h5 id="窗口关闭潜在的危险"><a href="#%E7%AA%97%E5%8F%A3%E5%85%B3%E9%97%AD%E6%BD%9C%E5%9C%A8%E7%9A%84%E5%8D%B1%E9%99%A9" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>窗口关闭潜在的危险</h5>
+<p>接收方向发送方通告窗口大小时，是通过 ACK 报文来通告的。</p>
+<p>那么，当发生窗口关闭时，接收方处理完数据后，会向发送方通告一个窗口非 0 的 ACK 报文，如果这个通告窗口的 ACK 报文在网络中丢失了，那麻烦就大了。</p>
+<p><img src="https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4591910247/92b9/c8db/a450/53e81f285fa83df363b3b596ccb0a8a9.png"></p>
+<p>窗口关闭潜在的危险
+这会导致发送方一直等待接收方的非 0 窗口通知，接收方也一直等待发送方的数据，如不采取措施，这种相互等待的过程，会造成了死锁的现象。</p>
+<h5 id="tcp-是如何解决窗口关闭时，潜在的死锁现象呢？"><a href="#tcp-%E6%98%AF%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E7%AA%97%E5%8F%A3%E5%85%B3%E9%97%AD%E6%97%B6%EF%BC%8C%E6%BD%9C%E5%9C%A8%E7%9A%84%E6%AD%BB%E9%94%81%E7%8E%B0%E8%B1%A1%E5%91%A2%EF%BC%9F" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>TCP 是如何解决窗口关闭时，潜在的死锁现象呢？</h5>
+<p>为了解决这个问题，TCP 为每个连接设有一个持续定时器，<strong>只要 TCP 连接一方收到对方的零窗口通知，就启动持续计时器</strong>。</p>
+<p>如果持续计时器超时，就会发送<strong>窗口探测 ( Window probe ) 报文</strong>，而对方在确认这个探测报文时，给出自己现在的接收窗口大小。</p>
+<p><img src="https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4591938978/49ab/353a/342a/bcee1b6e2e5ea25afff3d93bd8809a93.png" alt="窗口探测"></p>
+<ul>
+<li>如果接收窗口仍然为 0，那么收到这个报文的一方就会重新启动持续计时器；</li>
+<li>如果接收窗口不是 0，那么死锁的局面就可以被打破了。</li>
+</ul>
+<p>窗口探测的次数一般为 3 次，每次大约 30-60 秒（不同的实现可能会不一样）。如果 3 次过后接收窗口还是 0 的话，有的 TCP 实现就会发<code class="gatsby-code-text">RST</code>报文来中断连接。</p>
+<h5 id="糊涂窗口综合症"><a href="#%E7%B3%8A%E6%B6%82%E7%AA%97%E5%8F%A3%E7%BB%BC%E5%90%88%E7%97%87" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>糊涂窗口综合症</h5>
+<p>如果接收方太忙了，来不及取走接收窗口里的数据，那么就会导致发送方的发送窗口越来越小。</p>
+<p>到最后，<strong>如果接收方腾出几个字节并告诉发送方现在有几个字节的窗口，而发送方会义无反顾地发送这几个字节，这就是糊涂窗口综合症</strong>。</p>
+<p>要知道，我们的 <code class="gatsby-code-text">TCP + IP</code> 头有 40 个字节，为了传输那几个字节的数据，要达上这么大的开销，这太不经济了。</p>
+<p>就好像一个可以承载 50 人的大巴车，每次来了一两个人，就直接发车。除非家里有矿的大巴司机，才敢这样玩，不然迟早破产。要解决这个问题也不难，大巴司机等乘客数量超过了 25 个，才认定可以发车。</p>
+<p>现举个糊涂窗口综合症的栗子，考虑以下场景：</p>
+<p>接收方的窗口大小是 360 字节，但接收方由于某些原因陷入困境，假设接收方的应用层读取的能力如下：</p>
+<ul>
+<li>接收方每接收 3 个字节，应用程序就只能从缓冲区中读取 1 个字节的数据；</li>
+<li>在下一个发送方的 TCP 段到达之前，应用程序还从缓冲区中读取了 40 个额外的字节；</li>
+</ul>
+<p><img src="https://p5.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4592077522/5274/721b/944b/439c19bbfbb9c2b6d8dfc9d8b5e3fa8d.png"></p>
+<p>每个过程的窗口大小的变化，在图中都描述的很清楚了，可以发现窗口不断减少了，并且发送的数据都是比较小的了。</p>
+<p>所以，糊涂窗口综合症的现象是可以发生在发送方和接收方：</p>
+<ul>
+<li>接收方可以通告一个小的窗口</li>
+<li>而发送方可以发送小数据</li>
+</ul>
+<p>于是，要解决糊涂窗口综合症，就解决上面两个问题就可以了</p>
+<ul>
+<li>让接收方不通告小窗口给发送方</li>
+<li>让发送方避免发送小数据</li>
+</ul>
+<h5 id="怎么让接收方不通告小窗口呢？"><a href="#%E6%80%8E%E4%B9%88%E8%AE%A9%E6%8E%A5%E6%94%B6%E6%96%B9%E4%B8%8D%E9%80%9A%E5%91%8A%E5%B0%8F%E7%AA%97%E5%8F%A3%E5%91%A2%EF%BC%9F" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>怎么让接收方不通告小窗口呢？</h5>
+<p>接收方通常的策略如下:</p>
+<p>当「窗口大小」小于 min( MSS，缓存空间/2 ) ，也就是小于 MSS 与 1/2 缓存大小中的最小值时，就会向发送方通告窗口为 0，也就阻止了发送方再发数据过来。</p>
+<p>等到接收方处理了一些数据后，窗口大小 >= MSS，或者接收方缓存空间有一半可以使用，就可以把窗口打开让发送方发送数据过来。</p>
+<h5 id="怎么让发送方避免发送小数据呢？"><a href="#%E6%80%8E%E4%B9%88%E8%AE%A9%E5%8F%91%E9%80%81%E6%96%B9%E9%81%BF%E5%85%8D%E5%8F%91%E9%80%81%E5%B0%8F%E6%95%B0%E6%8D%AE%E5%91%A2%EF%BC%9F" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>怎么让发送方避免发送小数据呢？</h5>
+<p>发送方通常的策略:
+使用 Nagle 算法，该算法的思路是延时处理，它满足以下两个条件中的一条才可以发送数据：</p>
+<ul>
+<li>要等到窗口大小 >= MSS 或是 数据大小 >= MSS</li>
+<li>收到之前发送数据的 ack 回包</li>
+</ul>
+<p>只要没满足上面条件中的一条，发送方一直在囤积数据，直到满足上面的发送条件。</p>
+<h3 id="拥塞控制"><a href="#%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>拥塞控制</h3>
+<h4 id="为什么要有拥塞控制呀，不是有流量控制了吗？"><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E6%9C%89%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6%E5%91%80%EF%BC%8C%E4%B8%8D%E6%98%AF%E6%9C%89%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6%E4%BA%86%E5%90%97%EF%BC%9F" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>为什么要有拥塞控制呀，不是有流量控制了吗？</h4>
+<p>前面的流量控制是避免「发送方」的数据填满「接收方」的缓存，但是并不知道网络的中发生了什么。</p>
+<p>一般来说，计算机网络都处在一个共享的环境。因此也有可能会因为其他主机之间的通信使得网络拥堵。</p>
+<p><strong>在网络出现拥堵时，如果继续发送大量数据包，可能会导致数据包时延、丢失等，这时 TCP 就会重传数据，但是一重传就会导致网络的负担更重，于是会导致更大的延迟以及更多的丢包，这个情况就会进入恶性循环被不断地放大…</strong></p>
+<p>所以，TCP 不能忽略网络上发生的事，它被设计成一个无私的协议，当网络发送拥塞时，TCP 会自我牺牲，降低发送的数据量。</p>
+<p>于是，就有了<strong>拥塞控制</strong>，控制的目的就是<strong>避免「发送方」的数据填满整个网络</strong>。</p>
+<p>为了在「发送方」调节所要发送数据的量，定义了一个叫做「<strong>拥塞窗口</strong>」的概念。</p>
+<h4 id="什么是拥塞窗口？和发送窗口有什么关系呢？"><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%8B%A5%E5%A1%9E%E7%AA%97%E5%8F%A3%EF%BC%9F%E5%92%8C%E5%8F%91%E9%80%81%E7%AA%97%E5%8F%A3%E6%9C%89%E4%BB%80%E4%B9%88%E5%85%B3%E7%B3%BB%E5%91%A2%EF%BC%9F" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>什么是拥塞窗口？和发送窗口有什么关系呢？</h4>
+<p><strong>拥塞窗口 cwnd</strong>是发送方维护的一个的状态变量，它会根据<strong>网络的拥塞程度动态变化的</strong>。</p>
+<p>我们在前面提到过发送窗口 swnd 和接收窗口 rwnd 是约等于的关系，那么由于加入了拥塞窗口的概念后，此时发送窗口的值是swnd = min(cwnd, rwnd)，也就是拥塞窗口和接收窗口中的最小值。</p>
+<p>拥塞窗口 cwnd 变化的规则：</p>
+<ul>
+<li>只要网络中没有出现拥塞，cwnd 就会增大；</li>
+<li>但网络中出现了拥塞，cwnd 就减少；</li>
+</ul>
+<h5 id="那么怎么知道当前网络是否出现了拥塞呢？"><a href="#%E9%82%A3%E4%B9%88%E6%80%8E%E4%B9%88%E7%9F%A5%E9%81%93%E5%BD%93%E5%89%8D%E7%BD%91%E7%BB%9C%E6%98%AF%E5%90%A6%E5%87%BA%E7%8E%B0%E4%BA%86%E6%8B%A5%E5%A1%9E%E5%91%A2%EF%BC%9F" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>那么怎么知道当前网络是否出现了拥塞呢？</h5>
+<p>其实只要「发送方」没有在规定时间内接收到 ACK 应答报文，也就是<strong>发生了超时重传，就会认为网络出现了用拥塞</strong>。</p>
+<h5 id="拥塞控制有哪些控制算法？"><a href="#%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6%E6%9C%89%E5%93%AA%E4%BA%9B%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95%EF%BC%9F" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>拥塞控制有哪些控制算法？</h5>
+<p>拥塞控制主要是四个算法：</p>
+<ul>
+<li>慢启动</li>
+<li>拥塞避免</li>
+<li>拥塞发生</li>
+<li>快速恢复</li>
+</ul>
+<h5 id="慢启动"><a href="#%E6%85%A2%E5%90%AF%E5%8A%A8" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>慢启动</h5>
+<p>TCP 在刚建立连接完成后，首先是有个慢启动的过程，这个慢启动的意思就是一点一点的提高发送数据包的数量，如果一上来就发大量的数据，这不是给网络添堵吗？</p>
+<p>慢启动的算法记住一个规则就行：<strong>当发送方每收到一个 ACK，拥塞窗口 cwnd 的大小就会加 1</strong>。</p>
+<p>这里假定拥塞窗口 cwnd 和发送窗口 swnd 相等，下面举个栗子：</p>
+<p>连接建立完成后，一开始初始化 cwnd = 1，表示可以传一个 MSS 大小的数据。
+当收到一个 ACK 确认应答后，cwnd 增加 1，于是一次能够发送 2 个
+当收到 2 个的 ACK 确认应答后， cwnd 增加 2，于是就可以比之前多发2 个，所以这一次能够发送 4 个
+当这 4 个的 ACK 确认到来的时候，每个确认 cwnd 增加 1， 4 个确认 cwnd 增加 4，于是就可以比之前多发 4 个，所以这一次能够发送 8 个。</p>
+<p><img src="https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4592276216/3ec6/697c/3bea/431db7f840cd7af001cb696d008f8bfc.png"></p>
+<p>慢启动算法
+可以看出慢启动算法，发包的个数是<strong>指数性的增长</strong>。</p>
+<p>那慢启动涨到什么时候是个头呢？</p>
+<p>有一个叫慢启动门限<code class="gatsby-code-text">ssthresh</code>（slow start threshold）状态变量。</p>
+<ul>
+<li>当<code class="gatsby-code-text">cwnd &lt; ssthresh</code>时，使用慢启动算法。</li>
+<li>当<code class="gatsby-code-text">cwnd &gt;= ssthresh</code>时，就会使用「拥塞避免算法」。</li>
+</ul>
+<h5 id="拥塞避免算法"><a href="#%E6%8B%A5%E5%A1%9E%E9%81%BF%E5%85%8D%E7%AE%97%E6%B3%95" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>拥塞避免算法</h5>
+<p>前面说道，当拥塞窗口 cwnd 「超过」慢启动门限 ssthresh 就会进入拥塞避免算法。</p>
+<p>一般来说 ssthresh 的大小是 65535 字节。</p>
+<p>那么进入拥塞避免算法后，它的规则是：<strong>每当收到一个 ACK 时，cwnd 增加 1/cwnd</strong>。</p>
+<p>接上前面的慢启动的栗子，现假定 ssthresh 为 8：</p>
+<ul>
+<li>当 8 个 ACK 应答确认到来时，每个确认增加 1/8，8 个 ACK 确认 cwnd 一共增加 1，于是这一次能够发送 9 个 MSS 大小的数据，变成了线性增长。</li>
+</ul>
+<p><img src="https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4592304867/0faa/4e74/29af/f8cd189ecbabca5714223b39ad134861.png"></p>
+<p>拥塞避免
+所以，我们可以发现，拥塞避免算法就是将原本慢启动算法的指数增长变成了线性增长，还是增长阶段，但是增长速度缓慢了一些。</p>
+<p>就这么一直增长着后，网络就会慢慢进入了拥塞的状况了，于是就会出现丢包现象，这时就需要对丢失的数据包进行重传。</p>
+<p>当触发了重传机制，也就进入了「拥塞发生算法」。</p>
+<h5 id="拥塞发生"><a href="#%E6%8B%A5%E5%A1%9E%E5%8F%91%E7%94%9F" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>拥塞发生</h5>
+<p>当网络出现拥塞，也就是会发生数据包重传，重传机制主要有两种：</p>
+<ul>
+<li>超时重传</li>
+<li>快速重传
+这两种使用的拥塞发送算法是不同的，接下来分别来说说。</li>
+</ul>
+<h5 id="发生超时重传的拥塞发生算法"><a href="#%E5%8F%91%E7%94%9F%E8%B6%85%E6%97%B6%E9%87%8D%E4%BC%A0%E7%9A%84%E6%8B%A5%E5%A1%9E%E5%8F%91%E7%94%9F%E7%AE%97%E6%B3%95" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>发生超时重传的拥塞发生算法</h5>
+<p>当发生了「超时重传」，则就会使用拥塞发生算法。</p>
+<p>这个时候，ssthresh 和 cwnd 的值会发生变化：</p>
+<ul>
+<li>ssthresh 设为 cwnd/2，</li>
+<li>cwnd 重置为 1</li>
+</ul>
+<p><img src="https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4592331001/0607/3743/99ea/ea5b7fcf7a39563a43b077d1eac3b431.png"></p>
+<p>拥塞发送 —— 超时重传
+接着，就重新开始慢启动，慢启动是会突然减少数据流的。这真是一旦「超时重传」，马上回到解放前。但是这种方式太激进了，反应也很强烈，会造成网络卡顿。</p>
+<p>就好像本来在秋名山高速漂移着，突然来个紧急刹车，轮胎受得了吗。。。</p>
+<h5 id="发生快速重传的拥塞发生算法"><a href="#%E5%8F%91%E7%94%9F%E5%BF%AB%E9%80%9F%E9%87%8D%E4%BC%A0%E7%9A%84%E6%8B%A5%E5%A1%9E%E5%8F%91%E7%94%9F%E7%AE%97%E6%B3%95" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>发生快速重传的拥塞发生算法</h5>
+<p>还有更好的方式，前面我们讲过「快速重传算法」。当接收方发现丢了一个中间包的时候，发送三次前一个包的 ACK，于是发送端就会快速地重传，不必等待超时再重传。</p>
+<p>TCP 认为这种情况不严重，因为大部分没丢，只丢了一小部分，则 ssthresh 和 cwnd 变化如下：</p>
+<ul>
+<li>cwnd = cwnd/2 ，也就是设置为原来的一半;</li>
+<li>ssthresh = cwnd;</li>
+<li>进入快速恢复算法;</li>
+</ul>
+<h5 id="快速恢复"><a href="#%E5%BF%AB%E9%80%9F%E6%81%A2%E5%A4%8D" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>快速恢复</h5>
+<p>快速重传和快速恢复算法一般同时使用，快速恢复算法是认为，你还能收到 3 个重复 ACK 说明网络也不那么糟糕，所以没有必要像 RTO 超时那么强烈。</p>
+<p>正如前面所说，进入快速恢复之前，cwnd 和 ssthresh 已被更新了：</p>
+<ul>
+<li>cwnd = cwnd/2 ，也就是设置为原来的一半;</li>
+<li>ssthresh = cwnd;</li>
+</ul>
+<p>然后，进入快速恢复算法如下：</p>
+<ul>
+<li>拥塞窗口 cwnd = ssthresh + 3 （ 3 的意思是确认有 3 个数据包被收到了）；</li>
+<li>重传丢失的数据包；</li>
+<li>如果再收到重复的 ACK，那么 cwnd 增加 1；</li>
+<li>如果收到新数据的 ACK 后，把 cwnd 设置为第一步中的 ssthresh 的值，原因是该 ACK 确认了新的数据，说明从 duplicated ACK 时的数据都已收到，该恢复过程已经结束，可以回到恢复之前的状态了，也即再次进入拥塞避免状态；</li>
+</ul>
+<p><img src="https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4592361241/d959/2202/8b5a/345dd754a9642a09607f99bcb5865d84.png"></p>
+<p>快速重传和快速恢复
+也就是没有像「超时重传」一夜回到解放前，而是还在比较高的值，后续呈线性增长。</p>
+<h5 id="拥塞算法示意图"><a href="#%E6%8B%A5%E5%A1%9E%E7%AE%97%E6%B3%95%E7%A4%BA%E6%84%8F%E5%9B%BE" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>拥塞算法示意图</h5>
+<p>好了，以上就是拥塞控制的全部内容了，看完后，你再来看下面这张图片，每个过程我相信你都能明白：</p>
+<p><img src="https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4592372193/f9ad/744b/b31a/4ac3ce4f9f24633f8afa374ba79284cf.png"></p>
+<h3 id="抓包"><a href="#%E6%8A%93%E5%8C%85" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>抓包</h3>
+<p>网络世界中的数据包交互我们肉眼是看不见的，它们就好像隐形了一样，我们对着课本学习计算机网络的时候就会觉得非常的抽象，加大了学习的难度。
+下面介绍两大抓包利器：<code class="gatsby-code-text">tcpdump</code>和<code class="gatsby-code-text">Wireshark</code></p>
+<h4 id="tcpdump-和-wireshark-有什么区别？"><a href="#tcpdump-%E5%92%8C-wireshark-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>tcpdump 和 Wireshark 有什么区别？</h4>
+<p><code class="gatsby-code-text">tcpdump</code>和<code class="gatsby-code-text">Wireshark</code>就是最常用的网络抓包和分析工具，更是分析网络性能必不可少的利器。</p>
+<ul>
+<li><code class="gatsby-code-text">tcpdump</code>仅支持命令行格式使用，常用在 Linux 服务器中抓取和分析网络包。</li>
+<li><code class="gatsby-code-text">Wireshark</code>除了可以抓包外，还提供了可视化分析网络包的图形页面。</li>
+</ul>
+<p>所以，这两者实际上是搭配使用的，先用 tcpdump 命令在 Linux 服务器上抓包，接着把抓包的文件拖出到 Windows/Mac 电脑后，用 Wireshark 可视化分析。</p>
+<p>下面简单的举例说明：
+我们要抓包请求数据地址为：<code class="gatsby-code-text">http://tcpdynamics.uk:4033/16K</code>的通信链路，则直接命令行输入：</p>
+<div class="gatsby-highlight">
+      <pre class="gatsby-code-sh"><code class="gatsby-code-sh">sudo tcpdump host tcpdynamics.uk and port 4033 -w file1.cap</code></pre>
+      </div>
+<blockquote>
+<p>-w file1.cap 表示把抓包的数据通信链路保存到文件file1.cap中，后续交给Wireshark图形化解析</p>
+</blockquote>
+<p>然后继续使用命令行工具curl,请求数据:</p>
+<div class="gatsby-highlight">
+      <pre class="gatsby-code-sh"><code class="gatsby-code-sh">curl -v -4 -o /dev/null http://tcpdynamics.uk:4033/16K</code></pre>
+      </div>
+<p>数据请求完毕之后，在第一个终端中<code class="gatsby-code-text">control + c</code>，终止抓包，保存<code class="gatsby-code-text">file1.cap</code>文件,
+将生成的文件拖入<code class="gatsby-code-text">Wireshark</code>中，进行展示全部的建立链接的链路，可以看到tcp建立连接的“三次握手”和最后断开连接的“四次挥手”，更重要的是可以看到数据传输过程中的“丢包”，“快速重发”等等机制。</p></div><div class="css-gjwx19"><p class="css-86uhag">SHARE ON:</p><ul class="css-7c9av6"><li class="css-x76up1"><a target="_blank" href="https://twitter.com/intent/tweet?text=http://lit-forest.github.io/blog/2018/12/22/tcp.html" class="css-1eushs4"><i class="icon-twitter"></i><span class="share css-gyrv08">Twitter</span></a></li><li class="css-x76up1"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://lit-forest.github.io/blog/2018/12/22/tcp.html" class="css-9st2on"><i class="icon-facebook"></i><span class="share css-gyrv08">Facebook</span></a></li><li class="css-x76up1"><a target="_blank" href="https://plus.google.com/share?url=http://lit-forest.github.io/blog/2018/12/22/tcp.html" class="css-oqtow6"><i class="icon-google-plus"></i><span class="share css-gyrv08">Google+</span></a></li><li class="css-x76up1"><a target="_blank" href="https://www.reddit.com/submit?url=http://lit-forest.github.io/blog/2018/12/22/tcp.html" class="css-92irrj"><i class="icon-reddit"></i><span class="share css-gyrv08">Reddit</span></a></li></ul></div><div class="css-1ydqk91"><p class="css-42tr88">ABOUT ME:</p><ul class="css-7c9av6"><li class="css-x76up1"><img src="https://p1.music.126.net/zSKDVZtAkjf2fLs3dlraKw==/109951164939996801.png" class="css-d7avb2"/><p class="css-qih34u">微信联系</p></li><li class="css-x76up1"><img src="https://p1.music.126.net/-xttfMEUn532VeVy6bv9pg==/109951164940043034.png" class="css-d7avb2"/><p class="css-qih34u">微信打赏支持</p></li></ul></div></div></article><div class="css-5nmmc4"><div style="opacity:0;transition:opacity 0.5s ease" class="css-1vrdrc4"><div style="transform:translate(0px, 40px);transition:transform 0.5s ease" class="css-p72dfi"><nav class="css-kh5h8y css-1aai96l"><h3 class="css-1qq1zo5">CATALOGUE</h3><div class="css-axv6fp"><span>- </span><a href="#重传机制" class="css-1pg3mb5">重传机制</a></div><div class="css-axv6fp"><span>- </span><a href="#滑动窗口" class="css-1pg3mb5">滑动窗口</a></div><div class="css-axv6fp"><span>- </span><a href="#流量控制" class="css-1pg3mb5">流量控制</a></div><div class="css-axv6fp"><span>- </span><a href="#拥塞控制" class="css-1pg3mb5">拥塞控制</a></div><div class="css-axv6fp"><span>- </span><a href="#抓包" class="css-1pg3mb5">抓包</a></div></nav></div></div></div></div></div></div></div></div><footer class="css-1y8xe5z"><div class="css-9zmdzy"><div class="css-ftk3jl"><section class="css-1s9y5m3">Ask me anything!<a target="_blank" href="https://github.com/Sylvenas/sylvenas.github.io/issues/new" class="css-1tckc8c">Issues</a><p class="css-l2t6xk">Copyright © 2017 Little Forest.</p></section></div></div></footer></div></div><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"231608221292675":"app-ba22115cf3423541542f.js","36733297554888":"component---src-templates-blog-js-b58464b776f21cfad9e7.js","162898551421021":"component---src-pages-404-js-2de6458e09f4b6086c58.js","126913170887777":"component---src-pages-archive-html-js-e3ec42fce7487d5dc191.js","133811465156365":"component---src-pages-categories-html-js-2e61fe6eeb9cd1250a76.js","35783957827783":"component---src-pages-index-js-24174749f03f4006f365.js","165076273342585":"component---src-pages-jsx-compiler-html-js-9093ed090cef2ad97ccb.js","156897593687669":"component---src-pages-resume-js-c4b23ba1b25501cf3e47.js","60335399758886":"path----557518bd178906f8d58a.js","45123342489346":"path---blog-2018-01-29-parcel-html-bd672d094d407a7f95ba.js","87567455114222":"path---blog-2015-01-12-js-async-html-48b05136f2c490140f72.js","130476937168866":"path---blog-2016-11-15-event-loop-html-02ec376a513f6c34520b.js","104544032357299":"path---blog-2018-07-12-webp-loader-html-7e5114e98249fbc91c0d.js","263527473093100":"path---blog-2018-04-24-webpack-loader-html-ea8505673c2a33ad2550.js","186004504469781":"path---blog-2017-02-14-promise-html-1d026d03fdaac6af1501.js","141441953996563":"path---blog-2015-02-03-call-back-html-35c2081472bd306b877e.js","62172665694623":"path---blog-2018-07-14-svg-placeholder-html-31490d9f59b30693c1b6.js","240899964138553":"path---blog-2017-02-18-promise-api-html-accdcd56b635623dd6e4.js","229478105278766":"path---blog-2017-03-11-generator-html-4c1a90bc41dd1bbdb27a.js","103126334712109":"path---blog-2014-09-15-css-float-html-4c4d95a0936dc3a3f65c.js","76242677258713":"path---blog-2017-05-11-async-await-html-6207022ed6ad8ca781dd.js","24037326979274":"path---blog-2014-12-17-css-center-html-78a56fb7c690f3f5c1a5.js","158670813600671":"path---blog-2015-02-10-圣杯布局-html-8c5dad8a0f97aba24e99.js","186823484966292":"path---blog-2015-07-05-negative-margin-html-555cc16fc279a1adc517.js","211899004779295":"path---blog-2015-06-07-keep-footer-bottom-html-7717a1f3d40981ce19bf.js","90954196957731":"path---blog-2013-06-12-css-html-e97cf57adc779ac3d70d.js","197923964116340":"path---blog-2016-04-23-facebook-placeholder-html-b7965bc0a5e56e06f8d6.js","86781549884547":"path---blog-2016-08-21-bfc-html-4a24ab2ace5f2db1bbbb.js","140324884003377":"path---blog-2018-01-03-desgin-pattern-in-js-html-6f4612b1b06b9bf89050.js","149596090173323":"path---blog-2018-01-06-pub-sub-pattern-html-5e8d7b0401d5135a0307.js","34186222656622":"path---blog-2018-01-12-constructor-pattern-html-0c39264e4f87251c7a0f.js","94560950738343":"path---blog-2017-10-16-pub-sub-html-37b3c2bf44c5624c0ffe.js","55339036939558":"path---blog-2018-01-16-prototype-pattern-html-7b2b72bae09b8d6b940c.js","267018527685980":"path---blog-2018-01-20-factory-pattern-html-1cd85389b481a38812a5.js","191158020178648":"path---blog-2018-02-01-singleton-html-acb431835992a6a6e487.js","253093730185277":"path---blog-2017-07-16-fp-0-functional-programming-html-58a1c8d15f69a3dfe6e9.js","203920946486498":"path---blog-2017-07-25-fp-2-learn-fp-in-javascript-html-068d1ca74126aa8ce2d7.js","168005891448439":"path---blog-2017-11-14-fp-3-functional-programming-html-423535915eff370591b1.js","220268978586990":"path---blog-2017-07-20-fp-1-composing-software-intro-html-d1a333fc400bdea26a5a.js","110828910702164":"path---blog-2017-11-15-fp-4-pure-function-html-b935ffc534375bbead2b.js","268134586702403":"path---blog-2017-11-20-fp-5-closure-html-96c3257a208b59609ade.js","272945691394075":"path---blog-2017-11-23-fp-6-curry-and-partial-application-html-68f79e0368a288afaf96.js","171080386098129":"path---blog-2017-11-27-fp-7-function-composition-html-b15485b3f06c6e561b2b.js","138827884502336":"path---blog-2018-01-02-fp-8-recursion-html-61778fa91efe1358cb1f.js","28273515500037":"path---blog-2018-07-26-fp-10-functor-html-202370e88c54f97f90a9.js","79387333201259":"path---blog-2018-06-06-fp-9-hindley-milner-html-63c88a55f39ed116152a.js","23036640950291":"path---blog-2018-08-03-fp-12-either-html-ef8bfaebf36d86925352.js","14931806575433":"path---blog-2018-08-02-fp-11-maybe-html-38578a0d307b5e7970f4.js","66583963097476":"path---blog-2018-08-08-fp-13-io-html-b6820494f4aa71c24a5d.js","27161055902862":"path---blog-2018-09-02-fp-14-monad-1-html-966c819286a7606ac822.js","122006779658217":"path---blog-2018-09-11-fb-15-monad-2-html-a27b376503100320e28a.js","100847365912643":"path---blog-2018-11-07-fb-16-applicative-functor-html-e932d629df7eace86b4b.js","273459823734552":"path---blog-2018-12-11-fp-17-transform-naturally-html-f27c90f8d66b71404ac4.js","161791021652343":"path---blog-2018-12-13-fp-18-semigroup-html-b6217772648be0aa52f1.js","252218312009988":"path---blog-2015-03-25-session-timeout-html-b8d10eafdcb13e181bd5.js","238760354773762":"path---blog-2016-04-18-how-browser-work-html-0e9b1d8f7c552e50aa14.js","240414334137308":"path---blog-2016-03-23-what-really-happens-when-you-nav-to-a-url-html-7149dc46ed9f0ce33e3b.js","243078993728827":"path---blog-2016-09-23-web攻击与防范-html-75617fd5a5bd25f6be05.js","26630074914592":"path---blog-2018-01-03-http-cache-html-4f4f2c7913074ca36fd2.js","51993022045857":"path---blog-2017-06-13-https-html-f98ae81c790140e50768.js","177271024231624":"path---blog-2020-01-18-abort-controller-html-0f9ae4cfcc89c810cb42.js","263424503683858":"path---blog-2017-05-17-http-html-4132ed614601bbbf1a02.js","144718557163418":"path---blog-2014-04-03-js-natives-html-59f99d3acd39dd0a434b.js","50806470763578":"path---blog-2015-09-23-argument-vs-parameter-html-e5733f0b9cf00e6ff977.js","182734394921033":"path---blog-2018-12-22-tcp-html-3966c3b7c5012dd44700.js","130214400891082":"path---blog-2018-02-24-js-style-html-780fcc4835ff55a8bb04.js","76048864908282":"path---blog-2017-10-03-lexical-environments-html-3448f064706e68d49485.js","119628846040985":"path---blog-2019-06-23-nginx-html-035de9b1ed2d17429bff.js","176740479467196":"path---blog-2014-05-06-reg-exp-html-7749eba57078f2f1a730.js","133256223428223":"path---blog-2018-03-16-arrow-function-this-html-35d92462a3ce0bb6a16f.js","174926928852454":"path---blog-2018-08-24-代理-pattern-html-74eb3b779a3e134cdaaf.js","16102039640149":"path---blog-2018-06-24-this-html-84351152059b245edd47.js","30772353851385":"path---blog-2013-06-17-挪威的森林-html-cbd5908521488eb39a3b.js","256417209235808":"path---blog-2018-08-24-class-pattern-html-37bd567a09efeaa274b4.js","202726206507379":"path---blog-2018-11-12-overview-of-the-engine-the-runtime-the-call-stack-html-81e88d041383cea8787c.js","265724463804524":"path---blog-2017-11-7-山月记-html-7ea858eec7cea027e101.js","21532977230103":"path---blog-2019-02-05-menory-management-html-475c3e3654e9537e7453.js","22784017443185":"path---blog-2015-04-06-傲慢与偏见-html-f1e81bc6e2c657bc950b.js","91843727524435":"path---blog-2018-03-12-白夜行-html-7585cf8d1e12bffc5b89.js","98805676319533":"path---blog-2020-02-07-记念刘和珍君-html-ddf0d9f372046f14e75e.js","280582851610089":"path---blog-2014-05-23-追风筝的人-html-02435d695179c88e6947.js","108064919197429":"path---blog-2019-05-24-mobile-html-f11f8a091eee84ae817b.js","278222221773214":"path---blog-2020-02-01-动物庄园-html-15fe0a810571160ffb70.js","185090824242794":"path---blog-2020-05-14-被讨厌的勇气-html-106ea4861db57fe99a57.js","166507826721253":"path---blog-2019-05-27-mobile-css-html-9e102cb7696f1300ce24.js","11967409781273":"path---blog-2017-04-12-os-process-html-91a418bf3c47c472d450.js","142177569370066":"path---blog-2018-10-22-node-process-stability-html-27a3cffb9cf0cb563e22.js","97900780661389":"path---blog-2019-09-10-黑珍珠号的诅咒-html-193233a84e328479c186.js","10059636096439":"path---blog-2018-07-19-node-error-catch-html-5f53c24636a8d29a3b3c.js","269920589058424":"path---blog-2016-07-17-node-core-html-9985bdfb51ff225fd3a9.js","99047659125544":"path---blog-2019-11-12-node-cluster-html-9ec3122ac6e26ced5049.js","201855375687092":"path---blog-2019-06-11-node-http-html-8a5a643463cb4afcd4c4.js","184975369749003":"path---blog-2020-01-30-薛定谔的-maybe-html-cf94361db6143b01e3e4.js","4012586293193":"path---blog-2020-02-12-俄罗斯套娃娃-html-3bed1926ebd78827d83e.js","73951558102577":"path---blog-2020-03-02-加法是自然之道-html-f1c3a0d342cd3ee08e3a.js","7472626407853":"path---blog-2018-03-06-web-image-优化-html-0f1c96a2754cbd48b48b.js","212125876578772":"path---blog-2018-03-07-webp-html-d6d11cf93e5cd59cb805.js","68504083430238":"path---blog-2020-02-05-应用函子-html-01d072d1c169e3c89506.js","195643959104958":"path---blog-2018-03-08-lazy-loading-html-6e5a1feeeab5fd962328.js","246858995668919":"path---blog-2018-03-09-placeholder-html-e15c87fd090d1c27cd6f.js","257229840863137":"path---blog-2019-01-12-load-priority-html-66e6de8345a95e1a2a17.js","86743910227843":"path---blog-2020-05-02-自然变换-html-570f5a78101245f26906.js","173417927850782":"path---blog-2020-04-25-遍历与队列-html-a361a3271a0487b2f8a8.js","25883942521650":"path---blog-2018-03-10-responsive-img-html-e62364897df6bf879cd2.js","40317619944229":"path---blog-2015-04-21-utils-html-b2fb34ed08ac7899f2b9.js","57247527272280":"path---blog-2014-02-10-photos-html-b6c0bff248f1c5d0e1d3.js","11728106488743":"path---blog-2016-12-01-react-set-state-html-d1d7ab0b01f86fd80aa3.js","12903464940258":"path---blog-2017-02-26-react-magic-html-fae0a0342df6ca07e779.js","10469856415718":"path---blog-2017-08-30-react-bind-html-52b92ada85f5748878fb.js","172881535359774":"path---blog-2017-06-23-react-pass-params-html-ae63aafa52bbe362dbf5.js","181594266608914":"path---blog-2017-10-23-set-state-html-bdcc841dcdfbcf44165e.js","238234326428222":"path---blog-2017-08-21-spa-html-fce522a6722aaa7ccec6.js","268448654283062":"path---blog-2018-05-26-react-if-html-1d6a0ffb7a66e6a94a44.js","248500680906976":"path---blog-2018-05-21-hight-order-component-html-f8f0a1a93a31ab388888.js","52773232763740":"path---blog-2018-06-15-arrow-in-react-html-589fc2522d24cd5204bc.js","265288779230157":"path---blog-2018-10-08-css-in-react-html-d985c9d4e7fa6796c4f6.js","35649322189577":"path---blog-2018-09-20-using-function-as-children-html-431665a11dce2bda0caa.js","192377786737564":"path---blog-2018-09-11-react-jsx-html-f59538b2c0386b0b1745.js","191393338706681":"path---blog-2019-03-04-react-fiber-html-762729d6be8efa6d0b34.js","68175638597491":"path---blog-2020-01-02-catch-react-error-html-47dc5d22355c70847e3d.js","70070408593366":"path---blog-2019-03-07-react-reconciliation-html-19a0aefab7e313414564.js","4928131371014":"path---blog-2017-10-24-rxjs-intro-html-e73fa6e11cbc051083fb.js","127884542819937":"path---blog-2017-10-26-rxjs-observable-html-2beb8126eaa3f0cf716e.js","62649264562255":"path---blog-2017-11-8-rxjs-observer-html-9194939ddf2e7633ea3d.js","70030795282346":"path---blog-2021-03-30-react-hooks-html-df0242c7c3ce0f18cb4a.js","254022195166212":"path---404-a0e39f21c11f6a62c5ab.js","32240201454517":"path---archive-html-99ac481ee4fe9b5d346a.js","69206468122066":"path---categories-html-99ac481ee4fe9b5d346a.js","142629428675168":"path---index-0d01f3370391bf875935.js","119766850614634":"path---jsx-compiler-html-a0e39f21c11f6a62c5ab.js","218357007423260":"path---resume-a0e39f21c11f6a62c5ab.js","178698757827068":"path---404-html-a0e39f21c11f6a62c5ab.js","114276838955818":"component---src-layouts-index-js-933419639cd1b488f0e0.js"}/*]]>*/</script><script>/*<![CDATA[*/["/commons-ca4351058a10da99e2be.js","/app-ba22115cf3423541542f.js","/path---blog-2018-12-22-tcp-html-3966c3b7c5012dd44700.js","/component---src-templates-blog-js-b58464b776f21cfad9e7.js","/component---src-layouts-index-js-933419639cd1b488f0e0.js"].forEach(function(s){document.write('<script src="'+s+'" defer></'+'script>')})/*]]>*/</script></body></html>
