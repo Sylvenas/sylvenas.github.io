@@ -64,7 +64,7 @@ const Cart = ({ node }) => {
                 position: 'absolute',
                 top: 0,
                 left: 0,
-                opacity: 0,
+                opacity: 1,
                 transition: 'opacity .3s',
               }}
               description="true" />
