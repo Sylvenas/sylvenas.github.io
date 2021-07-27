@@ -10,8 +10,10 @@ const Cart = ({ node }) => {
   const picRef = useRef()
 
   const handleImgLoad = () => {
-    svgRef.current.style.opacity = 0;
-    picRef.current.style.opacity = 1;
+    setTimeout(() => {
+      svgRef.current.style.opacity = 0;
+      picRef.current.style.opacity = 1;
+    })
   }
 
   return (
