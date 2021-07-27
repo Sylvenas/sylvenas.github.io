@@ -1,0 +1,41 @@
+{
+  "name": "gatsby-example-using-markdown-pages",
+  "private": true,
+  "description": "Start your new blog using markdown files",
+  "version": "0.1.0",
+  "author": "@gatsbyjs",
+  "dependencies": {
+    "gatsby": "^3.10.1",
+    "gatsby-image": "next",
+    "gatsby-plugin-alias-imports": "^1.0.5",
+    "gatsby-plugin-glamor": "^3.10.0",
+    "gatsby-plugin-less": "^5.10.0",
+    "gatsby-plugin-manifest": "next",
+    "gatsby-plugin-offline": "next",
+    "gatsby-plugin-react-helmet": "next",
+    "gatsby-remark-prismjs": "^5.7.0",
+    "gatsby-source-filesystem": "next",
+    "gatsby-transformer-remark": "^4.7.0",
+    "glamor": "^2.20.40",
+    "prismjs": "^1.24.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1"
+  },
+  "devDependencies": {
+    "prettier": "2.1.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx,md}",
+    "start": "npm run dev",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+  }
+}
