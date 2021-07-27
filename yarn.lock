@@ -4994,6 +4994,11 @@ gatsby-plugin-manifest@next:
     semver "^7.3.5"
     sharp "^0.28.3"
 
+gatsby-plugin-no-sourcemaps@^3.10.0:
+  version "3.10.0"
+  resolved "https://registry.nlark.com/gatsby-plugin-no-sourcemaps/download/gatsby-plugin-no-sourcemaps-3.10.0.tgz#f8a4ada487953bc6c8fec8ef7652d6ea2924fc8d"
+  integrity sha1-+KStpIeVO8bI/sjvdlLW6ikk/I0=
+
 gatsby-plugin-offline@next:
   version "4.11.0-next.0"
   resolved "https://registry.nlark.com/gatsby-plugin-offline/download/gatsby-plugin-offline-4.11.0-next.0.tgz#e754e767741de095d946b0b90b540f899635014e"

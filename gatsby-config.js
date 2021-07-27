@@ -14,11 +14,12 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
+    "gatsby-plugin-no-sourcemaps",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/static/img`,
       },
     },
     // `gatsby-transformer-sharp`,
@@ -32,7 +33,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
+        icon: `src/static/img/logo.png`,
       },
     },
     "gatsby-plugin-glamor",

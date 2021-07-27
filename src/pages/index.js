@@ -1,9 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import TitleAndMetaTags from "@components/title-mate-tags"
 import Layout from "@components/layout"
 import Cart from "@components/cart"
 import { media, sharedStyles } from '@utils/theme';
+import { urlRoot } from '@utils/consts';
 
 const IndexPage = ({ location, data: {
   allMarkdownRemark: { edges },
@@ -31,10 +33,10 @@ const IndexPage = ({ location, data: {
               textAlign: 'center',
               marginBottom: '25px',
             }}>Less is More</div>
-            {/* <TitleAndMetaTags
+            <TitleAndMetaTags
               ogUrl={`${urlRoot}/blog/all.html`}
               title="Little forest - All Posts"
-            /> */}
+            />
             <ul
               css={{
                 display: 'flex',

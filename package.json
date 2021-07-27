@@ -11,6 +11,7 @@
     "gatsby-plugin-glamor": "^3.10.0",
     "gatsby-plugin-less": "^5.10.0",
     "gatsby-plugin-manifest": "next",
+    "gatsby-plugin-no-sourcemaps": "^3.10.0",
     "gatsby-plugin-offline": "next",
     "gatsby-plugin-react-helmet": "next",
     "gatsby-remark-prismjs": "^5.7.0",
