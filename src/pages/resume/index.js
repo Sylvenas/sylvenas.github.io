@@ -25,7 +25,10 @@ class Resume extends React.Component {
             width: '100%',
           }}>
             <h2 className="resume-title">About</h2>
-            <p className="resume-p">Mello is a holy buddhist. He lives in HangZhou, ZheJiang. He likes basketball, books, games and travel.</p>
+            <p className="resume-p">
+              Tao Zhao lives in HangZhou, ZheJiang. He likes basketball, books,
+              games and travel.
+            </p>
             <br />
             <p className="resume-p">Math is my next programming language</p>
             <br />
