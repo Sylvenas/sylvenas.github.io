@@ -48,6 +48,7 @@ module.exports = {
           "@css": "src/css",
           "@templates": "src/templates",
           "@utils": "src/utils",
+          "@hooks": "src/hooks",
         },
         extensions: [
           "js",

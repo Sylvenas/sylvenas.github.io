@@ -1,10 +1,19 @@
-import React from "react";
+import React, { memo, useRef } from "react";
 import { Link } from 'gatsby';
-import { media, sharedStyles } from '@utils/theme';
+import { media } from '@utils/theme';
 
 const Cart = ({ node }) => {
   const imgName = node.frontmatter.img.substring(6, 16);
   const imgType = node.frontmatter.img.substring(17);
+
+  const svgRef = useRef()
+  const picRef = useRef()
+
+  const handleImgLoad = () => {
+    svgRef.current.style.opacity = 0;
+    picRef.current.style.opacity = 1;
+  }
+
   return (
     <li
       css={{
@@ -33,7 +42,7 @@ const Cart = ({ node }) => {
               position: 'relative',
               transition: 'opacity .3s',
             }}
-          // ref={img => { this.smImgs.set(i, img); }}
+            ref={svgRef}
           />
           <picture>
             <source media="(min-width: 900px)"
@@ -41,7 +50,8 @@ const Cart = ({ node }) => {
             <source media="(max-width: 900px)"
               srcSet={`/img/${imgName}_md_1x.webp 1x,/img/${imgName}_md_2x.webp 2x`} type="image/webp" />
             <img
-              // onLoad={this.handleImgLoad(i)}
+              ref={picRef}
+              onLoad={handleImgLoad}
               srcSet={`/img/${imgName}_md_1x.${imgType} 900w,/img/${imgName}_lg_1x.${imgType} 1440w`}
               src={`/img/${imgName}_lg_1x.${imgType} 1440w`}
               type={`image/${imgType}`}
@@ -52,7 +62,7 @@ const Cart = ({ node }) => {
                 position: 'absolute',
                 top: 0,
                 left: 0,
-                opacity: 1,
+                opacity: 0,
                 transition: 'opacity .3s',
               }}
               description="true" />
@@ -117,4 +127,4 @@ const Cart = ({ node }) => {
   )
 }
 
-export default Cart
+export default memo(Cart)
