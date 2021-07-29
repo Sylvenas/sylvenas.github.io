@@ -52,14 +52,14 @@ const MarkdownPage = ({
               </div>
             </Flex>
 
-            <div css={sharedStyles.articleLayout.sidebar}>
-              {/* <StickyResponsiveSidebar
+            {/* <div css={sharedStyles.articleLayout.sidebar}> */}
+            {/* <StickyResponsiveSidebar
                 enableScrollSync={enableScrollSync}
                 createLink={createLink}
                 location={location}
                 sectionList={sectionList}
               /> */}
-            </div>
+            {/* </div> */}
           </div>
         </Container>
       </div>

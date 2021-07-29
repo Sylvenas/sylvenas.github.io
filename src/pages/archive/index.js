@@ -15,20 +15,22 @@ const Archive = ({
   let collections = {};
   let years;
 
-  edges.forEach(edge => {
-    var col = {};
-    var year = edge.node.fields.date.split(',')[1];
-    col.categories = edge.node.frontmatter.categories;
-    col.date = edge.node.fields.date;
-    col.title = edge.node.frontmatter.title;
-    col.slug = edge.node.fields.slug;
-    if (collections[year]) {
-      collections[year].push(col)
-    } else {
-      collections[year] = [];
-      collections[year].push(col)
-    }
-  });
+  edges
+    .filter(edge => !edge.node.frontmatter.secert)
+    .forEach(edge => {
+      var col = {};
+      var year = edge.node.fields.date.split(',')[1];
+      col.categories = edge.node.frontmatter.categories;
+      col.date = edge.node.fields.date;
+      col.title = edge.node.frontmatter.title;
+      col.slug = edge.node.fields.slug;
+      if (collections[year]) {
+        collections[year].push(col)
+      } else {
+        collections[year] = [];
+        collections[year].push(col)
+      }
+    });
 
   years = Object.keys(collections);
 
@@ -82,6 +84,7 @@ export const pageQuery = graphql`
             title
             author
             categories
+            secert
           }
         }
       }

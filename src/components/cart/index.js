@@ -16,11 +16,14 @@ const Cart = ({ node }) => {
     })
   }
 
+  if (node.frontmatter.secert) return null
+
   return (
     <li
       css={{
         width: '100%',
         minHeight: 500,
+        listStyleType: 'none',
         [media.size('medium')]: {
           width: '50%',
         },

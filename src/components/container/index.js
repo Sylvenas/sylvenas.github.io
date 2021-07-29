@@ -9,8 +9,8 @@ import { media } from '@utils/theme';
 const Container = ({ children }) => (
   <div
     css={{
-      paddingLeft: 20,
-      paddingRight: 20,
+      // paddingLeft: 20,
+      // paddingRight: 20,
       marginLeft: 'auto',
       marginRight: 'auto',
 

@@ -15,19 +15,21 @@ const Categories = ({
   let collections = {};
   let categories;
 
-  edges.forEach(edge => {
-    var col = {};
-    var categorie = edge.node.frontmatter.categories;
-    col.date = edge.node.fields.date;
-    col.title = edge.node.frontmatter.title;
-    col.slug = edge.node.fields.slug;
-    if (collections[categorie]) {
-      collections[categorie].push(col)
-    } else {
-      collections[categorie] = [];
-      collections[categorie].push(col)
-    }
-  });
+  edges
+    .filter(edge => !edge.node.frontmatter.secert)
+    .forEach(edge => {
+      var col = {};
+      var categorie = edge.node.frontmatter.categories;
+      col.date = edge.node.fields.date;
+      col.title = edge.node.frontmatter.title;
+      col.slug = edge.node.fields.slug;
+      if (collections[categorie]) {
+        collections[categorie].push(col)
+      } else {
+        collections[categorie] = [];
+        collections[categorie].push(col)
+      }
+    });
   categories = Object.keys(collections);
 
   return (
@@ -80,6 +82,7 @@ export const pageQuery = graphql`
             title
             author
             categories
+            secert
           }
         }
       }

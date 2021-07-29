@@ -1,12 +1,3 @@
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * @emails react-core
- * @flow
- */
-
-'use strict';
-
 import { css } from 'glamor';
 import { colors } from '@utils/theme';
 

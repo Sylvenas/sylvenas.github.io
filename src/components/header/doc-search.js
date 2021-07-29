@@ -45,7 +45,7 @@ const DocSearch = () => (
           borderRadius: 15,
         },
       }}
-      href="https://github.com/lit-forest"
+      href="https://github.com/sylvenas"
       target="_blank"
       rel="noopener">
       <i className="icon-github"></i>

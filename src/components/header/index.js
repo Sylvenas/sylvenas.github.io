@@ -22,6 +22,7 @@ const Header = ({ location }) => {
         paddingRight: 20,
         marginLeft: 'auto',
         marginRight: 'auto',
+        overflowX: 'auto',
 
         [media.greaterThan('medium')]: {
           width: '90%',

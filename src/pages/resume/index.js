@@ -119,7 +119,7 @@ const WorkInfo = () => (
           <span className="work-date">Apr 2017 - Now</span> Fontend Developer @ <a href="http://netease.com" target="_blank">NetEase</a>
         </div>
         <div className="year work">
-          <span className="work-date">May 2013 - Apr 2017</span> Web Assistant @ <a href="https://www.bilibili.com/" target="_blank">Bilibili</a>
+          <span className="work-date">May 2015 - Apr 2017</span> Web Assistant @ <a href="https://www.bilibili.com/" target="_blank">Bilibili</a>
         </div>
         {/* <div className="year work">
           <span className="work-date">July 2010 - May 2014</span> Software Developer @ <a href="http://sap.com" target="_blank">tongyan</a>

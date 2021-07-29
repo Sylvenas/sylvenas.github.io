@@ -110,7 +110,7 @@ const sharedStyles = {
     content: {
       marginTop: 40,
       marginBottom: 120,
-
+      padding: '0 20px',
       [media.greaterThan('medium')]: {
         marginTop: 50,
       },
