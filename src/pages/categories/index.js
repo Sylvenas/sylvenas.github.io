@@ -68,39 +68,6 @@ const Categories = ({
       </Container>
     </Layout>
   )
-
-  return (
-    <Layout location={location}>
-      <Container css={{
-        position: 'relative',
-      }}>
-        <div className="timeline">
-          {categories.map(categorie => (
-            <div key={categorie} className="title">
-              <h2 className="year" id={categorie}>
-                {categorie}
-              </h2>
-              <ul className="posts-ul">
-                {collections[categorie].map(post => (
-                  <li key={post.title} className="post-li">
-                    <p css={{
-                      display: 'none',
-                    }} className="post-date-cat">
-                      <a
-                        href={`/archive.html#${post.date.split(',')[1]}`}>
-                        {`${post.date.substr(0, 3)} ${post.date.split(',')[0].split(' ')[1]},${post.date.split(',')[1]}`}
-                      </a>
-                    </p>
-                    <a className="post-title-cat" href={post.slug}>{post.title}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>)
-          )}
-        </div>
-      </Container>
-    </Layout>
-  )
 }
 
 
