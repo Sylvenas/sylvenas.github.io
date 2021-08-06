@@ -29,7 +29,7 @@ img: './img/2017-11-14.jpeg'
 
 **纯函数**有许多对函数式编程非常有用的特性，包括引用透明(referential transparency,你可以直接把一个函数调用替换成函数执行后的结果，而不会对程序造成任何影响),关于纯函数可以阅读[What is a Pure Function?](/blog/2017/11/15/Pure-function.html)。
 
-**函数组合**是把两个或者多个函数合并成一个函数。将函数组合在一起，就像将一连串管道扣合在一起，让数据流过一样。举例来说：`f.g`在JavaScript中相当于之行`f(g(x))`。函数组合是函数式编程中很重要的概念，关于函数组合可以阅读[What is Function Composition]()。
+**函数组合**是把两个或者多个函数合并成一个函数。将函数组合在一起，就像将一连串管道扣合在一起，让数据流过一样。举例来说：`f.g`在JavaScript中相当于执行`f(g(x))`。函数组合是函数式编程中很重要的概念，关于函数组合可以阅读[What is Function Composition]()。
 
 ### Shared State
 **共享状态**是指任意的变量，对象或者内存空间存在于共享作用域中，或则作为对象的属性在不同的作用域中传递。共享作用域可以包含全局作用域和局部作用域。通常，在面向对象编程中，对象以添加属性到其他对象上的方式在作用域内共享。
@@ -91,7 +91,7 @@ console.log(x1(x2(y)).val); // 5
 移除函数的时序依赖，可以减少很多去仔细分析函数上下文的精力。
 
 ### Immutability
-一个**不可变的(immutability)**的对象是指一个对象不会在它创建之后被改变。对应的一个**可变的(mutable)**的对象是指对象在创建之后可以被修改。
+一个 **不可变的(immutability)** 的对象是指一个对象不会在它创建之后被改变。对应的一个 **可变的(mutable)** 的对象是指对象在创建之后可以被修改。
 
 在JavaScript中，很重要的一点是不要混肴了`const`关键字和`immutability`。使用`const`关键字可以创建一个变量绑定，让该对象不能被重新赋值。但是`const`并不是创建了一个不可变对象。虽然不能修改`const`声明的变量的指向，但是你可以修改它的属性，这意味着`const`关键字声明的变量仍然是可以改变的。
 
@@ -117,7 +117,7 @@ const a = Object.freeze({
 a.foo.greeting = 'Goodbye';
 ```
 在许多函数式编程语言中，有一种特殊的不可变数据结构，被称为**trie**数据结构(trie的发音为tree),该结构能够有效的进行深度冻结--对象的任意层级的属性都是完全不能被修改的。
-当一个对象被拷贝的时候，trie使用结构共享来共用不可变对象的引用内存地址，这样可以减少内存占用，优化性能。
+当一个对象被拷贝的时候，trie 使用结构共享来共用不可变对象的引用内存地址，这样可以减少内存占用，优化性能。
 
 有一个已经使用了trie的JavaScript库[Immutable.js](https://github.com/facebook/immutable-js)。关于`Immutable.js`更多请查阅[10 Tips for Better Redux Architecture](https://medium.com/javascript-scene/10-tips-for-better-redux-architecture-69250425af44)。
 

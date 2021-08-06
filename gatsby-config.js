@@ -5,6 +5,7 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -12,7 +13,6 @@ module.exports = {
         path: `${__dirname}/posts`,
       },
     },
-    `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
     "gatsby-plugin-no-sourcemaps",
     {
@@ -59,6 +59,13 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 920,
+              wrapperStyle: 'margin:0;',
+            },
+          },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {

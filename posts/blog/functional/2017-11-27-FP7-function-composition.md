@@ -67,7 +67,7 @@ const split = curry((splitOn, str) => str.split(splitOn));
 ``` js
 import { curry, map, join, split } from 'lodash/fp';
 ```
-这里我们偷个懒，直接使用这个简写版本，注意这里`curry`并不是一个真正的柯里化函数，而是一个偏应用。关于柯里化和偏应用请查看[Partial Application And Curry]()。
+这里我们偷个懒，直接使用这个简写版本，注意这里`curry`并不是一个真正的柯里化函数，而是一个偏应用。关于柯里化和偏应用请查看[Partial Application And Curry](/blog/2017/11/23/FP6-Curry-and-PartialApplication.html)。
 
 回到我们的`toSlug`实现，这里有些东西让我真的很不喜欢：
 ``` js
