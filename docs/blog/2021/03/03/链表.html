@@ -26,7 +26,9 @@
         // <![CDATA[
         window._glamor = ["ktpazh","5779ll","1vv77hc","1jld97y","1b1t4gw","14f2gh7","1u4y56u","1h2fzrm","syyzfr","ki8d3w","o0vamj","1j3hxv8","zsednb","2x6ipt","nf6sef","6kb8y3","1ogfv32","h7y4wy","kgt1pa","qcikeu","9cb5ay","lhlvbt","f5j1cd","1yok9qz","190hivd","154pfwi","ja0yb3","qudo5w","v72wnb","10ayjkp","14nlkyt","dkzafi","1xv6vnd","1mevcx1","16n14tl","1cxcbpn","gczsff","vqwfir","n3wuan","j4q8zh","12vsfho","5v0gxc","95xunl","qvgrb1","1vzv80m","ughd3t","hgc6lu","1xjy9ic","174qq1k","86uhag","gyrv08","1eushs4","x76up1","9st2on","oqtow6","92irrj","7c9av6","gjwx19"]
         // ]]>
-        </script><title data-react-helmet="true">Rxjs Observer - little forest</title><meta data-react-helmet="true" property="og:title" content="Rxjs Observer - little forest"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:url" content="https://sylvenas.github.io/blog/2017/11/8/Rxjs-Observer.html"/><meta data-react-helmet="true" property="og:image" content="/logo-og.png"/><meta data-react-helmet="true" property="og:description" content="Little Forset Blog - Observer what is Observer? Observer(观察者)是Observable(可观察对象)推送的数据的消费者。在Rxjs中，Observer是由回调组成的对象，对象的键名分别为：、和，以此接受Observable推送的不同类型的通知，下面的代码是Observer的一个简单示例： Observer 的使用，只需要在  Observable时，把 observer 作为参数传递给  方法即可。 Observers are just objects with three…"/><meta data-react-helmet="true" property="fb:app_id" content="623268441017527"/><script data-react-helmet="true" type="application/ld+json">
+        </script><title data-react-helmet="true">链表 - little forest</title><meta data-react-helmet="true" property="og:title" content="链表 - little forest"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:url" content="https://sylvenas.github.io/blog/2021/03/03/链表.html"/><meta data-react-helmet="true" property="og:image" content="/logo-og.png"/><meta data-react-helmet="true" property="og:description" content="Little Forset Blog - 707.设计链表 /**
+设计链表的实现。您可以选择使用单链表或双链表。单链表中的节点应该具有两个属性：val 和 next。val 是当前节点的值，next 是指向下一个节点的指针/引用。如果要使用双向链表，则还需要一个属性 prev 以指示链表中的上一个节点。假设链表中的所有节点都是 0-index 的。 在链表类中实现这些功能： get(index)：获取链表中第 index 个节点的值。如果索引无效，则返回-1。
+addAtHead(val)：在链表的第一个元素之前添加一个值为 val…"/><meta data-react-helmet="true" property="fb:app_id" content="623268441017527"/><script data-react-helmet="true" type="application/ld+json">
         var _hmt = _hmt || [];
         (function() {
           var hm = document.createElement("script");
@@ -34,27 +36,236 @@
           var s = document.getElementsByTagName("script")[0]; 
           s.parentNode.insertBefore(hm, s);
         })();
-    </script><link rel="icon" href="/favicon-32x32.png?v=a30ccf9c3eea9c4abbc0c622979a4392" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=a30ccf9c3eea9c4abbc0c622979a4392"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=a30ccf9c3eea9c4abbc0c622979a4392"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=a30ccf9c3eea9c4abbc0c622979a4392"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=a30ccf9c3eea9c4abbc0c622979a4392"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=a30ccf9c3eea9c4abbc0c622979a4392"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=a30ccf9c3eea9c4abbc0c622979a4392"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=a30ccf9c3eea9c4abbc0c622979a4392"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=a30ccf9c3eea9c4abbc0c622979a4392"/><link as="script" rel="preload" href="/webpack-runtime-34d7ca55718d196e001b.js"/><link as="script" rel="preload" href="/framework-3413ebc5e40f5b37083e.js"/><link as="script" rel="preload" href="/app-26d5676d1bbb87bfc936.js"/><link as="script" rel="preload" href="/8b4e6025f464e9cebcbb2d5697e5d8bd86d9dc4c-9a843aa26145fb27743a.js"/><link as="script" rel="preload" href="/component---src-templates-blog-template-js-1f14a8c58eeb174f9172.js"/><link as="fetch" rel="preload" href="/page-data/blog/2017/11/8/Rxjs-Observer.html/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="css-190hivd"><header class="css-16n14tl"><div class="css-1mevcx1"><div class="css-1xv6vnd"><a class="css-qudo5w" href="/"><img src="https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/10032663585/7754/a2ab/5685/fa6b0f0675dcd210c2e285367ec352e5.png" class="css-154pfwi"/><span class="css-ja0yb3">little forest</span></a><nav class="css-v72wnb"><a class="css-1cxcbpn" href="/">HOME</a><a class="css-1cxcbpn" href="/archive">ARCHIVE</a><a class="css-1cxcbpn" href="/categories">CATEGORIES</a><a class="css-1cxcbpn" href="/resume">RESUME</a></nav><div class="css-gczsff"><a href="https://github.com/sylvenas" target="_blank" rel="noopener" class="css-14nlkyt"><i class="icon-github"></i></a></div><div class="css-dkzafi"><a href="https://twitter.com/MelloZhao" target="_blank" rel="noopener" class="css-10ayjkp"><i class="icon-twitter"></i></a><a href="mailto:wrsden@gmail.com?subject=little forest" target="_blank" rel="noopener" class="css-14nlkyt"><i class="icon-brand"></i></a></div></div></div></header><main class="css-1yok9qz"><div class="css-5v0gxc css-95xunl"><div class="css-12vsfho"><header class="css-hgc6lu"><div class="css-ughd3t"><h1 class="css-qvgrb1">Rxjs Observer</h1><div class="css-1vzv80m">November 07, 2017<!-- --> <span>by<!-- --> <!-- -->Sylvenas</span></div></div></header><div class="css-1xjy9ic"><div class="css-j4q8zh"><article class="css-174qq1k"><div class="css-n3wuan"><div class="css-vqwfir"><h3>Observer</h3>
-<p><strong>what is Observer?</strong> Observer(观察者)是Observable(可观察对象)推送的数据的消费者。在Rxjs中，Observer是由回调组成的对象，对象的键名分别为：<code class="language-text">next</code>、<code class="language-text">error</code>和<code class="language-text">complete</code>，以此接受Observable推送的不同类型的通知，下面的代码是Observer的一个简单示例：</p>
-<div class="gatsby-highlight has-highlighted-lines" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">var</span> observer <span class="token operator">=</span> <span class="token punctuation">{</span>
-<span class="gatsby-highlight-code-line">  <span class="token function-variable function">next</span><span class="token operator">:</span> <span class="token parameter">x</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Observer got a next value: '</span> <span class="token operator">+</span> x<span class="token punctuation">)</span><span class="token punctuation">,</span></span><span class="gatsby-highlight-code-line">  <span class="token function-variable function">error</span><span class="token operator">:</span> <span class="token parameter">err</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'Observer got an error: '</span> <span class="token operator">+</span> err<span class="token punctuation">)</span><span class="token punctuation">,</span></span><span class="gatsby-highlight-code-line">  <span class="token function-variable function">complete</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Observer got a complete notification'</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
-<p>Observer 的使用，只需要在 <code class="language-text">subscribe</code> Observable时，把 observer 作为参数传递给 <code class="language-text">subscribe</code> 方法即可。</p>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">observable<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span>observer<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
-<blockquote>
-<p>Observers are just objects with three callbacks, one for each type of notification that an Observable may deliver.</p>
-</blockquote>
-<p>在Rxjs中，Observer中的 <code class="language-text">next</code>,<code class="language-text">error</code>,<code class="language-text">complete</code> 三个处理逻辑是可以部分缺失的，即使缺失了部分，Observable 仍能正常运行的，只不过是对应的处理逻辑会被忽略，因为没有定义相应的处理逻辑，Observable 也就无法处理的。</p>
-<p>下面例子中的 Observer 就缺少了 <code class="language-text">complete</code> 的处理逻辑：</p>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">var</span> observer <span class="token operator">=</span> <span class="token punctuation">{</span>
-  <span class="token function-variable function">next</span><span class="token operator">:</span> <span class="token parameter">x</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Observer got a next value: '</span> <span class="token operator">+</span> x<span class="token punctuation">)</span><span class="token punctuation">,</span>
-  <span class="token function-variable function">error</span><span class="token operator">:</span> <span class="token parameter">err</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'Observer got an error: '</span> <span class="token operator">+</span> err<span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
-<p>在 <code class="language-text">subscribe</code> Observable 的时候，可以直接把函数作为参数传递给 <code class="language-text">subscribe</code> 方法，而不用传入整个 Observer 对象,当只传入一个函数的时候，Rxjs 在内部会创建一个只含有 <code class="language-text">next</code> 处理逻辑的 Observer。</p>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">observable<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token parameter">x</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Observer got a next value: '</span> <span class="token operator">+</span> x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
-<p>当然你也可以把<code class="language-text">next</code>,<code class="language-text">error</code>,<code class="language-text">complete</code>的回调函数作为参数全部传入<code class="language-text">subscribe</code>方法：</p>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">observable<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span>
-  <span class="token parameter">x</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Observer got a next value: '</span> <span class="token operator">+</span> x<span class="token punctuation">)</span><span class="token punctuation">,</span>
-  <span class="token parameter">err</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'Observer got an error: '</span> <span class="token operator">+</span> err<span class="token punctuation">)</span><span class="token punctuation">,</span>
-  <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Observer got a complete notification'</span><span class="token punctuation">)</span>
-<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
-<p>上面的例子，在 Observable 的内部，依然可以正常的调用 <code class="language-text">observer.next</code> , <code class="language-text">observer.error</code> ,<code class="language-text">observer.complete</code> 三个方法。</p></div><div class="css-gjwx19"><p class="css-86uhag">SHARE ON:</p><ul class="css-7c9av6"><li class="css-x76up1"><a target="_blank" href="https://twitter.com/intent/tweet?text=http://lit-forest.github.io/blog/2017/11/8/Rxjs-Observer.html" class="css-1eushs4"><i class="icon-twitter"></i><span class="share css-gyrv08">Twitter</span></a></li><li class="css-x76up1"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://lit-forest.github.io/blog/2017/11/8/Rxjs-Observer.html" class="css-9st2on"><i class="icon-facebook"></i><span class="share css-gyrv08">Facebook</span></a></li><li class="css-x76up1"><a target="_blank" href="https://plus.google.com/share?url=http://lit-forest.github.io/blog/2017/11/8/Rxjs-Observer.html" class="css-oqtow6"><i class="icon-google-plus"></i><span class="share css-gyrv08">Google+</span></a></li><li class="css-x76up1"><a target="_blank" href="https://www.reddit.com/submit?url=http://lit-forest.github.io/blog/2017/11/8/Rxjs-Observer.html" class="css-92irrj"><i class="icon-reddit"></i><span class="share css-gyrv08">Reddit</span></a></li></ul></div></div></article></div></div></div></div></main></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/2017/11/8/Rxjs-Observer.html";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-8c3cefde6b26c567f2e1.js"],"app":["/app-26d5676d1bbb87bfc936.js"],"component---src-pages-404-js":["/component---src-pages-404-js-e6aa6bd410c3d6433217.js"],"component---src-pages-archive-index-js":["/component---src-pages-archive-index-js-a2bb101f2fbd6173a77a.js"],"component---src-pages-categories-index-js":["/component---src-pages-categories-index-js-36c6e7546b674c45ecab.js"],"component---src-pages-index-js":["/component---src-pages-index-js-a5d76399b367da04c546.js"],"component---src-pages-resume-index-js":["/component---src-pages-resume-index-js-23e9f5f8157c7c95088c.js"],"component---src-pages-s-index-js":["/component---src-pages-s-index-js-84155e904fad5bf8deb0.js"],"component---src-templates-blog-template-js":["/component---src-templates-blog-template-js-1f14a8c58eeb174f9172.js"]};/*]]>*/</script><script src="/polyfill-8c3cefde6b26c567f2e1.js" nomodule=""></script><script src="/component---src-templates-blog-template-js-1f14a8c58eeb174f9172.js" async=""></script><script src="/8b4e6025f464e9cebcbb2d5697e5d8bd86d9dc4c-9a843aa26145fb27743a.js" async=""></script><script src="/app-26d5676d1bbb87bfc936.js" async=""></script><script src="/framework-3413ebc5e40f5b37083e.js" async=""></script><script src="/webpack-runtime-34d7ca55718d196e001b.js" async=""></script></body></html>
+    </script><link rel="icon" href="/favicon-32x32.png?v=a30ccf9c3eea9c4abbc0c622979a4392" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=a30ccf9c3eea9c4abbc0c622979a4392"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=a30ccf9c3eea9c4abbc0c622979a4392"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=a30ccf9c3eea9c4abbc0c622979a4392"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=a30ccf9c3eea9c4abbc0c622979a4392"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=a30ccf9c3eea9c4abbc0c622979a4392"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=a30ccf9c3eea9c4abbc0c622979a4392"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=a30ccf9c3eea9c4abbc0c622979a4392"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=a30ccf9c3eea9c4abbc0c622979a4392"/><link as="script" rel="preload" href="/webpack-runtime-34d7ca55718d196e001b.js"/><link as="script" rel="preload" href="/framework-3413ebc5e40f5b37083e.js"/><link as="script" rel="preload" href="/app-26d5676d1bbb87bfc936.js"/><link as="script" rel="preload" href="/8b4e6025f464e9cebcbb2d5697e5d8bd86d9dc4c-9a843aa26145fb27743a.js"/><link as="script" rel="preload" href="/component---src-templates-blog-template-js-1f14a8c58eeb174f9172.js"/><link as="fetch" rel="preload" href="/page-data/blog/2021/03/03/链表.html/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="css-190hivd"><header class="css-16n14tl"><div class="css-1mevcx1"><div class="css-1xv6vnd"><a class="css-qudo5w" href="/"><img src="https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/10032663585/7754/a2ab/5685/fa6b0f0675dcd210c2e285367ec352e5.png" class="css-154pfwi"/><span class="css-ja0yb3">little forest</span></a><nav class="css-v72wnb"><a class="css-1cxcbpn" href="/">HOME</a><a class="css-1cxcbpn" href="/archive">ARCHIVE</a><a class="css-1cxcbpn" href="/categories">CATEGORIES</a><a class="css-1cxcbpn" href="/resume">RESUME</a></nav><div class="css-gczsff"><a href="https://github.com/sylvenas" target="_blank" rel="noopener" class="css-14nlkyt"><i class="icon-github"></i></a></div><div class="css-dkzafi"><a href="https://twitter.com/MelloZhao" target="_blank" rel="noopener" class="css-10ayjkp"><i class="icon-twitter"></i></a><a href="mailto:wrsden@gmail.com?subject=little forest" target="_blank" rel="noopener" class="css-14nlkyt"><i class="icon-brand"></i></a></div></div></div></header><main class="css-1yok9qz"><div class="css-5v0gxc css-95xunl"><div class="css-12vsfho"><header class="css-hgc6lu"><div class="css-ughd3t"><h1 class="css-qvgrb1">链表</h1><div class="css-1vzv80m">March 02, 2021<!-- --> <span>by<!-- --> <!-- -->Sylvenas</span></div></div></header><div class="css-1xjy9ic"><div class="css-j4q8zh"><article class="css-174qq1k"><div class="css-n3wuan"><div class="css-vqwfir"><h2>707.设计链表</h2>
+<p>/**
+设计链表的实现。您可以选择使用单链表或双链表。单链表中的节点应该具有两个属性：val 和 next。val 是当前节点的值，next 是指向下一个节点的指针/引用。如果要使用双向链表，则还需要一个属性 prev 以指示链表中的上一个节点。假设链表中的所有节点都是 0-index 的。</p>
+<p>在链表类中实现这些功能：</p>
+<p>get(index)：获取链表中第 index 个节点的值。如果索引无效，则返回-1。
+addAtHead(val)：在链表的第一个元素之前添加一个值为 val 的节点。插入后，新节点将成为链表的第一个节点。
+addAtTail(val)：将值为 val 的节点追加到链表的最后一个元素。
+addAtIndex(index,val)：在链表中的第 index 个节点之前添加值为 val  的节点。如果 index 等于链表的长度，则该节点将附加到链表的末尾。如果 index 大于链表长度，则不会插入节点。如果index小于0，则在头部插入节点。
+deleteAtIndex(index)：如果索引 index 有效，则删除链表中的第 index 个节点。</p>
+<p>示例：</p>
+<p>MyLinkedList linkedList = new MyLinkedList();
+linkedList.addAtHead(1);
+linkedList.addAtTail(3);
+linkedList.addAtIndex(1,2);   // 链表变为1-> 2-> 3
+linkedList.get(1);            // 返回2
+linkedList.deleteAtIndex(1);  // 现在链表是1-> 3
+linkedList.get(1);            // 返回3
+*/</p>
+<p>/**</p>
+<p>// 假设链表为 5 -> 3 > 1
+{
+val: 5,
+next: {
+val: 3,
+next: {
+val: 1,
+next: null
+}
+}
+}
+// 双链表的结构就会多一个prev, 这个就不写了, 不然字数限制
+*/</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">class</span> <span class="token class-name">MyLinkedList</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">get</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> curr <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>curr<span class="token punctuation">.</span>next<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span>
+            curr <span class="token operator">=</span> curr<span class="token punctuation">.</span>next
+            i<span class="token operator">++</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> curr<span class="token punctuation">.</span>val <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">?</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">:</span> curr<span class="token punctuation">.</span>val
+    <span class="token punctuation">}</span>
+
+    <span class="token function">addAtHead</span><span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">&amp;&amp;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">.</span>val <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token punctuation">{</span> val<span class="token punctuation">,</span> next<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token punctuation">{</span> val<span class="token punctuation">,</span> next<span class="token operator">:</span> <span class="token keyword">null</span> <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">addAtTail</span><span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> curr <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>curr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            curr <span class="token operator">=</span> curr<span class="token punctuation">.</span>next
+        <span class="token punctuation">}</span>
+        curr<span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token punctuation">{</span> val<span class="token punctuation">,</span> next<span class="token operator">:</span> <span class="token keyword">null</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">addAtIndex</span><span class="token punctuation">(</span><span class="token parameter">index<span class="token punctuation">,</span> val</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">addAtHead</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">deleteAtIndex</span><span class="token punctuation">(</span><span class="token parameter">index</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h2>206.反转链表</h2>
+<p>/**</p>
+<ul>
+<li>给你单链表的头节点 head ，请你反转链表，并返回反转后的链表。</li>
+<li></li>
+<li>head = [1,2,3,4,5] => [5,4,3,2,1]</li>
+<li>head = [1,2] => [2,1]</li>
+<li>head = [] => []</li>
+</ul>
+<p>*/</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">
+<span class="token comment">/**
+* Definition for singly-linked list.
+* function ListNode(val, next) {
+*     this.val = (val===undefined ? 0 : val)
+*     this.next = (next===undefined ? null : next)
+* }
+*/</span>
+<span class="token punctuation">{</span>
+ <span class="token comment">/************* 循环 *****************/</span>
+ <span class="token comment">/**
+  * @param {ListNode} head
+  * @return {ListNode}
+  */</span>
+ <span class="token keyword">var</span> <span class="token function-variable function">reverseList</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">head</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">let</span> prev <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span> <span class="token comment">// 创建这个变量作为反转链表的尾部</span>
+   <span class="token keyword">let</span> curr <span class="token operator">=</span> head<span class="token punctuation">;</span> <span class="token comment">// 这个变量用于不断的移动指针。</span>
+
+   <span class="token keyword">while</span> <span class="token punctuation">(</span>curr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">let</span> next <span class="token operator">=</span> curr<span class="token punctuation">.</span>next<span class="token punctuation">;</span> <span class="token comment">// 翻转之前需要先保存 next 节点，不然翻转之后找不到这个位置的元素了</span>
+     curr<span class="token punctuation">.</span>next <span class="token operator">=</span> prev<span class="token punctuation">;</span> <span class="token comment">// 当前节点 next 指针翻转指向 pre 前置节点</span>
+     prev <span class="token operator">=</span> curr<span class="token punctuation">;</span> <span class="token comment">// 将 pre 移动到 cur 当前的位置</span>
+     curr <span class="token operator">=</span> next<span class="token punctuation">;</span> <span class="token comment">// 将 cur 移动到 next 的位置 执行下一次的循环</span>
+   <span class="token punctuation">}</span>
+
+   <span class="token keyword">return</span> prev<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span><span class="token punctuation">;</span>
+ <span class="token keyword">const</span> linkList <span class="token operator">=</span> <span class="token punctuation">{</span>
+   value<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+   next<span class="token operator">:</span> <span class="token punctuation">{</span>
+     value<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+     next<span class="token operator">:</span> <span class="token punctuation">{</span>
+       value<span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+       next<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+   <span class="token punctuation">}</span><span class="token punctuation">,</span>
+ <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+ <span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token function">reverseList</span><span class="token punctuation">(</span>linkList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// => { value: 3, next: { value: 2, next: { value: 1, next: null } } }</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">{</span>
+ <span class="token comment">/************* 递归 *****************/</span>
+ <span class="token keyword">var</span> <span class="token function-variable function">reverseList2</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">head</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">const</span> <span class="token function-variable function">reverse</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">prev<span class="token punctuation">,</span> curr</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+     <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>curr<span class="token punctuation">)</span> <span class="token keyword">return</span> prev<span class="token punctuation">;</span>
+
+     <span class="token keyword">let</span> next <span class="token operator">=</span> curr<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+     curr<span class="token punctuation">.</span>next <span class="token operator">=</span> prev<span class="token punctuation">;</span>
+     <span class="token keyword">return</span> <span class="token function">reverse</span><span class="token punctuation">(</span>curr<span class="token punctuation">,</span> next<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+   <span class="token keyword">return</span> <span class="token function">reverse</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> head<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+ <span class="token keyword">const</span> linkList <span class="token operator">=</span> <span class="token punctuation">{</span>
+   value<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+   next<span class="token operator">:</span> <span class="token punctuation">{</span>
+     value<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+     next<span class="token operator">:</span> <span class="token punctuation">{</span>
+       value<span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+       next<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+   <span class="token punctuation">}</span><span class="token punctuation">,</span>
+ <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+ <span class="token keyword">const</span> res2 <span class="token operator">=</span> <span class="token function">reverseList2</span><span class="token punctuation">(</span>linkList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// => { value: 3, next: { value: 2, next: { value: 1, next: null } } }</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h2>203.移除链表元素</h2>
+<p>/**
+删除链表中等于给定值 val 的所有节点。</p>
+<p>示例:
+输入: 1->2->6->3->4->5->6, val = 6
+输出: 1->2->3->4->5
+*/</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * Definition for singly-linked list.
+     * function ListNode(val, next) {
+     *     this.val = (val===undefined ? 0 : val)
+     *     this.next = (next===undefined ? null : next)
+     * }
+     */</span>
+    <span class="token comment">/**
+     * @param {ListNode} head
+     * @param {number} val
+     * @return {ListNode}
+    */</span>
+
+    <span class="token keyword">function</span> <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token parameter">val<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>val <span class="token operator">=</span> <span class="token punctuation">(</span>val <span class="token operator">===</span> <span class="token keyword">undefined</span> <span class="token operator">?</span> <span class="token number">0</span> <span class="token operator">:</span> val<span class="token punctuation">)</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token punctuation">(</span>next <span class="token operator">===</span> <span class="token keyword">undefined</span> <span class="token operator">?</span> <span class="token keyword">null</span> <span class="token operator">:</span> next<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token keyword">var</span> <span class="token function-variable function">removeElements</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">head<span class="token punctuation">,</span> val</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+        <span class="token keyword">let</span> newHead <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ListNode</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            prev <span class="token operator">=</span> newHead<span class="token punctuation">,</span>
+            curr <span class="token operator">=</span> head<span class="token punctuation">;</span>
+
+        newHead<span class="token punctuation">.</span>next <span class="token operator">=</span> curr
+
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>curr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>curr<span class="token punctuation">.</span>val <span class="token operator">===</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                prev<span class="token punctuation">.</span>next <span class="token operator">=</span> curr<span class="token punctuation">.</span>next
+                curr <span class="token operator">=</span> curr<span class="token punctuation">.</span>next
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                prev <span class="token operator">=</span> curr
+                curr <span class="token operator">=</span> curr<span class="token punctuation">.</span>next
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">return</span> newHead<span class="token punctuation">.</span>next
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h2>142.环形链表II</h2>
+<p>/**</p>
+<p>给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。</p>
+<p>为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。注意，pos 仅仅是用于标识环的情况，并不会作为参数传递到函数中。</p>
+<p>说明：不允许修改给定的链表。</p>
+<p>进阶：</p>
+<p>你是否可以使用 O(1) 空间解决此题？
+*/</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">/**
+* Definition for singly-linked list.
+* function ListNode(val) {
+*     this.val = val;
+*     this.next = null;
+* }
+*/</span>
+
+<span class="token comment">/**
+* @param {ListNode} head
+* @return {ListNode}
+*/</span>
+<span class="token keyword">var</span> <span class="token function-variable function">detectCycle</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">head</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ <span class="token keyword">const</span> set <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+ <span class="token keyword">while</span> <span class="token punctuation">(</span>head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">if</span> <span class="token punctuation">(</span>set<span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span>head<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">return</span> head<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+   set<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>head<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   head <span class="token operator">=</span> head<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+
+ <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div></div><div class="css-gjwx19"><p class="css-86uhag">SHARE ON:</p><ul class="css-7c9av6"><li class="css-x76up1"><a target="_blank" href="https://twitter.com/intent/tweet?text=http://lit-forest.github.io/blog/2021/03/03/链表.html" class="css-1eushs4"><i class="icon-twitter"></i><span class="share css-gyrv08">Twitter</span></a></li><li class="css-x76up1"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://lit-forest.github.io/blog/2021/03/03/链表.html" class="css-9st2on"><i class="icon-facebook"></i><span class="share css-gyrv08">Facebook</span></a></li><li class="css-x76up1"><a target="_blank" href="https://plus.google.com/share?url=http://lit-forest.github.io/blog/2021/03/03/链表.html" class="css-oqtow6"><i class="icon-google-plus"></i><span class="share css-gyrv08">Google+</span></a></li><li class="css-x76up1"><a target="_blank" href="https://www.reddit.com/submit?url=http://lit-forest.github.io/blog/2021/03/03/链表.html" class="css-92irrj"><i class="icon-reddit"></i><span class="share css-gyrv08">Reddit</span></a></li></ul></div></div></article></div></div></div></div></main></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/2021/03/03/链表.html";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-8c3cefde6b26c567f2e1.js"],"app":["/app-26d5676d1bbb87bfc936.js"],"component---src-pages-404-js":["/component---src-pages-404-js-e6aa6bd410c3d6433217.js"],"component---src-pages-archive-index-js":["/component---src-pages-archive-index-js-a2bb101f2fbd6173a77a.js"],"component---src-pages-categories-index-js":["/component---src-pages-categories-index-js-36c6e7546b674c45ecab.js"],"component---src-pages-index-js":["/component---src-pages-index-js-a5d76399b367da04c546.js"],"component---src-pages-resume-index-js":["/component---src-pages-resume-index-js-23e9f5f8157c7c95088c.js"],"component---src-pages-s-index-js":["/component---src-pages-s-index-js-84155e904fad5bf8deb0.js"],"component---src-templates-blog-template-js":["/component---src-templates-blog-template-js-1f14a8c58eeb174f9172.js"]};/*]]>*/</script><script src="/polyfill-8c3cefde6b26c567f2e1.js" nomodule=""></script><script src="/component---src-templates-blog-template-js-1f14a8c58eeb174f9172.js" async=""></script><script src="/8b4e6025f464e9cebcbb2d5697e5d8bd86d9dc4c-9a843aa26145fb27743a.js" async=""></script><script src="/app-26d5676d1bbb87bfc936.js" async=""></script><script src="/framework-3413ebc5e40f5b37083e.js" async=""></script><script src="/webpack-runtime-34d7ca55718d196e001b.js" async=""></script></body></html>

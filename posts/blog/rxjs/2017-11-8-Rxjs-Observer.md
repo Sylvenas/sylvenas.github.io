@@ -14,22 +14,22 @@ var observer = {
   complete: () => console.log('Observer got a complete notification'),
 };
 ```
-Observer的使用，只需要在`subscribe`Observable时，把observer作为参数传递给`subscribe`方法即可。
+Observer 的使用，只需要在 `subscribe` Observable时，把 observer 作为参数传递给 `subscribe` 方法即可。
 ``` js
 observable.subscribe(observer);
 ```
 >Observers are just objects with three callbacks, one for each type of notification that an Observable may deliver.
 
-在Rxjs中，Observer中的`next`,`error`,`complete`三个处理逻辑是可以部分缺失的，即使缺失了部分，Observable仍能正常运行的，只不过是对应的处理逻辑会被忽略，因为没有定义相应的处理逻辑，Observable也就无法处理的。
+在Rxjs中，Observer中的 `next`,`error`,`complete` 三个处理逻辑是可以部分缺失的，即使缺失了部分，Observable 仍能正常运行的，只不过是对应的处理逻辑会被忽略，因为没有定义相应的处理逻辑，Observable 也就无法处理的。
 
-下面例子中的Observer就缺少了`complete`的处理逻辑：
+下面例子中的 Observer 就缺少了 `complete` 的处理逻辑：
 ```js
 var observer = {
   next: x => console.log('Observer got a next value: ' + x),
   error: err => console.error('Observer got an error: ' + err),
 };
 ```
-在`subscribe`Observable的时候，可以直接把函数作为参数传递给`subscribe`方法，而不用传入整个Observer对象,当只传入一个函数的时候，Rxjs在内部会创建一个只含有`next`处理逻辑的Observer。
+在 `subscribe` Observable 的时候，可以直接把函数作为参数传递给 `subscribe` 方法，而不用传入整个 Observer 对象,当只传入一个函数的时候，Rxjs 在内部会创建一个只含有 `next` 处理逻辑的 Observer。
 ```js
 observable.subscribe(x => console.log('Observer got a next value: ' + x));
 ```
@@ -41,4 +41,4 @@ observable.subscribe(
   () => console.log('Observer got a complete notification')
 );
 ```
-上面的例子，在Observable的内部，依然可以正常的调用`observer.next`,`observer.error`,`observer.complete`三个方法。
+上面的例子，在 Observable 的内部，依然可以正常的调用 `observer.next` , `observer.error` ,`observer.complete` 三个方法。
