@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect,useState} from "react"
 import { graphql } from "gatsby"
 import MarkdownPage from '@components/markdown-page';
 import Layout from "@components/layout"
@@ -10,6 +10,25 @@ export default function Template({
 }) {
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, excerpt, fields } = markdownRemark
+  const [catalogueList, setCatalogueList]=useState([])
+
+  useEffect(() => {
+    const h2 = [...document.querySelectorAll('h2')]
+    if (h2.length) {
+      setCatalogueList(h2.map(x => {
+        let chapter = x.textContent.replaceAll(' ', '-').toLowerCase()
+        x.id = chapter
+        return chapter
+      }))
+    } else {
+      const h3 = [...document.querySelectorAll('h3')]
+      setCatalogueList(h3.map(x => {
+        let chapter = x.textContent.replaceAll(' ', '-').toLowerCase()
+        x.id = chapter
+        return chapter
+      }))
+    }
+  },[])
 
   return (
     <Layout location={location}>
@@ -20,7 +39,7 @@ export default function Template({
         location={location}
         ogDescription={excerpt}
         markdownRemark={markdownRemark}
-        sectionList={frontmatter.catalogue || []}
+        sectionList={catalogueList}
         titlePostfix=" - little forest"
       />
     </Layout>

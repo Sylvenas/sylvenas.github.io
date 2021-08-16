@@ -8,7 +8,7 @@ import { media, sharedStyles } from '@utils/theme';
 import { urlRoot } from '@utils/consts';
 import useIntersectionObserver from "@hooks/useIntersectionObserver"
 
-const pageSize = 6
+const pageSize = 9
 
 const IndexPage = ({ location, data: {
   allMarkdownRemark: { edges },
@@ -19,10 +19,12 @@ const IndexPage = ({ location, data: {
 
   const isBottomVisible = useIntersectionObserver(bottomRef, { threshold: 0 }, false);
 
-  useEffect(() => {
-    if (noMore) return
+  // console.log(edges.length)
 
-    isBottomVisible && setShowBlogs(blogs => {
+  useEffect(() => {
+    if (noMore || !isBottomVisible) return
+    setShowBlogs(blogs => {
+      console.log(blogs.length)
       if (edges.length - blogs.length > pageSize) {
         return edges.slice(0, blogs.length + pageSize)
       }

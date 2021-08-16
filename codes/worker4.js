@@ -1,13 +1,44 @@
+class Queue {
+  constructor() {
+    this.taskList = [];
+    this.timerIdList=[]
+  }
 
+  task(wait,fn) {
+    this.taskList.push([wait, fn])
+    return this
+  }
 
+  start(initialVal) {
+    let timeSum = 0
+    let res = initialVal
+    this.taskList.forEach(item => {
+      timeSum += item[0];
+      const timerId = setTimeout(
+        function () {
+          res = item[1](res)
+        },
+        timeSum);
+      
+      this.timerIdList.push(timerId)
+    })
+  }
 
-window.worker = new Worker("https://d2.music.126.net/dmusic/obj/w5zCg8OAw6HDjzjDgMK_/10186702592/7331/0db9/cf32/973c002fceccaee9849a0dc9379a139e.js?download=worker.js");
-worker.postMessage('https://httpbin.org/ip');
-worker.onmessage = function (e) {
-  console.info('new stuff:', e.data);
+  stop() {
+    this.timerIdList.forEach(timerId => {
+      clearTimeout(timerId)
+    })
+  }
 }
 
-const button = document.getElementById('stop')
-button.addEventListener('click', () => {
-  worker.terminate();
-});
+const queue = new Queue();
+queue
+  .task(1000, (x) => { console.log(x + 'a'); return x + 'a'})
+  .task(2000, (x) => { console.log(x + 'b'); return x + 'b' })
+  .task(2000, (x) => { console.log(x + 'c'); return x + 'c' })
+  .start("123")
+
+
+setTimeout(() => {
+  queue.stop()
+},4000)

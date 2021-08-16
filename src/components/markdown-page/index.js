@@ -4,7 +4,7 @@ import Container from '../container';
 import Flex from '../flex';
 import MarkdownHeader from '../markdown-page-header';
 import Share from '../share';
-// import StickyResponsiveSidebar from 'components/StickyResponsiveSidebar';
+import StickyResponsiveSidebar from '@components/StickyResponsiveSidebar';
 import TitleAndMetaTags from '../title-mate-tags';
 import { sharedStyles } from '@utils/theme';
 import createOgUrl from '@utils/createOgUrl';
@@ -52,14 +52,14 @@ const MarkdownPage = ({
               </div>
             </Flex>
 
-            {/* <div css={sharedStyles.articleLayout.sidebar}> */}
-            {/* <StickyResponsiveSidebar
+            <div css={sharedStyles.articleLayout.sidebar}>
+            <StickyResponsiveSidebar
                 enableScrollSync={enableScrollSync}
                 createLink={createLink}
                 location={location}
                 sectionList={sectionList}
-              /> */}
-            {/* </div> */}
+              />
+            </div>
           </div>
         </Container>
       </div>
