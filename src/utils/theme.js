@@ -400,6 +400,9 @@ const sharedStyles = {
 
     '& .gatsby-highlight + blockquote': {
       marginTop: 40,
+      background: '#EDEFF3',
+      padding: 20,
+      fontSize:'14px !important'
     },
   },
 };
