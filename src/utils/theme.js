@@ -255,17 +255,17 @@ const sharedStyles = {
 
     '& h1': {
       lineHeight: 1.2,
-
+      color: '#323a45',
       [media.size('xsmall')]: {
-        fontSize: 30,
+        fontSize: 24,
       },
 
       [media.between('small', 'large')]: {
-        fontSize: 45,
+        fontSize: 24,
       },
 
       [media.greaterThan('xlarge')]: {
-        fontSize: 60,
+        fontSize: 24,
       },
     },
 
@@ -402,7 +402,7 @@ const sharedStyles = {
       marginTop: 40,
       background: '#EDEFF3',
       padding: 20,
-      fontSize:'14px !important'
+      fontSize: '14px !important'
     },
   },
 };

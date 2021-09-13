@@ -1,8 +1,8 @@
 ---
-title:  "syntax in functions"
+title:  "04-syntax in functions"
 author: [Sylvenas]
 categories: 'Haskell'
-img: './img/2013-09-12.jpg'
+img: './img/2017-11-07.jpeg'
 ---
 
 # 函数的语法

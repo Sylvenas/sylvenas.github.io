@@ -1,8 +1,8 @@
 ---
-title:  "types and type classes"
+title:  "03-types and type classes"
 author: [Sylvenas]
 categories: 'Haskell'
-img: './img/2013-09-12.jpg'
+img: './img/2013-06-12.jpeg'
 ---
 # types-and-type-classes
 

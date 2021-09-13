@@ -1,8 +1,8 @@
 ---
-title:  "higher order functions"
+title:  "06-higher order functions"
 author: [Sylvenas]
 categories: 'Haskell'
-img: './img/2013-09-12.jpg'
+img: './img/2014-04-03.jpg'
 ---
 
 # 高阶函数

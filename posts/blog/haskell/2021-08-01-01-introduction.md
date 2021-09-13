@@ -1,5 +1,5 @@
 ---
-title:  "introduction"
+title:  "01-introduction"
 author: [Sylvenas]
 categories: 'Haskell'
 img: './img/2013-09-12.jpg'

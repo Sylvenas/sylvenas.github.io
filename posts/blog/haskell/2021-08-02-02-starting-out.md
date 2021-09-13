@@ -1,8 +1,8 @@
 ---
-title:  "ready begin"
+title:  "02-ready begin"
 author: [Sylvenas]
 categories: 'Haskell'
-img: './img/2013-09-12.jpg'
+img: './img/2016-08-21.jpeg'
 ---
 
 # ready-begin
