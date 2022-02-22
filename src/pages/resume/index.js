@@ -173,7 +173,6 @@ const Projects = () => (
       margin: "1em auto 1em",
     }}
   >
-    <h2 className="resume-title">Projects</h2>
     <span className="resume-sub-title">
       <a href="https://github.com/lit-forest/react-magic">react-magic</a>
     </span>
