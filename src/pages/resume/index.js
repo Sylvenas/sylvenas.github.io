@@ -26,6 +26,9 @@ class Resume extends React.Component {
             css={{
               margin: "2em auto 1em",
               width: "100%",
+              paddingLeft: 20,
+              paddingRight: 20,
+              boxSizing: "border-box",
             }}
           >
             <h2 className="resume-title">About</h2>
@@ -153,6 +156,9 @@ const WorkInfo = () => (
   <div
     css={{
       margin: "1em auto 5em",
+      paddingLeft: 20,
+      paddingRight: 20,
+      boxSizing: "border-box",
     }}
   >
     <div className="timeline">
@@ -171,6 +177,9 @@ const Projects = () => (
   <div
     css={{
       margin: "1em auto 1em",
+      paddingLeft: 20,
+      paddingRight: 20,
+      boxSizing: "border-box",
     }}
   >
     <span className="resume-sub-title">
@@ -219,6 +228,9 @@ const Books = () => (
     css={{
       display: "flex",
       flexWrap: "wrap",
+      paddingLeft: 20,
+      paddingRight: 20,
+      boxSizing: "border-box",
     }}
   >
     {BOOKS.map((book, idx) => (
